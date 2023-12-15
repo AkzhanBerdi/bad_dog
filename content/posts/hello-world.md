@@ -32,5 +32,5 @@ Whether you're a seasoned data pro or a curious newbie, this blog is your data p
 Ready to become a real dog? Let's go!  
 
 Yours,  
-Akzhan (the bad dog)
+Bad Dog
 
