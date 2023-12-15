@@ -6,15 +6,15 @@
           <h1 class="text-2xl font-semibold">
             <NuxtLink to="/">Bad Dog Data</NuxtLink>
           </h1>
-          <p class="text-gray-500">Stats, ML and all that staff</p>
+          <p class="text-gray-500">From Statistical to Machine Learning</p>
         </div>
 
         <div class="align-right">
           <Btn>
-            <a href="https://t.me/akzhan_berdi" target="_blank">Telegram Me</a>
+            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn Me</a>
           </Btn>
           <Btn>
-            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn Me</a>
+            <a href="https://t.me/akzhan_berdi" target="_blank">Telegram Me</a>
           </Btn>
         </div>
 
