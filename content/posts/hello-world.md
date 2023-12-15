@@ -9,7 +9,7 @@ slug: "hello-world"
   
 **Greetings to all curious minds!**  
   
-I'm Akzhan, your bad dog from the vibrant city of Almaty, Kazakhstan. By day, I learn just enough new stuff to navigate the ever-shifting landscape of e-commerce trends as a Data Analyst for a major player in the region. I do love coding, stats, and business – a potent trifecta for understanding the world through numbers and algorithms, or even scaling any business like online commerce, if you will.  
+I'm Akzhan, your bad dog from the vibrant city of Almaty, Kazakhstan. By day, I learn just enough of new stuff to navigate the ever-shifting landscape of e-commerce trends as a Data Analyst. I do love coding, stats, and business – a potent trifecta for understanding the world through numbers and algorithms, or even scaling any business like online commerce, if you will.  
   
 Forget boring spreadsheets! Statistical analysis is so much fun, sometimes it's mind-blowing! Here, you'll learn about statistical learning, how to transform it into machine learning, hence interpret the world around you or make your business data-driven.  
   
