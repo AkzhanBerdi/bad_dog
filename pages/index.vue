@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+function formatDate(date: string){
+   const dt =  new Date(date)
+
+   return `${dt.getFullYear()}-${dt.getMonth()}-${dt.getDate()}`
+}
+</script>
 
 <template>
     <div>
@@ -31,7 +38,7 @@
                 <NuxtLink :to="`/${post.slug}`">{{ post.title }}</NuxtLink>
             </h3>
             <div class="text-sm text-gray-500 mt-px">
-                {{ post.date }}
+                {{ formatDate(post.date) }}
             </div>
         </div>
     </div>
