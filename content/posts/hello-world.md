@@ -7,7 +7,7 @@ thumbnail: '/img/image_one.jpg'
 slug: "hello-world"
 ---
 
-# Calling all developer enthusiasts, data engineering nerds, and curious minds!  <br>
+Calling all developer enthusiasts, data engineering nerds, and curious minds!<br>
 
 **Hii!**  
 
