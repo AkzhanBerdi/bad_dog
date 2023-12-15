@@ -17,9 +17,9 @@ Forget boring spreadsheets! Statistical analysis is so much fun, sometimes it's 
 
 ### We'll dive deep into:  
 
-* The latest consumer behaviors  
-* Platform infrastructure  
-* Growth strategies  
+- The latest consumer behaviors  
+- Platform infrastructure  
+- Growth strategies  
 
 ### We'll also:  
 
