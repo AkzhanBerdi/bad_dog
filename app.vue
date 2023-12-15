@@ -4,12 +4,12 @@
       <header class="mt-8 mb-4 flex justify-between items-end">
         <div>
           <h1 class="text-2xl font-semibold">
-            <NuxtLink to="/">Bad Dog Data Blog</NuxtLink>
+            <NuxtLink to="/">Bad Dog Data</NuxtLink>
           </h1>
-          <p class="text-gray-500">Statistical Learning, ML and all that staff</p>
+          <p class="text-gray-500">Stat learning, ML and all that staff</p>
         </div>
 
-        <div>
+        <div class="align-right">
           <Btn>
             <a href="https://t.me/akzhan_berdi" target="_blank">Telegram Me</a>
           </Btn>
@@ -31,5 +31,8 @@ body {
   /* @apply bg-gray-100; */
   background-color: #f2f2f2; 
   font-size: 0.875rem; 
+}
+.align-right {
+  text-align: right;
 }
 </style>
