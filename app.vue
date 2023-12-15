@@ -6,7 +6,7 @@
           <h1 class="text-2xl font-semibold">
             <NuxtLink to="/">Bad Dog Data</NuxtLink>
           </h1>
-          <p class="text-gray-500">Stat learning, ML and all that staff</p>
+          <p class="text-gray-500">Stats, ML and all that staff</p>
         </div>
 
         <div class="align-right">
