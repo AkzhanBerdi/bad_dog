@@ -6,7 +6,7 @@
           <h1 class="text-2xl font-semibold">
             <NuxtLink to="/">Bad Dog Data</NuxtLink>
           </h1>
-          <p class="text-gray-500">Self-Taught Data Sceintist</p>
+          <p class="text-gray-500">Self-Taught Data Scientist Journal</p>
         </div>
 
         <div class="align-right">
