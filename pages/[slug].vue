@@ -1,14 +1,11 @@
 <script setup lang="ts" >
-
 const { slug } = useRoute().params;
 
-function formatDate(date: string) {
-  const dt = new Date(date);
+function formatDate(date: string){
+   const dt =  new Date(date)
 
-  const options = { month: 'short', day: 'numeric', year: 'numeric' };
-  return dt.toLocaleDateString('en-US', options);
+   return `${dt.getFullYear()}-${dt.getMonth()}-${dt.getDate()}`
 }
-
 
 </script>
 
@@ -25,13 +22,13 @@ function formatDate(date: string) {
                 </div>
 
                 <img :src="doc.thumbnail" class="w-full h-full object-cover" />
-                </header> 
+                </header>
+
+
 
                 <div class="p-5 content">
-  <div class="max-w-screen-lg mx-auto prose">
-    <ContentRenderer :value="doc"></ContentRenderer>
-  </div>
-</div>
+                    <ContentRenderer :value="doc"></ContentRenderer>
+                </div>
 
         </ContentDoc>
     </article>

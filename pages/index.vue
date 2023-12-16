@@ -1,16 +1,9 @@
 <script setup lang="ts">
 
-// function formatDate(date: string){
-//    const dt =  new Date(date)
+function formatDate(date: string){
+   const dt =  new Date(date)
 
-//    return `${dt.getFullYear()}-${dt.getMonth()}-${dt.getDate()}`
-// }
-
-function formatDate(date: string) {
-  const dt = new Date(date);
-
-  const options = { month: 'short', day: 'numeric', year: 'numeric' };
-  return dt.toLocaleDateString('en-US', options);
+   return `${dt.getFullYear()}-${dt.getMonth()}-${dt.getDate()}`
 }
 </script>
 
