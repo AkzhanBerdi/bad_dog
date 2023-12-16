@@ -13,6 +13,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
   content: {
-    documentDriven: true
+    // experimental: {
+    //   clientDB: true
+    // },
+    // documentDriven: true,
   },
   });
