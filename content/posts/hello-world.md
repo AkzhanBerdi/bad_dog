@@ -35,6 +35,5 @@ Whether you're a seasoned pro or a curious newbie, this blog is your playground 
 
 Wanna become a real dog? Let's go!
 
-Yours,  
-
+Yours,
 Bad Dog.
