@@ -12,12 +12,17 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "@tailwindcss/typography": "^0.5.10",
     "nuxt": "^3.8.2",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@nuxt/content": "^2.9.0",
-    "dayjs": "^1.11.10"
+    "dayjs": "^1.11.10",
+    "markdown-it": "^14.0.0",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-prism": "^2.3.0",
+    "marked": "^11.1.0"
   }
 }
