@@ -31,9 +31,9 @@ Statistical analysis is so much fun, sometimes even mind-blowing! Forget boring 
 - Bridge the technical gap and encourage non-technical crowd to start new projects.  
   
 
-Whether you're a seasoned pro or a curious newbie, this blog is your playground for different frameworks. Join me as we explore the fascinating intersection of data, business, and the human experience. Let's learn, grow, and maybe even rewrite the rules of business, one byte at a time.
+Whether you're a seasoned pro or a curious newbie, this blog may serve you with different technical approaches when it comes to working with data. Join me as we explore the fascinating intersection of data, business, and the human experience. Let's learn, grow, and maybe even rewrite the rules of business, one byte at a time.
 
 Wanna become a real dog? Let's go!
 
-Yours,
+Yours,  
 Bad Dog.
