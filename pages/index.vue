@@ -8,7 +8,7 @@ function formatDate(date: string) {
     const options = { month: 'short', day: 'numeric', year: 'numeric' };
     return dt.toLocaleDateString('en-US', options);
 }
-</script>
+</script>  
 
 <template>
     <div>
@@ -29,9 +29,11 @@ function formatDate(date: string) {
             :key="post._path"
             class="blog-card bg-white rounded-2xl overflow-hidden mb-4"
         >
-        <div class="h-[320px] relative">
-            <img 
+        <div class="h-[300px] relative">
+            <img
+                v-if="post.thumbnail" 
                 :src="post.thumbnail"
+                :alt="post.title"
                 class="w-full h-full object-cover absolute" 
             />
         </div>

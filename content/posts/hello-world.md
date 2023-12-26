@@ -1,9 +1,9 @@
 ---
-title: "Follow the Light"
+title: "I'm a Bad Dog"
 date: 2023-12-16
 draft: false
 tags: ["personal"]
-thumbnail: '/img/image_one.jpg'
+thumbnail: '/img/hello_world.png'
 slug: "hello-world"
 ---
   
