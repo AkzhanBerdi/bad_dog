@@ -1,7 +1,7 @@
 ---
 title: "How to Learn Coding"
 
-feature: img/img1.png
+img: img/img1.png
 
 date: 2023-12-25
 
@@ -25,13 +25,15 @@ In this article we will focus on how to start coding immediately, without too mu
 
 ## Step 1: Learn to Code in a Browser
 
-As you read this article through a webpage, you already have the tools at your fingertips. Press **Ctrl** + **Shift** + **J** if running on Windows or **Command** + **Option** + **J** if running on MacOS. It will open the console which appears to be on the right side of the browser in my case. It might appear on the bottom as well, but let's just focus on JavaScript.
+As you read this article through a webpage, you already have the tools at your fingertips. Press **Ctrl** + **Shift** + **J** if running on Windows or **Command** + **Option** + **J** if running on MacOS. It will open the console which appears to be on the right side of the browser in my case. It might appear on t
+
+![bad_dog3](img/img1.png)
 
 ![bad_dog](img/img1.jpg)
 
 ![bad_dog2](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\content\posts\img\img1.png)
 
-![bad_dog](img/img1.png)
+![bad_dog](static/img/img1.png)
 
 ![](C:\Users\Admin\AppData\Roaming\marktext\images\2023-12-24-16-32-11-image.png)
 
