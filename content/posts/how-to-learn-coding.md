@@ -190,11 +190,11 @@ if oranges == 3:
         oranges -= 1
         print(f'{i} received an orange, {oranges} oranges remaining')
 else:
-    print('We are going to buy more oranges for our kids')
+    print('We will go to the Whole Foods to buy more oranges for our kids')
 ```
 
 In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, if not then we follow **else** statement saying: 
-> *"we are going to buy more supplies"*.
+> *We will go to the Whole Foods to buy more oranges for our kids*.
 
 ![bad_dog](/img/img6.png)
 
@@ -301,8 +301,10 @@ In this article we've accessed the console in the browser, installed the Linux T
 
 Keep in mind that this guide is meant for a complete beginners to boost their confidence with some solid hands-on experience, but the basics and theory are essential to back-up this practice. So follow the FAQ section below to see the recommendations.
 
-> The words printed here are pure experience. You must go through the concepts as well
->                                                                           -- Bad Dog
+
+> The words printed here is experience. You must go through the concepts.
+> -- <cite>Bad Dog</cite>
+
 
 Follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Start Coding: From Zero to Hero**.
 
