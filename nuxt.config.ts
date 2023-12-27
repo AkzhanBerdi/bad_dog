@@ -18,7 +18,4 @@ export default defineNuxtConfig({
     // },
     // documentDriven: true,
   },
-  experimental: {
-    renderJsonPayloads: false
-  },
   });
