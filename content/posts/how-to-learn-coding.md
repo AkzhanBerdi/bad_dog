@@ -88,6 +88,8 @@ wsl --install
 
 Take a a little break, since the installation might take a few minutes
 
+If running on Windows 11, then input Linux username and password and you are good to go. For Windows 10 users proceed with the Distro installation as following.
+
 ```powershell
 wsl --list --online
 ```
