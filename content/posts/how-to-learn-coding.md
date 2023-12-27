@@ -1,13 +1,7 @@
 ---
 title: "How to Learn Coding"
 
-<<<<<<< HEAD
 date: 2023-12-27
-=======
-feature: img/img1.png
-
-date: 2023-12-25
->>>>>>> parent of a7ba35a (pics uploaded)
 
 draft: false
 
@@ -16,7 +10,6 @@ tags: ["coding"]
 thumbnail: '/img/how_to_learn_coding.png'
 
 slug: "how-to-learn-coding"
-
 ---
 
 # Start to Code in These 3 Steps
@@ -31,17 +24,7 @@ In this article we will focus on how to start coding immediately, without too mu
 
 As you read this article through a webpage, you already have the tools at your fingertips. Press **Ctrl** + **Shift** + **J** if running on Windows or **Command** + **Option** + **J** if running on MacOS. It will open the console which appears to be on the right side of the browser in my case. It might appear on the bottom as well, but let's just focus on JavaScript.
 
-<<<<<<< HEAD
 ![bad_dog](/img/img1.png)
-=======
-![bad_dog](img/img1.jpg)
-
-![bad_dog2](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\content\posts\img\img1.png)
-
-![bad_dog](img/img1.png)
-
-![](C:\Users\Admin\AppData\Roaming\marktext\images\2023-12-24-16-32-11-image.png)
->>>>>>> parent of a7ba35a (pics uploaded)
 
 JavaScript is an excellent language to start experimenting with, especially if you're attracted to dynamic interfaces. I encourage you to type all of the commands manually to have grasp feeling of what it's like to be a programmer.
 
