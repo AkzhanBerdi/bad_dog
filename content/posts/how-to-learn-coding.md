@@ -71,7 +71,7 @@ console.log(`The square root of ${number} is ${result}`);
 
 If you are windy like me, there is a big chances your are confused the backtick sign *`*   with the quote sign  *'*   using which would not return the expected result. Eventually the learning curve will leave you frustruated with the console and error messages, but as aspiring progrmmers we should embrace it as the part of our job, and keep learning.
 
-JavaScript is bad ass programming language. It has both Front and Back ends web frameworks, and even mobile-dev frameworks for Android and IOS devices alike. To put it into perspective - my beloved Python only handles the back-end for web applications.
+JavaScript is bad ass programming language. It has both Front and Back end web frameworks, and even mobile-app frameworks for Android and IOS devices alike. To put it into perspective - my beloved Python only handles the back-end for web applications.
 
 ### Step 2: Learn to Code in Terminal
 
@@ -87,7 +87,7 @@ wsl --install
 
 Take a a little break, since the installation might take a few minutes.
 
-If running on Windows 11, the Ubuntu distro has been installed by default. Create Linux username and password and you are good to go.
+If running on Windows 11, the Ubuntu distro should be installed by default. If so create a Linux username and password. That's it.
 
 For Windows 10 users proceed with the Distro installation as following.
 
@@ -193,7 +193,8 @@ else:
     print('We are going to buy more oranges for our kids')
 ```
 
-In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, if not then we follow **else** statement saying: *"we are going to buy more supplies"*.
+In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, if not then we follow **else** statement saying: 
+> *"we are going to buy more supplies"*.
 
 ![bad_dog](/img/img6.png)
 
@@ -207,7 +208,7 @@ IDE is a text editor that allows you to create files of code, which often reffer
 
 #### VS Code
 
-So to proceed further you should google the page where you can download **VS Code**. Intsall the **VS Code**, and open the application. If running on Linux environment you can open VS Code using this prompt in your Terminal.
+So to proceed further you should google the page where you can download [VS Code](https://code.visualstudio.com/). Intsall the **VS Code**, and open the application. After the installation if running on WSL Linux environment, then you can open VS Code using this prompt in your Terminal.
 
 ```bash
 code .
@@ -221,11 +222,11 @@ Open your Terminal and create the directory for your project with this command.
 mkdir orange_project
 ```
 
-It creates a folder named **orange_project** in your WSL home directory. Projects are managed in directories accessible from your IDE. Look at the **VS Code** tool bar and choose the **File** , **Open Folder** it will drop-down the menu like on the picture shown below where you can choose any available directory. Let's choose **orange_project**.
+It creates a folder named **orange_project** in your WSL home directory. Projects are managed in directories accessible from your IDE. Open **VS Code**, look at the tool bar and choose **File** -> **Open Folder** it will drop-down the menu like on the picture shown below where you can choose any available directory. Let's choose **orange_project**.
 
 ![bad_dog](/img/img7.png)
 
-Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on those icons to create the file or the directory, remember the word **directory** is just a fancy word for a **folder**.
+Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on those icons to create the file or the directory, remember the word *directory* is just a fancy word for a *folder*.
 
 ![bad_dog](/img/img8.png)
 
@@ -296,11 +297,14 @@ Congrats, bad dog! We've just successfully executed both Python and JavaScript f
 
 ## Conclusion
 
-In this article we've accessed the console in the browser , installed the Linux Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming so congrats you with such a milestone.
+In this article we've accessed the console in the browser, installed the Linux Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming so congrats you with such a huge milestone.
 
-You should bear in mind that I've wrote this article for a complete beginners to have a solid hands-on experience to boost their confidence, but the basics and theory are essential to back-up this practice. So follow the FAQ section below to see the recommendations.
+Keep in mind that this guide is meant for a complete beginners to boost their confidence with some solid hands-on experience, but the basics and theory are essential to back-up this practice. So follow the FAQ section below to see the recommendations.
 
-Also follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Start Coding: From Zero to Hero**.
+> The words printed here are pure experience. You must go through the concepts as well
+>                                                                           -- Bad Dog
+
+Follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Start Coding: From Zero to Hero**.
 
 ## FAQ from Coding Beginners
 
