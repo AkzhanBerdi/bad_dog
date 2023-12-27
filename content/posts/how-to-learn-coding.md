@@ -16,7 +16,7 @@ slug: "how-to-learn-coding"
 
 You probably landed this page because you want to learn to code, which is great! Most people still didn't figure out what they want to do in their life, but you already did the hardest part. The coding is truely powerful skill. It enables you to write instructions to the machine which in turn builds stuff like websites, mobile applications, rocket missiles launching systems and many more.
 
-As Data Scientiests we use Coding skills to access, process and manage raw data, build graphs to visually comprehend the nature of dataset we ended-up working with, and eventually develop a statistical and machine learning models to predict the likelihood of certain events depending on the given task.
+As Data Scientists we use Coding skills to access, process and manage raw data, build graphs to visually comprehend the nature of dataset we ended-up working with, and eventually develop a statistical and machine learning models to predict the likelihood of certain events depending on the given task.
 
 In this article we will focus on how to start coding immediately, without too much of a theory behind it. We will run a decent amount of lines of code by following the best practices of learning by doing. Please enjoy.
 
@@ -71,35 +71,37 @@ console.log(`The square root of ${number} is ${result}`);
 
 If you are windy like me, there is a big chances your are confused the backtick sign *`*   with the quote sign  *'*   using which would not return the expected result. Eventually the learning curve will leave you frustruated with the console and error messages, but as aspiring progrmmers we should embrace it as the part of our job, and keep learning.
 
-JavaScript is bad ass programming language. It has it all, both Front and Back ends of web frameworks, and even mobile-native app frameworks for Android and IOS devices alike. To put it into perspective, my beloved Python only handles the back-end for web apps.
+JavaScript is bad ass programming language. It has both Front and Back ends web frameworks, and even mobile-dev frameworks for Android and IOS devices alike. To put it into perspective - my beloved Python only handles the back-end for web applications.
 
 ### Step 2: Learn to Code in Terminal
 
-Just now we've been using browser as the mediator between the User and the Machine which is only possible with JavaScript, but now we would like to write instructions directly into the machine itself. If you're using a Windows operating system, you might need to make a few tweaks to ensure a seamless coding experience. While Windows is widely used and affordable, it's just never meant to be a developing machine. Whereas on MacOS you may just press **Command** + **Т** to find a Terminal and skip the next section.
+Just now we've been using browser as the mediator between the User and the Machine which is only possible with JavaScript, but now we would like to write instructions directly into the machine itself. If you're using Windows operating system, you might need to make a few tweaks to ensure a seamless coding experience. While Windows is widely used and affordable, it's just never meant to be a developing machine. Whereas on MacOS you may just press **Command** + **Т** to find a Terminal and skip the next section.
 
 #### Install WSL2 on Windows
 
-In order to successfully run any code on the Windows machine, you should do it in the Windows Subsystem for Linux or **WSL2** environment for short. Linux has many advantages over Windows, but we will focus only on **Terminal**, and for that we should open the PowerShell as Administrator and run the following command
+In order to successfully run any code on the Windows machine, you should do it in the Windows Subsystem for Linux or **WSL2** for short. Linux has many advantages over Windows, but we will focus only on **Terminal**, and for that we should open the PowerShell as Administrator and run the following command.
 
 ```powershell
 wsl --install
 ```
 
-Take a a little break, since the installation might take a few minutes
+Take a a little break, since the installation might take a few minutes.
 
-If running on Windows 11, then input Linux username and password and you are good to go. For Windows 10 users proceed with the Distro installation as following.
+If running on Windows 11, the Ubuntu distro has been installed by default. Create Linux username and password and you are good to go.
+
+For Windows 10 users proceed with the Distro installation as following.
 
 ```powershell
 wsl --list --online
 ```
 
-This line of code will list the available Linux distributions. Choose any distro name. I'll choose Debian for demonstrative purposes, but you can install Ubuntu or Kali it doesn't really matter
+This line of code will list the available Linux distributions. Choose any distro name. I'll choose Debian for demonstrative purposes, but you can install Ubuntu or Kali it doesn't really matter.
 
 ```powershell
 wsl --install -d Debian
 ```
 
-After the installation you might need to restart your machine and check the start menu to see if there is a new Linux distribution available. Open your app, Debian in my case, and that's your Terminal
+Create username and password after the installation. You might need to restart your machine and check the start menu to see if there is a Linux distribution available. Open your Debian or Ubuntu or whatever distro you've installed, and that's your Terminal.
 
 ![bad_dog](/img/img4.png)
 
@@ -113,7 +115,7 @@ It should update your Linux system. Isn't cool ? You'd never miss any update wit
 
 #### Terminal and Python Shell
 
-Now regardless of your Operating Sytem, you can run Python directly in your **Terminal** using the following command
+Now regardless of your Operating Sytem, you can run **Python** directly in your Terminal using the following command.
 
 ```python
 python3
@@ -157,7 +159,7 @@ The first variable contains the number **5** representing the amount of oranges,
 
 #### For loops
 
-Now imaging that we have to supply our kids with oranges programmatically. Let's do that using the **for loop**, which is the sequance of instructions written in short. Make sure to follow the formating by entering the **tab** or **four spaces** on the lines 2 and 3 to align the instructions to the **for loop** statement as shown below. Also press double enter at the end of the input, it's just how it works in Python Shell.
+Now imaging that we have to supply our kids with oranges programmatically. Let's do that using the **for loop**, which is the sequance of instructions written in short. Make sure to follow the formating by entering the **tab** or **four spaces** on the lines 2 and 3 to align the instructions to the **for i in kids:** statement as shown below. Also press double enter at the end of the input, it's just how it works in Python Shell.
 
 ```python
 for i in kids:
@@ -180,7 +182,7 @@ for i in kids:
         print(f'{i} received an orange, {oranges} oranges remaining')
 ```
 
-Which is basically a biased decision to give oranges to those who's more adorable to you, accidently it happens that both of their names contains big letter **K**. This is exactly how it's programmed in the line 2. But what about more responsible solution ?
+Which is basically a biased decision to give oranges to those kids who's name contains big letter **K**. This is exactly how it's programmed at the line 2. But what about more responsible solution?
 
 ```python
 if oranges == 3:
@@ -191,17 +193,17 @@ else:
     print('We are going to buy more oranges for our kids')
 ```
 
-In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, if not we are going to the marketplace to get more supplies.
+In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, if not then we follow **else** statement saying: *"we are going to buy more supplies"*.
 
 ![bad_dog](/img/img6.png)
 
-If you got so far into the article, then you are true bad dog, congrats! As for now you are fammiliar with variables, lists, loops and If-else statements. You can have a deserved rest for a while, cause that was a lot to process for a bloody beginner.
+If you got so far into the article, then you are true bad dog, congrats! As for now you have an idea of what is variables, lists, loops and If-else statements. You can have a deserved rest for a while, cause that was a lot to process for a bloody beginner.
 
 ### Step 3: Learn to Code in IDE
 
-Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's get ourself the Integrated Developing Environment or **IDE** for short which enables us to execute the numerous files of code. 
+Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's explore the Integrated Developing Environment or **IDE** for short which enables us to execute the numerous files of code. 
 
-IDE is sort of a WordPad that has the integrated Terminal within it. The IDE that we are going to use is the **VS Code**, simply because most of the relevant tutorials that you are going to watch on YouTube going to use it as well.
+IDE is a text editor that allows you to create files of code, which often reffered as **scripts**. Running scripts through Terminal allows you to execute multiple lines of code at once. The IDE that we are going to use is the **VS Code**, simply because most of the relevant tutorials that you are going to watch on YouTube going to use it as well.
 
 #### VS Code
 
@@ -213,21 +215,21 @@ code .
 
 #### Projects and Directories
 
-Open your Terminal and create the directory, for your project with this command.
+Open your Terminal and create the directory for your project with this command.
 
 ```bash
 mkdir orange_project
 ```
 
-It creates a folder named **orange_project** in your WSL root directory. Projects are managed in directories accessible from your IDE. Look at the **VS Code** tool bar and choose the **File** , **Open Folder** it will drop-down the menu like on the picture shown below where you can choose any available directory. Let's choose **orange_project**.
+It creates a folder named **orange_project** in your WSL home directory. Projects are managed in directories accessible from your IDE. Look at the **VS Code** tool bar and choose the **File** , **Open Folder** it will drop-down the menu like on the picture shown below where you can choose any available directory. Let's choose **orange_project**.
 
 ![bad_dog](/img/img7.png)
 
-Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on those icons to create the file or the directory, remember the word **directory** is just a fancy way to say the **folder**.
+Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on those icons to create the file or the directory, remember the word **directory** is just a fancy word for a **folder**.
 
 ![bad_dog](/img/img8.png)
 
-Let's create two files in our orange project, Let's name the first one as **script.py**, and it will contain the Python programm for fair orange distribution that we've developed in the Step 2.
+Let's create two files in our orange project, The first one named **script.py**, and it will contain the Python programm for fair orange distribution system that we've developed in the Step 2.
 
 ```javascript
 oranges = 5
@@ -242,9 +244,9 @@ else:
 
 ![bad_dog](/img/img9.png)
 
-After creating each file, remember to press **'Ctrl'** + **'S'** or go to **File** and hit **Save**. Otherwise VS Code would not be able to find your files in the project. 
+After creating/updating each file, remember to press **'Ctrl'** + **'S'** or go to **File** and hit **Save**. Otherwise VS Code would not be able to find your files in the project. 
 
-Now let's create our second file **script.js**, which is the same programm, but written in JavaScript. Just look how Python and JavaScript use different syntaxes to execute the same command.
+Now let's create our second file **script.js**, which is the same programm, but written in JavaScript.
 
 ```python
 let oranges = 2;
@@ -262,7 +264,7 @@ if (oranges >= 3) {
 
 ![bad_dog](/img/img10.png)
 
-Now lets run our very last command sequence into the Terminal
+Now lets run our very last command sequence into the Terminal.
 
 ```bash
 pwd
@@ -294,9 +296,9 @@ Congrats, bad dog! We've just successfully executed both Python and JavaScript f
 
 ## Conclusion
 
-In this article we accessed the console in the browser , installed the Linux Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming so congrats you with such a milestone.
+In this article we've accessed the console in the browser , installed the Linux Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming so congrats you with such a milestone.
 
-You should bear in mind that I've wrote this article for a complete beginners to have a solid hands-on experience to boost your confidence, but you still have to learn the basics and theory to back-up this practice. So follow the FAQ section below to see the recommendations.
+You should bear in mind that I've wrote this article for a complete beginners to have a solid hands-on experience to boost their confidence, but the basics and theory are essential to back-up this practice. So follow the FAQ section below to see the recommendations.
 
 Also follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Start Coding: From Zero to Hero**.
 
@@ -304,23 +306,23 @@ Also follow me on LinkedIn to stay up to date for upcoming articles in this seri
 
 ### What's better JavaScript or Python?
 
-It depends on what is your final goal. If you trying to build a website then JavaScript is essential for the front-end elements that users going to interact with. For Machine Learning tasks you are going to use Python modules, that will save you a lifetime amount of work instead of writing them in JavaScipt from the scratch. For a Statistical Learning **R** is the way to go. So focus on your goal and the choice of programming language will come easy.
+It depends on what is your final goal. If you trying to build a website then JavaScript is the better choice for the front-end elements. For Machine Learning tasks you are going to use Python modules, that will save you a lifetime amount of work rather than writing them from the scratch in any other language. For a Statistical Learning **R** is the way to go. So focus on your goal and the choice of programming language will come easy.
 
 ### Can I pivot from Data Science to Software Engineering?
 
-Indeed many people may find that Data Science methodologies are too theorethical, thus no guarantees that your research is going to represent the actual Distribution. Software Engineering is more about building actual stuff, whereas Data Science be like: "I can say with 96% confidence level that bad dogs drink coffee on alternative milk only!". So Yes, Software Engineeing is cool indeed, and no shame in switching to that.
+Indeed many people may find that Data Science methodologies are too theorethical, thus no guarantees that your research is going to represent the actual Distribution. Software Engineering is more about building actual stuff, whereas Data Science may just pointing at the significance of some data. So Yes, Software Engineeing is cool, and no shame in switching to that.
 
 ### What Should I learn next to be a good coder?
 
-You can start with YouTube **CS50** courses by Harvard. It will back you up with solid fundumentals to better understand the content you've red so far. It's also essential if you want to work in Tech companies, so just start with that and keep wondering what's next. Another source I'd recommend is the [interviews.school](https://interviews.school). This is the website developed by Google employee guiding user to prepare for the interview in companies like MANG.
+You can start with YouTube **CS50** courses. It will back you up with solid fundamentals to better understand the content you've red so far. It's also essential for growth in Tech companies, so just start with that and keep wondering what's next. Another source I'd recommend is the [interviews.school](https://interviews.school). This website being developed by Google employee guiding users to prepare for the interview in big Tech companies such as Google.
 
 ### Should I Read Programming Books?
 
-This is another good resource for a contextual learning. However there is just so much to cover as a beginner. I'd rather focus on IT basics like HTTP, Network Protocols, Binary Code Processing, Data Types and Data Structures, Data Bases and so much more, so internet and Google are better at this point.
+This is another good resource for a contextual learning. However there is just so much to cover as a beginner. I'd rather focus on IT basics like HTTP, Network Protocols, Binary Code Processing, Data Types and Data Structures, Databases and so much more, so Google are better at this point.
 
 ### Should I use LLM's like GPT and Gemini?
 
-Sure yes! The only scenario that is not suitable for LLM's are the homeworks that on the edge of the deadline, cause the temptation to copy paste the response without further analysis is quite high, so be curiouse and critical to every response, cause LLM's sometimes tends to hallucinate.
+Sure yes! The only scenario that is not suitable for LLM's are the homeworks that on the edge of the deadline, cause of the temptation to copy paste the response without further analysis, so be curiouse and critical to every response LLM would provide you.
 
 Yours,  
 Bad Dog
