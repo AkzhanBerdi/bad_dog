@@ -50,7 +50,7 @@ clear() // function that clears the console for convinience, optional
 
 ![bad_dog](/img/img2.png)
 
-Well Done my bad dog! Did you feel akward with the Math.sqrt() method ? You will learn about methods along the way, and don't worry if you missreading a couple of words or two. When learning a programming it's inevitable to come accross the concepts that are not yet familliar to you. Now let's get a little bit dirty and nail one of those concepts.
+Well Done! Did you feel akward with the Math.sqrt() method ? You will learn about methods along the way, and don't worry if you missreading a couple of words or two. When learning a programming it's inevitable to come accross the concepts that are not yet familliar to you. Now let's get a little bit dirty and nail one of those concepts.
 
 #### Variables
 
@@ -69,7 +69,7 @@ console.log(`The square root of ${number} is ${result}`);
 
 ![bad_dog](/img/img3.png)
 
-If you are windy like me, there is a big chances your are confused the backtick sign *`*   with the quote sign  *'*   using which would not return the expected result. Eventually the learning curve will leave you frustruated with the console and error messages, but as aspiring progrmmers we should embrace it as the part of our job, and keep learning.
+If you are windy like me, there is a big chances your are confused the backtick sign *`*   with the quote sign  *'*   using which would not return the expected result. Eventually the learning curve will leave you frustruated with the console and error messages, but as aspiring programmers we should embrace it as the part of our job, and keep learning.
 
 JavaScript is bad ass programming language. It has both Front and Back end web frameworks, and even mobile-app frameworks for Android and IOS devices alike. To put it into perspective - my beloved Python only handles the back-end for web applications.
 
@@ -159,7 +159,7 @@ The first variable contains the number **5** representing the amount of oranges,
 
 #### For loops
 
-Now imaging that we have to supply our kids with oranges programmatically. Let's do that using the **for loop** which is the sequence of instructions written in short. Make sure to follow the indentation format by creating space using **tab** or **four spaces** on each line that follows **for i in kids:**. Every command line being indented will be repeated as the sequence for each kid in the list.
+Now imaging that we have to supply our kids with oranges programmatically. Let's do that using the **for loop** which is the sequence of instructions written in short. Make sure to follow the indentation format by creating space using **tab** or **four spaces** on each line that follows **for i in kids:**
 
 ```python
 for i in kids:
@@ -167,7 +167,7 @@ for i in kids:
     print(f'{i} received an orange, {oranges} oranges remaining')
 ```
 
-This code subtracts the amount of oranges by 1 and prints the name and amount of oranges remained. Now execute the following loop in the Python Shell by **double** clicking the Enter button. The expected result is shown below.
+ Every command line that being indented will be repeated as the sequence for each kid in the list subtracting the amount of oranges by 1, printing the name and amount of oranges remained. Now execute the following loop in the Python Shell by **double** clicking the Enter button. The expected result is shown below.
 
 ![bad_dog](/img/img5.png)
 
@@ -182,7 +182,7 @@ for i in kids:
         print(f'{i} received an orange, {oranges} oranges remaining')
 ```
 
-This code scans every name in the list, and if it contains big letter 'K' then kid gets an orange. This is due to if statement at the line 2 which leaves Aki without an orange. But what about more responsible solution?
+This code scans every name in the list, and if it contains big letter 'K' then kid gets an orange. This is due to if statement at the line 2 which leaves Aki without an orange. Let's use **else** statement to fix this.
 
 ```python
 if oranges == 3:
@@ -193,18 +193,18 @@ else:
     print('We will go to the Whole Foods to buy more oranges for our kids')
 ```
 
-In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, if not then we follow **else** statement saying: 
+In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, **else** we are stating: 
 > *We will go to the Whole Foods to buy more oranges for our kids*.
 
 ![bad_dog](/img/img6.png)
 
-If you got so far into the article, then you are true bad dog, congrats! As for now you have an idea of what is variables, lists, loops and If-else statements. You can have a deserved rest for a while, cause that was a lot to process for a bloody beginner.
+If you got so far into the article, then you are true bad dog, congrats! As for now you have an idea of what is variables, lists, loops and If-else statements. We will revise them in upcoming articles in this beginner's guide series, but for now take rest for a while, cause that was a lot to process for a bloody beginner.
 
 ### Step 3: Learn to Code in IDE
 
-Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's explore the Integrated Developing Environment or **IDE** for short. 
+Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's explore the Integrated Developing Environment or **IDE** for short.
 
-IDE is simply a text editor for creating files of code, which often reffered as **scripts**. Running scripts through a Terminal allows you to execute multiple lines of code at once. We are going to use **VS Code** simply because most of the relevant tutorials that you will be watching on YouTube when keep lerning programming is going to use it as well.
+IDE is simply a text editor for creating files of code, which often reffered as **scripts**. Running scripts through a Terminal allows you to execute multiple lines of code at once. We are going to use **VS Code** because eventually you will be watching YouTube to keep learning programming, and most of the time it will be VS code.
 
 Follow the link to download and install the [VS Code](https://code.visualstudio.com/). There is one gangsta move to open VS Code using Linux Terminal. Try this command if running on WSL.
 
@@ -224,7 +224,7 @@ It creates a directory named **orange_project** in your WSL home directory. Proj
 
 ![bad_dog](/img/img7.png)
 
-Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on the icons to create the file or the directory. Don't be confused with the word *directory* it's just a fancy way to sa *folder*.
+Creating new files should be as easy, but choose **New File** instead of **Open Folder** at the tool bar. Alternatively you can click on the icons to create the file or the directory. Don't be confused with the word *directory* it's just a fancy way to sa *folder*.
 
 ![bad_dog](/img/img8.png)
 
@@ -245,7 +245,7 @@ else:
 
 After creating/updating each file, remember to press **'Ctrl'** + **'S'** or go to **File** and hit **Save**. Otherwise VS Code would not be able to find your files in the project. 
 
-Now let's create our second file **script.js**, which is the same programm, but written in JavaScript.
+Now create the second file **script.js** which is the same programm, but written in JavaScript.
 
 ```python
 let oranges = 2;
@@ -263,7 +263,7 @@ if (oranges >= 3) {
 
 ![bad_dog](/img/img10.png)
 
-Again **'Ctrl'** + **'S'** and lets run our very last command sequence into the Terminal.
+Again press **'Ctrl'** + **'S'** and lets run our very last command lines into the Terminal.
 
 ```bash
 pwd
@@ -291,20 +291,20 @@ node script.js
 
 ![bad_dog](/img/img11.png)
 
-Congrats, bad dog! We've just successfully executed both Python and JavaScript files.
+There you go! Your first executed Python and JavaScript files.
 
 ## Conclusion
 
-In this article we've accessed the console in the browser, explored the Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming so congrats you with such a huge milestone.
+In this article we've accessed the console in the browser, explored the Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming. Congrats you with such a huge milestone!
 
-Keep in mind that this guide is meant for a complete beginners to boost their confidence with some solid hands-on experience, but the basics and theory are essential to back-up this practice. So follow the FAQ section below to see the recommendations.
+Keep in mind that this guide is meant for a complete beginners to boost their confidence with some heavy lifting environment set-up and hands-on experience, but the basics and theory are essential to back-up this practice. So follow the FAQ section below to see the recommendations.
 
 
 > The words printed here is experience. You must go through the concepts.
 > -- <cite>Bad Dog</cite>
 
 
-Follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Start Coding: From Zero to Hero**.
+Follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Learn Coding**.
 
 ## FAQ from Coding Beginners
 
@@ -314,19 +314,19 @@ It depends on what is your final goal. If you trying to build a website then Jav
 
 ### Can I pivot from Data Science to Software Engineering?
 
-Indeed many people may find that Data Science methodologies are too theorethical, thus no guarantees that your research is going to represent the actual Distribution. Software Engineering is more about building actual stuff, whereas Data Science may just pointing at the significance of some data. So Yes, Software Engineeing is cool, and no shame in switching to that.
+Indeed many people may find Data Science way too theorethical, thus no guarantees - that you will get to the general distribution. Afterall Software Engineering is about building actual stuff you can use, whereas Data Science more about pointing at the significance of some data. So Yes, the Software Engineeing is cool, and no shame in switching to that.
 
 ### What Should I learn next to be a good coder?
 
-You can start with YouTube **CS50** courses. It will back you up with solid fundamentals to better understand the content you've red so far. It's also essential for growth in Tech companies, so just start with that and keep wondering what's next. Another source I'd recommend is the [interviews.school](https://interviews.school). This website being developed by Google employee guiding users to prepare for the interview in big Tech companies such as Google.
+You can start with YouTube [CS50](https://www.youtube.com/watch?v=IDDmrzzB14M&list=PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4) courses. It will back you up with solid fundamentals to better understand the content you've red so far. It's also essential for growth in Tech companies, so just start with that and keep wondering what's next. Another source I'd recommend is the [interviews.school](https://interviews.school). This website has been developed by Google employee guiding users to prepare for the interview in a big Tech companies such as MANG.
 
 ### Should I Read Programming Books?
 
-This is another good resource for a contextual learning. However there is just so much to cover as a beginner. I'd rather focus on IT basics like HTTP, Network Protocols, Binary Code Processing, Data Types and Data Structures, Databases and so much more, so Google are better at this point.
+This is another good resource for a contextual learning. However there is just so much to cover as a beginner. I'd rather focus on IT basics like HTTP, Network Protocols, Binary Code Processing, Data Types and Data Structures, Databases Git and so much more, so Google Search is better at this point.
 
-### Should I use LLM's like GPT and Gemini?
+### Should I use LLM like GPT and Gemini?
 
-Sure yes! The only scenario that is not suitable for LLM's are the homeworks that on the edge of the deadline, cause of the temptation to copy paste the response without further analysis, so be curiouse and critical to every response LLM would provide you.
+Sure yes! The only scenario I'd not recommend LLM is at the very end of deadline for your homework, cause of the temptation to copy paste the response without even reading it. Always be curiouse and critical to every response LLM would provide you.
 
 Yours,  
 Bad Dog
