@@ -159,7 +159,7 @@ The first variable contains the number **5** representing the amount of oranges,
 
 #### For loops
 
-Now imaging that we have to supply our kids with oranges programmatically. Let's do that using the **for loop**, which is the sequance of instructions written in short. Make sure to follow the formating by entering the **tab** or **four spaces** on the lines 2 and 3 to align the instructions to the **for i in kids:** statement as shown below. Also press double enter at the end of the input, it's just how it works in Python Shell.
+Now imaging that we have to supply our kids with oranges programmatically. Let's do that using the **for loop** which is the sequence of instructions written in short. Make sure to follow the indentation format by creating space using **tab** or **four spaces** on each line that follows **for i in kids:**. Every command line being indented will be repeated as the sequence for each kid in the list.
 
 ```python
 for i in kids:
@@ -167,7 +167,7 @@ for i in kids:
     print(f'{i} received an orange, {oranges} oranges remaining')
 ```
 
-This code instructs to subtract 1 piece of orange and print the statment of remaining oranges after a certain kid received a fruit. The expected result is shown below.
+This code subtracts the amount of oranges by 1 and prints the name and amount of oranges remained. Now execute the following loop in the Python Shell by **double** clicking the Enter button. The expected result is shown below.
 
 ![bad_dog](/img/img5.png)
 
@@ -182,7 +182,7 @@ for i in kids:
         print(f'{i} received an orange, {oranges} oranges remaining')
 ```
 
-Which is basically a biased decision to give oranges to those kids who's name contains big letter **K**. This is exactly how it's programmed at the line 2. But what about more responsible solution?
+This code scans every name in the list, and if it contains big letter 'K' then kid gets an orange. This is due to if statement at the line 2 which leaves Aki without an orange. But what about more responsible solution?
 
 ```python
 if oranges == 3:
@@ -202,31 +202,29 @@ If you got so far into the article, then you are true bad dog, congrats! As for 
 
 ### Step 3: Learn to Code in IDE
 
-Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's explore the Integrated Developing Environment or **IDE** for short which enables us to execute the numerous files of code. 
+Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's explore the Integrated Developing Environment or **IDE** for short. 
 
-IDE is a text editor that allows you to create files of code, which often reffered as **scripts**. Running scripts through Terminal allows you to execute multiple lines of code at once. The IDE that we are going to use is the **VS Code**, simply because most of the relevant tutorials that you are going to watch on YouTube going to use it as well.
+IDE is simply a text editor for creating files of code, which often reffered as **scripts**. Running scripts through a Terminal allows you to execute multiple lines of code at once. We are going to use **VS Code** simply because most of the relevant tutorials that you will be watching on YouTube when keep lerning programming is going to use it as well.
 
-#### VS Code
-
-So to proceed further you should google the page where you can download [VS Code](https://code.visualstudio.com/). Intsall the **VS Code**, and open the application. After the installation if running on WSL Linux environment, then you can open VS Code using this prompt in your Terminal.
+Follow the link to download and install the [VS Code](https://code.visualstudio.com/). There is one gangsta move to open VS Code using Linux Terminal. Try this command if running on WSL.
 
 ```bash
 code .
 ```
 
-#### Projects and Directories
+#### Directory
 
-Open your Terminal and create the directory for your project with this command.
+Open your Terminal and make the directory for our orange project with this command.
 
 ```bash
 mkdir orange_project
 ```
 
-It creates a folder named **orange_project** in your WSL home directory. Projects are managed in directories accessible from your IDE. Open **VS Code**, look at the tool bar and choose **File** -> **Open Folder** it will drop-down the menu like on the picture shown below where you can choose any available directory. Let's choose **orange_project**.
+It creates a directory named **orange_project** in your WSL home directory. Projects are managed in directories accessible from your IDE. Open VS Code, look at the tool bar and choose **File** -> **Open Folder** it will drop-down the menu like on the picture shown below where you can choose any available directory. Let's choose **orange_project**.
 
 ![bad_dog](/img/img7.png)
 
-Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on those icons to create the file or the directory, remember the word *directory* is just a fancy word for a *folder*.
+Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on the icons to create the file or the directory. Don't be confused with the word *directory* it's just a fancy way to sa *folder*.
 
 ![bad_dog](/img/img8.png)
 
@@ -265,7 +263,7 @@ if (oranges >= 3) {
 
 ![bad_dog](/img/img10.png)
 
-Now lets run our very last command sequence into the Terminal.
+Again **'Ctrl'** + **'S'** and lets run our very last command sequence into the Terminal.
 
 ```bash
 pwd
@@ -297,7 +295,7 @@ Congrats, bad dog! We've just successfully executed both Python and JavaScript f
 
 ## Conclusion
 
-In this article we've accessed the console in the browser, installed the Linux Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming so congrats you with such a huge milestone.
+In this article we've accessed the console in the browser, explored the Terminal and even created bilingual project using VS Code. It's way too much for the first experience with programming so congrats you with such a huge milestone.
 
 Keep in mind that this guide is meant for a complete beginners to boost their confidence with some solid hands-on experience, but the basics and theory are essential to back-up this practice. So follow the FAQ section below to see the recommendations.
 
