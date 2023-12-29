@@ -1,6 +1,5 @@
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YF25TVCCJC"></script>
-<script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YF25TVCCJC">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
