@@ -24,6 +24,10 @@ useHead({
       `,
     },
   ],
+  htmlAttrs: {
+      lang: 'en',
+      //style: 'font-size: 13px',
+    },
 });
 </script>
 
