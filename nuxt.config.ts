@@ -1,19 +1,12 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    //"nuxt-content-assets",
-    "@nuxtjs/google-analytics",
+ //   "@nuxtjs/google-analytics",
     "@nuxtjs/tailwindcss", 
-    "@nuxt/content"
+    "@nuxt/content",
   ],
-  content: {
-  },
-  googleAnalytics: {
-    id: 'G-VSDTCMMC1P'
-  },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }
-  },
-  });
+  // googleAnalytics: {
+  //   id: 'G-VSDTCMMC1P', // Replace with your Google Analytics tracking ID
+  // },
+  content: {},
+});

@@ -1,3 +1,21 @@
+<script setup lang="ts">
+useHead({
+  script: [
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-VSDTCMMC1P',
+      async: true,
+    },
+    {
+      innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VSDTCMMC1P');
+      `,
+    },
+  ],
+});
+</script>
 
 <template>
   <div class="max-w-3xl px-4 mx-auto">
