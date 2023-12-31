@@ -6,7 +6,7 @@ tags: ["personal"]
 thumbnail: '/img/hello_world.png'
 slug: "hello-world"
 ---
-  
+
 # **Greetings to all curious minds!**
 
 I'm Akzhan, your bad dog from the vibrant city of Almaty, Kazakhstan. By day, I learn just enough of new stuff to navigate the ever-shifting landscape of e-commerce trends as a Data Analyst. I do love coding, stats, and business – a potent trifecta for understanding the world through numbers and algorithms, or even scaling any business like online commerce for instance.

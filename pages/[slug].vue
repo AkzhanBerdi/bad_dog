@@ -1,10 +1,7 @@
 <script setup lang="ts" >
-const { slug } = useRoute().params;
-// function formatDate(date: string){
-//    const dt =  new Date(date)
 
-//    return `${dt.getFullYear()}-${dt.getMonth()}-${dt.getDate()}`
-// }
+const { slug } = useRoute().params;
+
 function formatDate(date: string) {
     const dt = new Date(date);
     const options = { month: 'short', day: 'numeric', year: 'numeric' };

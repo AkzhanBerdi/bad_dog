@@ -24,6 +24,9 @@ useHead({
       `,
     },
   ],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: '/public/favicon.ico'},
+  ],
   htmlAttrs: {
       lang: 'en',
       //style: 'font-size: 13px',
