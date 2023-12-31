@@ -1,4 +1,14 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Bad Dog Data',
+  ogTitle: 'Bad Dog Data',
+  description: 'Self-Taught Data Science / Machine Learning Journal',
+  ogDescription: 'Self-Taught Data Science / Machine Learning Journal',
+  ogImage: 'https://baddogdata.netlify.app/img/hello_world.png',
+  ogType: 'website',
+  ogUrl: 'https://baddogdata.netlify.app/',
+});
+
 useHead({
   script: [
     {

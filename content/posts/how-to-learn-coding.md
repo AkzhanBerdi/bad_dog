@@ -24,7 +24,7 @@ In this article we will focus on how to start coding immediately, without too mu
 
 As you read this article through a webpage, you already have the tools at your fingertips. Press **Ctrl** + **Shift** + **J** if running on Windows or **Command** + **Option** + **J** if running on MacOS. It will open the console which appears to be on the right side of the browser in my case. It might appear on the bottom as well, but let's just focus on JavaScript.
 
-![bad_dog](/img/img1.png)
+![Console opened in the browser](/img/img1.png)
 
 JavaScript is an excellent language to start experimenting with, especially if you're attracted to dynamic interfaces. I encourage you to type all of the commands manually to have grasp feeling of what it's like to be a programmer.
 
@@ -48,7 +48,7 @@ Math.sqrt(25) // The method to perform square root
 clear() // function that clears the console for convinience, optional
 ```
 
-![bad_dog](/img/img2.png)
+![Arithmetic commands executed in the console](/img/img2.png)
 
 Well Done my bad dog! Did you feel akward with the Math.sqrt() method ? You will learn about methods along the way, and don't worry if you missreading a couple of words or two. When learning a programming it's inevitable to come accross the concepts that are not yet familliar to you. Now let's get a little bit dirty and nail one of those concepts.
 
@@ -67,7 +67,7 @@ const result = Math.sqrt(number);
 console.log(`The square root of ${number} is ${result}`);
 ```
 
-![bad_dog](/img/img3.png)
+![Defining variable number and printing them using console.log](/img/img3.png)
 
 If you are windy like me, there is a big chances your are confused the backtick sign *`*   with the quote sign  *'*   using which would not return the expected result. Eventually the learning curve will leave you frustruated with the console and error messages, but as aspiring progrmmers we should embrace it as the part of our job, and keep learning.
 
@@ -103,7 +103,7 @@ wsl --install -d Debian
 
 Create username and password after the installation. You might need to restart your machine and check the start menu to see if there is a Linux distribution available. Open your Debian or Ubuntu or whatever distro you've installed, and that's your Terminal.
 
-![bad_dog](/img/img4.png)
+![Openning Linux Terminal from the start menu](/img/img4.png)
 
 After installing our Linux distro, let's do something cool, try this command for instance:
 
@@ -169,7 +169,7 @@ for i in kids:
 
 This code subtracts the amount of oranges by 1 and prints the name and amount of oranges remained. Now execute the following loop in the Python Shell by **double** clicking the Enter button. The expected result is shown below.
 
-![bad_dog](/img/img5.png)
+![The for loop used in Python Shell](/img/img5.png)
 
 #### If else
 
@@ -196,7 +196,7 @@ else:
 In this solution we initially check if the stock of oranges is equal to the exact number of our kids which is 3, if so we proceed as before, if not then we follow **else** statement saying: 
 > *We will go to the Whole Foods to buy more oranges for our kids*.
 
-![bad_dog](/img/img6.png)
+![If Else statement using Python Shell](/img/img6.png)
 
 If you got so far into the article, then you are true bad dog, congrats! As for now you have an idea of what is variables, lists, loops and If-else statements. You can have a deserved rest for a while, cause that was a lot to process for a bloody beginner.
 
@@ -222,11 +222,11 @@ mkdir orange_project
 
 It creates a directory named **orange_project** in your WSL home directory. Projects are managed in directories accessible from your IDE. Open VS Code, look at the tool bar and choose **File** -> **Open Folder** it will drop-down the menu like on the picture shown below where you can choose any available directory. Let's choose **orange_project**.
 
-![bad_dog](/img/img7.png)
+![Choosing folder in the VS Code](/img/img7.png)
 
 Creating new files should be as easy, but choose **New File** instead of **Open Folder** in the tool bar. Alternatively you can click on the icons to create the file or the directory. Don't be confused with the word *directory* it's just a fancy way to sa *folder*.
 
-![bad_dog](/img/img8.png)
+![Use this icons to create new files or folders](/img/img8.png)
 
 Let's create two files in our orange project, The first one named **script.py**, and it will contain the Python programm for fair orange distribution system that we've developed in the Step 2.
 
@@ -241,7 +241,7 @@ else:
     print('We are going to buy more oranges for our kids')
 ```
 
-![bad_dog](/img/img9.png)
+![The Python file written in VS Code](/img/img9.png)
 
 After creating/updating each file, remember to press **'Ctrl'** + **'S'** or go to **File** and hit **Save**. Otherwise VS Code would not be able to find your files in the project. 
 
@@ -261,7 +261,7 @@ if (oranges >= 3) {
 }
 ```
 
-![bad_dog](/img/img10.png)
+![The JavaScript file written in VS Code](/img/img10.png)
 
 Again **'Ctrl'** + **'S'** and lets run our very last command sequence into the Terminal.
 
@@ -289,7 +289,7 @@ python3 script.py
 node script.js
 ```
 
-![bad_dog](/img/img11.png)
+![Executing Python and JavaScript files in the Terminal](/img/img11.png)
 
 Congrats, bad dog! We've just successfully executed both Python and JavaScript files.
 
