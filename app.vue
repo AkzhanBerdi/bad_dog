@@ -46,14 +46,14 @@ useHead({
         </div>
 
         <div class="align-right">
-          <Btn>
+          <!-- <Btn>
             <a href="https://baddogdata.com/hello-world" target="_blank">About me</a>
+          </Btn> -->
+          <Btn>
+            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn Me</a>
           </Btn>
           <Btn>
-            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn</a>
-          </Btn>
-          <Btn>
-            <a href="https://t.me/akzhan_berdi" target="_blank">Telegram</a>
+            <a href="https://t.me/akzhan_berdi" target="_blank">Telegram Me</a>
           </Btn>
         </div>
 
