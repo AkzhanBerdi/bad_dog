@@ -4,9 +4,9 @@ useSeoMeta({
   ogTitle: 'Bad Dog Data',
   description: 'Self-Taught Data Science / Machine Learning Journal',
   ogDescription: 'Self-Taught Data Science / Machine Learning Journal',
-  ogImage: 'https://baddogdata.netlify.app/img/hello_world.png',
+  ogImage: 'https://baddogdata.com/img/hello_world.png',
   ogType: 'website',
-  ogUrl: 'https://baddogdata.netlify.app/',
+  ogUrl: 'https://baddogdata.com/',
 });
 
 useHead({
@@ -44,10 +44,13 @@ useHead({
 
         <div class="align-right">
           <Btn>
-            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn Me</a>
+            <a href="https://baddogdata.com/hello-world" target="_blank">About me</a>
           </Btn>
           <Btn>
-            <a href="https://t.me/akzhan_berdi" target="_blank">Telegram Me</a>
+            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn</a>
+          </Btn>
+          <Btn>
+            <a href="https://t.me/akzhan_berdi" target="_blank">Telegram</a>
           </Btn>
         </div>
 
