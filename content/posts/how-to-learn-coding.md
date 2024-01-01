@@ -14,7 +14,7 @@ slug: "how-to-learn-coding"
 
 # Start to Code in These 3 Steps
 
-You probably landed this page because you want to learn to code, which is great! Most people still didn't figure out what they want to do in their life, but you already did the hardest part. The coding is truely powerful skill. It enables you to write instructions to the machine which in turn builds stuff like websites, mobile applications, rocket missiles launching systems and many more.
+You probably landed this page because you want to learn to code, which is great! Most people still didn't figure out what they want to do in their life, but you already did the hardest part. The coding is truly powerful skill. It enables you to write instructions to the machine which in turn builds stuff like websites, mobile applications, rocket missiles launching systems and many more.
 
 As Data Scientists we use Coding skills to access, process and manage raw data, build graphs to visually comprehend the nature of dataset we ended-up working with, and eventually develop a statistical and machine learning models to predict the likelihood of certain events depending on the given task.
 
@@ -50,7 +50,7 @@ clear() // function that clears the console for convinience, optional
 
 ![Arithmetic commands executed in the console](/img/img2.png)
 
-Well Done! Did you feel akward with the Math.sqrt() method ? You will learn about methods along the way, and don't worry if you missreading a couple of words or two. When learning a programming it's inevitable to come accross the concepts that are not yet familliar to you. Now let's get a little bit dirty and nail one of those concepts.
+Well Done! Did you feel akward with the Math.sqrt() method ? You will learn about methods along the way, and don't worry if you missreading a couple of words or two. When learning a programming it's inevitable to come across the concepts that are not yet familiar to you. Now let's get a little bit dirty and nail one of those concepts.
 
 #### Variables
 
@@ -111,11 +111,11 @@ After installing our Linux distro, let's do something cool, try this command for
 sudo apt-get install && sudo apt-get upgrade
 ```
 
-It should update your Linux system. Isn't cool ? You'd never miss any update with such a bad ass interactive interface. I litterally prompt this command every signle day, and it still blowing my mind.
+It should update your Linux system. Isn't cool ? You'd never miss any update with such a bad ass interactive interface. I literally prompt this command every signle day, and it still blowing my mind.
 
 #### Terminal and Python Shell
 
-Now regardless of your Operating Sytem, you can run **Python** directly in your Terminal using the following command.
+Now regardless of your Operating System, you can run **Python** directly in your Terminal using the following command.
 
 ```python
 python3
@@ -204,7 +204,7 @@ If you got so far into the article, then you are true bad dog, congrats! As for 
 
 Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's explore the Integrated Developing Environment or **IDE** for short.
 
-IDE is simply a text editor for creating files of code, which often reffered as **scripts**. Running scripts through a Terminal allows you to execute multiple lines of code at once. We are going to use **VS Code** because eventually you will be watching YouTube to keep learning programming, and most of the time it will be VS code.
+IDE is simply a text editor for creating files of code, which often referred as **scripts**. Running scripts through a Terminal allows you to execute multiple lines of code at once. We are going to use **VS Code** because eventually you will be watching YouTube to keep learning programming, and most of the time it will be VS code.
 
 Follow the link to download and install the [VS Code](https://code.visualstudio.com/). There is one gangsta move to open VS Code using Linux Terminal. Try this command if running on WSL.
 
@@ -322,7 +322,7 @@ You can start with YouTube [CS50](https://www.youtube.com/watch?v=IDDmrzzB14M&li
 
 ### Should I Read Programming Books?
 
-This is another good resource for a contextual learning. However there is just so much to cover as a beginner. I'd rather focus on IT basics like HTTP, Network Protocols, Binary Code Processing, Data Types and Data Structures, Databases Git and so much more, so Google Search is better at this point.
+This is another good resource for a contextual learning. However there is just so much to cover as a beginner. I'd rather focus on IT basics like HTTP, Network Protocols, Binary Code Processing, Data Types and Data Structures, Databases, Git and so much more, so Google Search is better at this point.
 
 ### Should I use LLM like GPT and Gemini?
 
