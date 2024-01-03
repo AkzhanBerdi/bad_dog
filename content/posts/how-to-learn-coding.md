@@ -314,7 +314,7 @@ It depends on what is your final goal. If you trying to build a website then Jav
 
 ### Can I pivot from Data Science to Software Engineering?
 
-Indeed many people may find Data Science way too theorethical, thus no guarantees - that you will get to the general distribution. Afterall Software Engineering is about building actual stuff you can use, whereas Data Science more about pointing at the significance of some data. So Yes, the Software Engineeing is cool, and no shame in switching to that.
+Indeed many people may find Data Science way too theorethical, thus no guarantees - that you will get to the actual *population*. Afterall Software Engineering is about building actual stuff you can use, whereas Data Science more about pointing at the significance of some data. So Yes, the Software Engineeing is cool, and no shame in switching to that.
 
 ### What Should I learn next to be a good coder?
 
