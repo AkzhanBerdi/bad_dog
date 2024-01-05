@@ -5,7 +5,7 @@ draft: false
 tags: ["personal"]
 thumbnail: '/img/hello_world.png'
 slug: "hello-world"
-description: "Welcome to Bad Dog Data blog! Here we learn about programming, statistical data analysis and machine learning"
+description: "Welcome to Bad Dog Data blog! Here we will learn about programming, statistical data analysis and machine learning"
 ---
 
 # Greetings to all curious minds!
