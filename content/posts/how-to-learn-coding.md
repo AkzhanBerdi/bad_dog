@@ -11,7 +11,7 @@ thumbnail: '/img/how_to_learn_coding.png'
 
 slug: "how-to-learn-coding"
 
-description: "Start coding with these 3 steps! Learn to code in a browser, explore the terminal, and dive into an IDE like VS Code. Follow hands-on exercises and build a bilingual project. This guide covers arithmetics, variables, lists, loops, and if-else statements. Execute your first scripts and gain confidence in coding"
+description: "Start coding with these 3 steps! Learn to code in a browser, explore the terminal, and dive into an IDE like VS Code. Follow hands-on exercises and build a bilingual project"
 ---
 
 # Start to Code in These 3 Steps
