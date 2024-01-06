@@ -89,7 +89,7 @@ wsl --install
 
 Take a a little break, since the installation might take a few minutes.
 
-If running on Windows 11, the Ubuntu distro should be installed by default. If so create a Linux username and password. That's it.
+If running on Windows 11, the Ubuntu distro should be installed by default. If so create a Linux username and password. I would suggest to set easy password like single space.
 
 For Windows 10 users proceed with the Distro installation as following.
 
@@ -107,17 +107,17 @@ Create username and password after the installation. You might need to restart y
 
 ![Linux Terminal installed and opened via Start menu](/img/img4.png)
 
-After installing our Linux distro, let's do something cool, try this command for instance:
+Inside the Linux Terminal you are able to run _bash_ commands, try this for instance:
 
 ```bash
 sudo apt-get install && sudo apt-get upgrade
 ```
 
-It should update your Linux system. Isn't cool ? You'd never miss any update with such a bad ass interactive interface. I literally prompt this command every signle day, and it still blowing my mind.
+It should prompt for your password and update your Linux system. Isn't it cool ? You'd never miss any update with such a bad ass interactive interface. I literally prompt this command every signle day, and it still blowing my mind.
 
 #### Terminal and Python Shell
 
-Now regardless of your Operating System, you can run **Python** directly in your Terminal using the following command.
+Now regardless of your Operating System, you can run **Python** directly in your Terminal using this bash command.
 
 ```python
 python3
@@ -129,7 +129,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-As we are entered In the state of tripple arrows **>>>**, we are in so called **Python Shell** which is a powerful way to interact with your machine. We can perform the same arithmetic commands as we did using JavaScript.
+As we are entered In the state of tripple arrows **>>>**, we are in so called **Python Shell** which is a powerful Python way to interact with your machine. We can perform the arithmetic commands as we did using JavaScript.
 
 ```python
 1 + 1
@@ -206,9 +206,9 @@ If you got so far into the article, then you are true bad dog, congrats! As for 
 
 Just now we've been using Python Shell to directly communicate with the machine by one line at the time. In fact it's not the most effective way to write and execute the code. Now let's explore the Integrated Developing Environment or **IDE** for short.
 
-IDE is simply a text editor for creating files of code, which often referred as **scripts**. Running scripts through a Terminal allows you to execute multiple lines of code at once. We are going to use **VS Code** because eventually you will be watching YouTube to keep learning programming, and most of the time it will be VS code.
+IDE is simply a text editor for creating files of code, which often referred as **scripts**. Running scripts through a Terminal allows you to execute multiple lines of code at once. We are going to use **VS Code** because eventually you will be watching YouTube to keep learning programming, and most of the time it will be using VS code.
 
-Follow the link to download and install the [VS Code](https://code.visualstudio.com/). There is one gangsta move to open VS Code using Linux Terminal. Try this command if running on WSL.
+Follow the link to download and install the [VS Code](https://code.visualstudio.com/). There is one gangsta move to open IDE in Linux Terminal. Try this bash command if running on WSL.
 
 ```bash
 code .
@@ -216,7 +216,7 @@ code .
 
 #### Directory
 
-Open your Terminal and make the directory for our orange project with this command.
+Open your Terminal and make directory for our project using bash.
 
 ```bash
 mkdir orange_project
@@ -226,7 +226,7 @@ It creates a directory named **orange_project** in your WSL home directory. Proj
 
 ![VS Code drop-down menu for choosing a directory](/img/img7.png)
 
-Creating new files should be as easy, but choose **New File** instead of **Open Folder** at the tool bar. Alternatively you can click on the icons to create the file or the directory. Don't be confused with the word *directory* it's just a fancy way to sa *folder*.
+Creating new files should be as easy, but choose **New File** instead of **Open Folder** at the tool bar. Alternatively you can click on the icons to create the file or the directory. Don't be confused with the word *directory* as it's just a fancy way to say *folder*.
 
 ![VS Code icons to create file or folder](/img/img8.png)
 
@@ -265,35 +265,34 @@ if (oranges >= 3) {
 
 ![JavaScript script created in VS Code](/img/img10.png)
 
-Again press **'Ctrl'** + **'S'** and lets run our very last command lines into the Terminal.
+Again press **'Ctrl'** + **'S'** and lets run our very last bash commands into the Terminal. 
 
 ```bash
 pwd
 ```
+**PWD** - Prints Working Directory starting from the root (/)  
 
 ```bash
 ls
 ```
+**LS** - Lists the files in your current directory  
 
 ```bash
 cd orange_project
 ```
-
-```bash
-ls
-```
-
+**CD** - Changes directory. When it comes to working with files you actually don't need to print it's entire name. Just specify the first couple of letters like _ora_ and press tab. The bash should type the rest of the name for you.
+  
 ```bash
 python3 script.py
 ```
-
+**PYTHON3** - Executes Python files
 ```bash
 node script.js
 ```
-
+**NODE** - Executes JavaScript files  
 ![Python and JavaScript files executed using Terminal](/img/img11.png)
 
-There you go! Your first executed Python and JavaScript files.
+And that's it! Your very first executed Python and JavaScript files.
 
 ## Conclusion
 
@@ -306,7 +305,7 @@ Keep in mind that this guide is meant for a complete beginners to boost their co
 > -- <cite>Bad Dog</cite>
 
 
-Follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Learn Coding**.
+Follow me on LinkedIn to stay up to date for upcoming articles in this series of **How to Learn Coding**. Also feel free to reach out with any kind of feedback. I'd appreciate that.
 
 ## FAQ from Coding Beginners
 
