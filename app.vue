@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 useSeoMeta({
   title: 'Bad Dog Data',
   ogTitle: 'Bad Dog Data',

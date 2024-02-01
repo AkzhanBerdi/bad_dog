@@ -307,5 +307,4 @@ $$
 That's enough for an introduction into Statistical Data Analysis, I hope you enjoyed.
 
 Yours,  
-
 Akzhan
