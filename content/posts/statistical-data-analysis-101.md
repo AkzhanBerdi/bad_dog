@@ -9,7 +9,7 @@ tags: ["stats"]
 
 thumbnail: '/img/statistical_data_analysis_101.png'
 
-slug: "statistical_data_analysis_101"
+slug: "statistical-data-analysis-101"
 
 description: "Learn Statistical Data Analysis for Bloody Beginners and dive into basics of Measures of Central Tendency, Variability and Variance. Also Learn how neural networks use back propagation to learn from experience."
 
@@ -66,7 +66,7 @@ print(mean(data))
 print(median(data))
 ```
 
-![Normal Distribution with mean and median](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img12.png)
+![Normal Distribution with mean and median](/img/img12.png)
 
 Looking at the graph we can see the mean and median both at the center, as expected. The console line calculated \$50.90 and \$50.61 as the mean and median respectivly.
 
@@ -106,7 +106,7 @@ cat("Mean:", mean(data), "\n")
 cat("Median:", median(data), "\n")
 ```
 
-![Not Normal Distribution with mean and median](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img13.png)
+![Not Normal Distribution with mean and median](/img/img13.png)
 
 Note how the median and mean are further apart from each other, to be precise they are \$52.78 and \$56.90 respectively. That's due to the fact that we've defined some spendings to be more than \$100. And that's why we use median more often, cause it's resistant to the outliers and always point to the middle value unlike the mean. 
 
@@ -127,7 +127,7 @@ hist(data, main = "Median",
 abline(v = my_median, col = "orange", lwd =2)
 ```
 
-![Displaying Median using quantiles function](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img14.png)
+![Displaying Median using quantiles function](/img/img14.png)
 
 In this way we divide the dataset into two quantiles, everything above the median and everything below it. The dataset maybe sliced in any given number of quantiles. Let's cut it down to four quartiles.
 
@@ -144,7 +144,7 @@ hist(data, main = "Quartiles",
 abline(v = quartile, col = "orange", lwd =2)
 ```
 
-![Displaying quartiles using quntile function](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img15.png)
+![Displaying quartiles using quntile function](/img/img15.png)
 
 Now we have four equal quantiles in terms of total amount of values, but notice the difference in range. We can keep slicing and dicing the distribution to quintiles and deciles or even percentiles if you need to. But we will move on to the next concept.
 
@@ -222,7 +222,7 @@ ggplot(df, aes(x = Group, y = Values, fill = Group)) +
   scale_fill_manual(values = c("Jusan" = "darkorange", "Halyk" = "darkgreen", "Kaspi" = "#bd1206"))
 ```
 
-![The boxplot displaying payment providers](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img16.png)
+![The boxplot displaying payment providers](/img/img16.png)
 
 Looking at this graph we can see three different plots representing **'Halyk'**, **'Jusan'**, and **'Kaspi'** in green, orange and red respectively. The horizontal line in the middle of sandglass shape is the median, the sandglass shape itself is the IQR, where the bottom part is the second quartile, the top part is the third quartile, everything above it is the fourth quartile, and everything below IQR is the first quartile. Also we can see the outliers represented as single point isolated from the rest of the dataset.
 
@@ -242,7 +242,7 @@ $$
 
 However, there is a technical problem with this formula, it only would work if our distribution doesn't have the negative values like so.    
 
-![Absolute Deviation of a certain value](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img17.png)
+![Absolute Deviation of a certain value](/img/img17.png)
 
 Otherwise, just like with the weather example where the negative and positive values cancels eachother, it would be rather meaningless to have 0 deviation at actual 10 &deg;C range, so for this reason the formula is modified to use modules like so 
 
@@ -272,7 +272,7 @@ How does machine distinguish between cat and dog? It learns through an algorythm
 
 At the very core of it's engine, neural networks use function's derivative to adjust itself in case of error. But what happens if the the algorythm use absolute deviation?
 
-![Absolute Value Function](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img18.png)
+![Absolute Value Function](/img/img18.png)
 
 The Absolute Value Function gets to a corner point where the Lipschitz condition is violated, and no derivative available to propagate the error back to the machine, hence neural network algorythm breaks.
 
@@ -294,7 +294,7 @@ $$
 
 It may feel a bit off to use square values, but so what? We don't care about actual values if it allows us the machine to learn how to distinguish between cat and dog, car and pedastrian, cancer and healthy cells and so on. 
 
-![Tangency Line on a function](\\wsl.localhost\Debian\home\bad_dog\nuxt-content\public\img\img19.png)
+![Tangency Line on a function](/img/img19.png)
 
 ### Standard Deviation
 
@@ -306,6 +306,6 @@ $$
 
 That's enough for an introduction into Statistical Data Analysis, I hope you enjoyed.
 
-Yours,
+Yours,  
 
 Akzhan
