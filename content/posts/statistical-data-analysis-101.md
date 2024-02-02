@@ -17,7 +17,7 @@ description: "Learn Statistical Data Analysis for Bloody Beginners and dive into
 
 # Statistical Data Analysis 101. Part I
 
-In this article we will take a look at the basic concepts of Statistical Analysis. We will be using the R programming language to visualize essential details, so [download]([RStudio Desktop - Posit](https://posit.co/download/rstudio-desktop/)) and install both R and R studio. If you are not comfortable programming at all, then check out my previous post about [how to start coding](https://baddogdata.com/how-to-learn-coding) and build the basics of using Terminal and VS Code. Even though it's not covering the R, it still a good starting point.
+In this article we will take a look at the basic concepts of Statistical Analysis. We will be using the R programming language to visualize essential details, so download [RStudio Desktop - Posit](https://posit.co/download/rstudio-desktop/) and install both R and R studio. If you are not comfortable programming at all, then check out my previous post about [how to start coding](https://baddogdata.com/how-to-learn-coding) and build the basics of using Terminal and VS Code. Even though it's not covering the R, it still a good starting point.
 
 Now let's kick-off with the following command to generate random dataset. After printing out the entire block of the code you'd need to select it and press *Ctrl + Enter*. 
 
@@ -226,7 +226,7 @@ ggplot(df, aes(x = Group, y = Values, fill = Group)) +
 
 Looking at this graph we can see three different plots representing **'Halyk'**, **'Jusan'**, and **'Kaspi'** in green, orange and red respectively. The horizontal line in the middle of sandglass shape is the median, the sandglass shape itself is the IQR, where the bottom part is the second quartile, the top part is the third quartile, everything above it is the fourth quartile, and everything below IQR is the first quartile. Also we can see the outliers represented as single point isolated from the rest of the dataset.
 
-If made it this far, then congrats fellow, now you can perform basic descriptive analysis using measures of Central Tendency and Variablity. The next section would get a little bit tricky, but pretty much exciting for nerds like me.
+If you made it this far, then congrats fellow! You've learn how to perform decent descriptive analysis using measures of Central Tendency and Variablity. The next section would get a little bit tricky, but pretty much exciting for nerds like me.
 
 ## Variance
 
@@ -278,23 +278,25 @@ The Absolute Value Function gets to a corner point where the Lipschitz condition
 
 ### Mean Squared Error
 
-Finding the derivative requires a tangency line that gives machine a new direction to adjust itself. Therefor the Absolute Deviation formula has been evolved to **Mean Squared Error** which use square instead of module. Thus allows to keep absolute values and function's derivative both at the same time.
+Finding the derivative requires a tangency line that gives machine a new direction to adjust itself. Therefor the Absolute Deviation formula has been evolved to **Mean Squared Error** which use square instead of module. 
 
 $$
 S^2(A) = \frac{\sum_{i=1}^n(x_i - A)^2}{n}
 $$
 
-The optimization task is always cares about MSE to be as minimum as possible. And it gets to it's minimum when Central Tendency is an Arythmetic Mean or $ A = \bar x$ 
+Thus allows to keep absolute values and function's derivative both at the same time, and that optimizes back propagation to work as expected.
+
+![Tangency Line on a function](/img/img19.png) 
 
 ### Sample Variance
+
+The optimization task is always cares about MSE to be as minimum as possible. And it gets to it's minimum when Central Tendency is an Arythmetic Mean or $ A = \bar x$
 
 $$
 \tilde S^2 = \frac{\sum_{i=1}^n(x_i - \bar x)^2}{n}
 $$
 
 It may feel a bit off to use square values, but so what? We don't care about actual values if it allows us the machine to learn how to distinguish between cat and dog, car and pedastrian, cancer and healthy cells and so on. 
-
-![Tangency Line on a function](/img/img19.png)
 
 ### Standard Deviation
 
@@ -307,4 +309,4 @@ $$
 That's enough for an introduction into Statistical Data Analysis, I hope you enjoyed.
 
 Yours,  
-Akzhan
+Bad Dog
