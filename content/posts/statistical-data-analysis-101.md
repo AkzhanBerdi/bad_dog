@@ -112,7 +112,7 @@ Note how the median and mean are further apart from each other, to be precise th
 
 ## Quantiles
 
-A quantile divides the dataset into equal parts. The median is actually a particular case of a quantile which divides the dataet into two quantiles. Let's create a couple of variables using the **'quantile()'** function.
+A quantile divides the dataset into equal parts. The median is actually a particular case of a quantile which divides the dataset into two quantiles. Let's create a couple of variables using the **'quantile()'** function.
 
 ```r
 # Defining median using quantiles function
@@ -150,7 +150,7 @@ Now we have four equal quantiles in terms of total amount of values, but notice 
 
 ## Measure of variability
 
-The Central tendency is not the only measure to look at when analyzing the data. Now imagine you are assigned to a business in three different cities. Let's check the weather to make an assumptions on how to dress and what clothes to pack in your luggage.
+The Central tendency is not the only measure to look at when analyzing the data. Now imagine you've been set for a business trip to three different cities. Let's check the weather to make an assumptions on how to dress and what clothes to pack in your luggage.
 
 | City     | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
 | -------- |:------:|:-------:|:---------:|:--------:|:------:|:--------:|
@@ -184,7 +184,7 @@ $$
 IQR = \tilde{x}_{0.75} - \tilde{x}_{0.25}
 $$
 
-Let's create a new transaction data and group it by the payment providers. Now run the following script to create the dataframe.
+Let's create a new data for order transactions and group it by the payment providers. Now run the following script to create the dataframe.
 
 ```r
 set.seed(123) # Keep this for reproducibility
@@ -224,7 +224,9 @@ ggplot(df, aes(x = Group, y = Values, fill = Group)) +
 
 ![The boxplot displaying payment providers](/img/img16.png)
 
-Looking at this graph we can see three different plots representing **'Halyk'**, **'Jusan'**, and **'Kaspi'** in green, orange and red respectively. The horizontal line in the middle of sandglass shape is the median, the sandglass shape itself is the IQR, where the bottom part is the second quartile, the top part is the third quartile, everything above it is the fourth quartile, and everything below IQR is the first quartile. Also we can see the outliers represented as single point isolated from the rest of the dataset.
+Looking at this graph we can see three different plots representing **'Halyk'**, **'Jusan'**, and **'Kaspi'** in green, orange and red respectively.
+
+Think of the sandglass shape like this: the middle line is the median, the whole sandglass thing is the IQR. The bottom part is the second quartile, the top part is the third quartile, above it is the fourth quartile, and below the IQR is the first quartile. And the outlier? It's a lonely point that separated from the Halyk Group boxplot.
 
 If you made it this far, then congrats fellow! You've learn how to perform decent descriptive analysis using measures of Central Tendency and Variablity. The next section would get a little bit tricky, but pretty much exciting for nerds like me.
 
@@ -234,17 +236,17 @@ Sometimes we have to understand how far the values in the dataset from the mean 
 
 ### Absolute Deviation
 
-The absolute deviation is the sum of differences between the mean and each and every given value of the dataset divided by total observations. The math is pretty much straightforward.
+The absolute deviation is the sum of differences between the average and each and every given value of the dataset divided by total observations. The math is pretty much straightforward.
 
 $$
 D = \frac{\sum_{i=1}^n(x_i - A)}{n}
 $$
 
-However, there is a technical problem with this formula, it only would work if our distribution doesn't have the negative values like so.    
+However, there is a technical problem with this formula, it would only work if our distribution doesn't have the negative values like so.    
 
 ![Absolute Deviation of a certain value](/img/img17.png)
 
-Otherwise, just like with the weather example where the negative and positive values cancels eachother, it would be rather meaningless to have 0 deviation at actual 10 &deg;C range, so for this reason the formula is modified to use modules like so 
+Otherwise, just like with the weather example where the negative and positive values cancels eachother out, it would be rather meaningless to have 0 deviation at actual 10 &deg;C range, so for this reason the formula has been modified to use modules like so 
 
 $$
 D = \frac{\sum_{i=1}^n|x_i - A|}{n}
@@ -262,23 +264,23 @@ $$
 D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \bar x_{0,5}|}{n}
 $$
 
-Essentially the same thing, but different point of refference.
+Essentially the same thing, but different point of refference to the average.
 
 ## Back Propagation
 
-Module does great job eliminating problem of negative values by using absolutes. However when the task requires optimization for a machine learning algorythms like neural network for instance, then the Absolute Values becomes a huge problem.
+Module does great job eliminating problem of negative values by using absolutes. However when the task requires optimization for a machine learning algorithms like neural network for instance, then the Absolute Values becomes a huge problem.
 
-How does machine distinguish between cat and dog? It learns through an algorythm called back propagation, it gives a shot saying cat is dog, it then receives an error, this error propagated back to an algorythm optimizing the next intteration.
+How does machine learn to distinguish between cat and dog? It learns through a process of back propagation, it gives a shot saying cat is dog, it then receives an error, this error propagated back to an algorithm optimizing yet another numerous intteration.
 
-At the very core of it's engine, neural networks use function's derivative to adjust itself in case of error. But what happens if the the algorythm use absolute deviation?
+At the very core of it's engine, neural networks use function's derivative to adjust itself in case of error. But what happens if the the algorithm use absolute deviation?
 
 ![Absolute Value Function](/img/img18.png)
 
-The Absolute Value Function gets to a corner point where the Lipschitz condition is violated, and no derivative available to propagate the error back to the machine, hence neural network algorythm breaks.
+The Absolute Value Function gets to a corner point where the Lipschitz condition is violated, and no derivative available to propagate the error back to the machine, hence neural network algorithm breaks.
 
 ### Mean Squared Error
 
-Finding the derivative requires a tangency line that gives machine a new direction to adjust itself. Therefor the Absolute Deviation formula has been evolved to **Mean Squared Error** which use square instead of module. 
+Finding the derivative requires a tangency line that gives machine a new direction to adjust itself. Therefor the Absolute Deviation evolved into **Mean Squared Error** which use square instead of module. 
 
 $$
 S^2(A) = \frac{\sum_{i=1}^n(x_i - A)^2}{n}
@@ -290,13 +292,13 @@ Thus allows to keep absolute values and function's derivative both at the same t
 
 ### Sample Variance
 
-The optimization task is always cares about MSE to be as minimum as possible. And it gets to it's minimum when Central Tendency is an Arythmetic Mean or $ A = \bar x$
+The optimization task is always cares about MSE to be as minimum as possible. And it gets to it's minimum when Central Tendency is equal to Arythmetic Mean or $ A = \bar x$
 
 $$
 \tilde S^2 = \frac{\sum_{i=1}^n(x_i - \bar x)^2}{n}
 $$
 
-It may feel a bit off to use square values, but so what? We don't care about actual values if it allows us the machine to learn how to distinguish between cat and dog, car and pedastrian, cancer and healthy cells and so on. 
+It may feel a bit off to use square values, but so what? We don't care about actual values if it allows the machine to learn how to distinguish between cancer and healthy cells, right? 
 
 ### Standard Deviation
 
