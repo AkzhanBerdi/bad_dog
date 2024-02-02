@@ -17,9 +17,9 @@ description: "Learn Statistical Data Analysis for Bloody Beginners and dive into
 
 # Statistical Data Analysis 101. Part I
 
-In this article we will take a look at the basic concepts of Statistical Analysis. We will be using the R programming language to visualize essential details, so download [RStudio Desktop - Posit](https://posit.co/download/rstudio-desktop/) and install both R and R studio. If you are not comfortable programming at all, then check out my previous post about [how to start coding](https://baddogdata.com/how-to-learn-coding) and build the basics of using Terminal and VS Code. Even though it's not covering the R, it still a good starting point.
+In this article we will take a look at the basic concepts of Statistical Analysis. We will be using the R programming language to visualize essential details, so download [RStudio Desktop](https://posit.co/download/rstudio-desktop/) and install both R and R studio. If you are not comfortable programming at all, then check out my previous post about [how to start coding](https://baddogdata.com/how-to-learn-coding) and build the basics of using Terminal and VS Code. Even though it's not covering the R, it still a good point to start.
 
-Now let's kick-off with the following command to generate random dataset. After printing out the entire block of the code you'd need to select it and press *Ctrl + Enter*. 
+Now let's kick-off with the following command to generate random dataset. Print the entire block of the code into R studio editor, then select the code you want to run and press *Ctrl + Enter*. 
 
 ```r
 set.seed(123)  # Allows you to reproduce the same random data as mine
@@ -68,13 +68,13 @@ print(median(data))
 
 ![Normal Distribution with mean and median](/img/img12.png)
 
-Looking at the graph we can see the mean and median both at the center, as expected. The console line calculated \$50.90 and \$50.61 as the mean and median respectivly.
+Looking at the graph we can see the mean and median both at the center, as expected. The console line calculated \$50.90 and \$50.61 as the mean and median respectively.
 
 But what is this median and why do we need it?
 
 ### Median
 
-Unlike the mean, the median, denoted by $\tilde x$ it's the exact middle value in the dataset. It's pretty much straightforward with odd numbers of observations, you just sort the spendings in ascending order and point to the value in the middle. As the formula suggests - divide number of observations by 2 and round it upwards. And that's your median! 
+Unlike the mean, the median, denoted by $\tilde x$ it's the exact middle value in the dataset. It's pretty much straightforward with odd numbers of observations, you just sort the spendings in ascending order and point to the value in the middle. As the formula suggests - divide the number of observations by 2 and round it upwards. That's your median! 
 
 $$
 \tilde{x} = {x}_\frac{n+1}{2}
@@ -112,7 +112,7 @@ Note how the median and mean are further apart from each other, to be precise th
 
 ## Quantiles
 
-A quantile divides the dataset into equal parts. The median is actually a particular case of a quantile which divides the dataset into two quantiles. Let's create a couple of variables using the **'quantile()'** function.
+A quantile divides the dataset into several equal parts. The median is actually a particular case of a quantile which divides the dataset into two quantiles. Let's create a couple of variables using the **'quantile()'** function.
 
 ```r
 # Defining median using quantiles function
@@ -242,7 +242,7 @@ $$
 D = \frac{\sum_{i=1}^n(x_i - A)}{n}
 $$
 
-However, there is a technical problem with this formula, it would only work if our distribution doesn't have the negative values like so.    
+However, there is a technical problem with this formula, it would only work if our distribution doesn't have any negative value within it, just like our dataset happens to be.    
 
 ![Absolute Deviation of a certain value](/img/img17.png)
 
@@ -258,7 +258,7 @@ $$
 D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \tilde x_{0,5}|}{n}
 $$
 
-or an **Absolute Mean Deviation**
+Or an **Absolute Mean Deviation**
 
 $$
 D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \bar x_{0,5}|}{n}
@@ -292,7 +292,7 @@ Thus allows to keep absolute values and function's derivative both at the same t
 
 ### Sample Variance
 
-The optimization task is always cares about MSE to be as minimum as possible. And it gets to it's minimum when Central Tendency is equal to Arythmetic Mean or $ A = \bar x$
+The optimization task always requires Mean Squared Error to be as minimum as possible. That's pretty obvious! We want our neural network to be precise, and not making any mistakes, hence the name Mean Squared **Error**. The MSE gets minimum value when the Central Tendency is equal to Arythmetic Mean or $ A = \bar x$ , and that's called **Sample Variance**.
 
 $$
 \tilde S^2 = \frac{\sum_{i=1}^n(x_i - \bar x)^2}{n}
@@ -302,7 +302,7 @@ It may feel a bit off to use square values, but so what? We don't care about act
 
 ### Standard Deviation
 
-In the end if original values are required, we are always allowed to apply the square root to the Sample Variance, and that's how the Standard Deviation kicks into the game.
+In the end if the original values are required, we are always allowed to apply the square root to the Sample Variance, and that's how the Standard Deviation kicks into the game.
 
 $$
 \tilde S = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i - \bar x)^2}
