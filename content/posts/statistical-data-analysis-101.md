@@ -11,7 +11,7 @@ thumbnail: '/img/statistical_data_analysis_101.png'
 
 slug: "statistical-data-analysis-101"
 
-description: "Learn Statistical Data Analysis and dive into basics of Measures of Central Tendency, Variability and Variance. Also Learn how neural networks use back propagation to learn from experience."
+description: "Learn Statistical Analysis, Measures of Central Tendency, Variability and Variance. Also Learn how neural networks use back propagation to learn from experience."
 
 ---
 
