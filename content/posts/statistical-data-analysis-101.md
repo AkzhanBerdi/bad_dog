@@ -9,9 +9,11 @@ tags: ["stats"]
 
 thumbnail: '/img/statistical_data_analysis_101.png'
 
+alt_description: 'Statistical Data Analysis in 4 steps'
+
 slug: "statistical-data-analysis-101"
 
-description: "Learn Statistical Analysis, Measures of Central Tendency, Variability and Variance. Also Learn how neural networks use back propagation to learn from experience."
+description: "Learn about Statistical Analysis, Central Tendency, Variability, Variance, neural networks and back propagation."
 
 ---
 
@@ -264,7 +266,7 @@ $$
 D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \bar x_{0,5}|}{n}
 $$
 
-Essentially the same thing, but different point of refference to the average.
+Essentially the same thing, but different point of reference to the average.
 
 ## Back Propagation
 

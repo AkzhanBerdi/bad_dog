@@ -4,6 +4,7 @@ date: 2023-12-16
 draft: false
 tags: ["personal"]
 thumbnail: '/img/hello_world.png'
+alt_description: 'The bad dog is a data scientist'
 slug: "hello-world"
 description: "Welcome to Bad Dog Data blog! Here we will learn about programming, statistical data analysis and machine learning"
 ---

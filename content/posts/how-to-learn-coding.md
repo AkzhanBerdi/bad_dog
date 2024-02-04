@@ -9,6 +9,8 @@ tags: ["coding"]
 
 thumbnail: '/img/how_to_learn_coding.png'
 
+alt_description: 'Learn to code in three simple steps'
+
 slug: "how-to-learn-coding"
 
 description: "Start coding with these 3 steps! Learn to code in a browser, explore the terminal, and dive into an IDE like VS Code. Follow hands-on exercises and build a bilingual project"
