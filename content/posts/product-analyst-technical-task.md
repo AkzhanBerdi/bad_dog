@@ -9,6 +9,8 @@ tags: ["product_analytics"]
 
 thumbnail: '/img/product_analyst_technical_task.png'
 
+alt_description: 'Technical Task Explained'
+
 slug: "product-analyst-technical-task"
 
 description: "I've done a technical task when applying for a product analyst job. Let's break it down and learn from it together."
@@ -29,7 +31,7 @@ As the internaional student in China I used that product a lot. Also I currently
 
 ### 1.1 The Buyers Overview
 
-![](/img/img20.png)
+![The Buyers Overview Dashboard](/img/img20.png)
 
 The buyers overview shows you overall descriptive business sense of your APP. It's the amount of total **Users**, the amount of **New Users** who visited the App for the first time, as oppose to the **Retention**, that shows you the percentage of those who visiting the APP more than once. The **CSAT**, which stands for Customer Sattisfaction shows you the percentage of sattisfied users, and the **AOV** or Average Order Value, meaning the average paycheck your users spend in your APP. That's the basic line for business performance evaluation. Doesn't matter what you do with your APP, this metrics will signal to you if you do it right or wrong way.
 
@@ -51,7 +53,7 @@ Then you did contribute to the CSAT metric, and if your answer lies between 1 an
 
 ### 1.2 The Funnel Overview
 
-![](/img/img21.png)
+![The Funnel Overview Dashboard](/img/img21.png)
 
 The funnel overview would show you at what stage your users bounces out of the funnel. This is usually done with the web analytics tools such as **Google Analytics 4** or **Amplitude**. The web analytic tools allows you to track your custom events like user viewing an Item Page. Then you compare how many Users logged-into the session and viewed items on the marketplace, the next event is probably tracking the percentage of those who added the item to the cart, and eventually track the percentage of users that actually bought something, and that's how you calculate the conversion rate between the events, and by default the conversion calculates from top to bottom of the events, but it may depend on the task you working on.
 
@@ -59,7 +61,7 @@ Since the numbers are getting smaller on each stage, assuming that users general
 
 ### 1.3 Items and Sellers Selection
 
-![](/img/img23.png)
+![The Items Concentration Dashboard](/img/img23.png)
 
 Having a numbers on a dashboard is good, but what do you do when they are not meeting your targets. Then it's a good idea to descend down the level of your business concept and come-up with customer story. In case of marketplace, your customer story might sound like: 
 
@@ -69,7 +71,7 @@ To answer this abstract and general user question we will evaluate our supply su
 
 ### 1.4 Customer Segmentation Overview
 
-![](/img/img22.png)
+![The RFM Analysis Dashboard](/img/img22.png)
 
 This is where the analytics gets more advanced, cause that takes you to the prescriptive analysis. When having a big customer base, it's crucial to have a different or rather personal approach for the marketing touch. Also you can be very prejudice and provide different service level, depending on how important a certain customer to your revenue.
 
@@ -79,9 +81,9 @@ The RFM analysis ranks your customer base over three different attribute such as
 
 2. How frequently they been active using your APP
 
-3. How many revenue they been generating using your APP 
+3. How much revenue they been generating using your APP 
 
-You end-up with three different scoring models with ranks from 1 to 10 for each customer, and then you add the scores for each client and divide that by 3 getting the total RMF score, and that helps you to segment the customers. How exactly you should segment your customer base totally depends on your specific business model. But in general you need to find out customers that are sensitive to the price and attract them using promotions whereas big spender customers should be attracted with more privilege offers.
+You end-up with three different scoring models with ranks from 1 to 10 for each customer. You add the scores for each client and divide that by 3 getting the total RMF score, and that helps you to segment the customers. How exactly you should segment your customer base totally depends on your specific business model. But in general you need to find out customers that are sensitive to the price and attract them using promotions whereas big spender customers should be attracted with more privilege offers.
 
 ## Task 2
 
@@ -91,11 +93,11 @@ This task would evaluate your communication skills, including your attention to 
 
 ### Idea A
 
-The rating and reviews blocks. Adding the rating blocks available on the **listing page** and **service card**, and adding the sub-block for review on the **service card** may increase the conversion rate.
+The rating and review blocks. Making rating and review blocks available on the **listing page** and **service card** may increase the conversion rate.
 
 ### Idea B
 
-The subscription feature. Giving the users an option for subscribing to the different kind of services and being notified when new services being added to the platform would increae conversion rate.
+The subscription feature. Giving the users an option to subscribe to any service and being notified when new one being added to the platform would increase conversion rate.
 
 ### Idea C
 
@@ -118,7 +120,7 @@ Idea **C** sounds cool! Does this feature should be integrated into suppliers CR
 
 Idea **D** in my opinion may decrease the conversion rate, cause it makes clear whether the working hours suit your needs or not. But if you insist, it still very easy to implement so we can run the test on this week.
 
-Let's discuss with the rest of the team, but I'd suggest to prioritize ideas in the following order **A -> C -> B -> D**
+Let's discuss with the rest of the team, but I'd suggest to prioritize ideas in the following order **A -> C -> B -> D**.
 
 Yours,  
 Bad Dog
@@ -130,7 +132,7 @@ Bad Dog
 
 #### Experiment Objectives:
 
-Determine wether  the new **reviews** and **rating** blocks on the **listing page**, and **service card** has no significant increase on conversion rate by at least 5% 
+Determine whether  the new **reviews** and **rating** blocks on the **listing page**, and **service card** has or has not significant increase on conversion rate by at least 5% 
 
 H0: New blocks does not increase conversion rate from service page to contact
 
@@ -138,19 +140,23 @@ H1: New blocks does increase conversion rate from service page to contact
 
 #### A/A test groups:
 
-Preliminary experiment to identify two identical groups for comparability, both groups receiving identical interface. That ensures randomization in user selection for each group, the results of this will show if they are identical or not. If not there is no point in A/B test, cause groups are not identical and any difference in conversion rate would not be due to experimental changes. 
+Preliminary experiment to identify two identical groups for comparability. Both groups receiving identical interface, and that ensures randomization in user selection for each group, making sure that any difference in A/B test would happend due to recent changes. 
 
 Group A_1: control group 
 
 Group A_2: experimental group
 
+The A/A test duration time should be as much as needed for collecting required sample size.
+
 #### A/B test groups:
 
-The main experiment, where the control group (ex A_1) receives a standard interface, and the experimental group (ex_A2) additionally receives new blocks **reviews** and **rating** on the **listing page** and **service card**
+The main experiment, where the control group A (ex A_1) receives a standard interface, and the experimental group B (ex_A2) additionally receives new blocks of **reviews** and **rating** on the listing page and service card.
 
 Group A: control group
 
 Group B: experimental group
+
+The A/B test duration time should be at least 7 days, preferably even 14 days. The duration time in scope of entire weeks helps to properly assess the impact of weekend and working days alike.
 
 #### Metrics to be tracked during experiment:
 
@@ -205,7 +211,7 @@ sample_size
 
 Assuming that the given APP has been launched in January 2023, then MAU for January should be equal to the amount of new users, then for the february you'd need to multiply previous month MAU on the current retention rate and add the new users in the way like following excel formula would calculate it for you.
 
-                                                                    $D4=D3*C4+B4$
+                                               $D4=D3*C4+B4$
 
 | A          | B         | C              | D         |
 | ---------- | --------- | -------------- | --------- |
@@ -259,7 +265,7 @@ forecast <- predict(m, future)
 plot(m, forecast)
 ```
 
-![](/img/img24.png)
+![The Prophet Time Series Forecasting Plot](/img/img24.png)
 
 On the plot the black dots representing the actual values, the straight blue line is the model predicted values, and the lightblue area is the 96% confidence level of prediction accuracy. According to this model, we are likely to exceed 25 000 MAU by the end of the year.
 
