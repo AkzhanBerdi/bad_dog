@@ -1,5 +1,5 @@
 ---
-title: "Product Analyst Technical Task Completed and Explained"
+title: "Product Analyst Technical Task Explained"
 
 date: 2024-02-24
 
@@ -211,7 +211,7 @@ sample_size
 
 Assuming that the given APP has been launched in January 2023, then MAU for January should be equal to the amount of new users, then for the february you'd need to multiply previous month MAU on the current retention rate and add the new users in the way like following excel formula would calculate it for you.
 
-              $D4=D3*C4+B4$
+                        $D4=D3*C4+B4$
 
 | A          | B         | C              | D         |
 | ---------- | --------- | -------------- | --------- |
