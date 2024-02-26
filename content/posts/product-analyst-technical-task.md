@@ -1,5 +1,5 @@
 ---
-title: "Product Analyst Technical Task Explained"
+title: "Product Analyst Technical Task Completed and Explained"
 
 date: 2024-02-24
 
@@ -9,7 +9,7 @@ tags: ["product_analytics"]
 
 thumbnail: '/img/product_analyst_technical_task.png'
 
-alt_description: 'Technical Task Explained'
+alt_text: 'Technical Task Explained'
 
 slug: "product-analyst-technical-task"
 
@@ -23,7 +23,7 @@ According to the job description Product Analyst should assist to Product Manage
 
 ## Task 1
 
-**Choose any popular web or native application and imagine that you are launching your own APP with the same busines model. Now build a dashboard for keeping track of overall APP performance.**
+**Choose any popular web or native application and imagine that you are launching your own APP with the same business model. Now build a dashboard for keeping track of overall APP performance.**
 
 This task is all about your strategic vision! Whatever app you'd choose it tells a lot about your interests, background and experience. Personally I'd choose the B2C and C2C marketplace sort of like Alibaba's [taobao](https://taobao.cn) example. 
 
@@ -87,13 +87,13 @@ You end-up with three different scoring models with ranks from 1 to 10 for each 
 
 ## Task 2
 
-**Given the following ideas for increasing the conversion rate from service page to contact, help your Product Manager on Classified Advertisment Services to prioritize the experiments. Also pick at least one idea and provide the preliminary experiment design**
+**Given the following ideas for increasing the conversion rate from service page to contact, help your Product Manager on Classified Advertisement Services to prioritize the experiments. Also pick at least one idea and provide the preliminary experiment design**
 
 This task would evaluate your communication skills, including your attention to details and ability to ask right questions and clarifying the given information.
 
 ### Idea A
 
-The rating and review blocks. Making rating and review blocks available on the **listing page** and **service card** may increase the conversion rate.
+The rating and review blocks. Making rating and review blocks available on the listing page and service card may increase the conversion rate.
 
 ### Idea B
 
@@ -112,11 +112,11 @@ The working hours block. Adding the working hours to the service card would incr
 ---
 Dear John Doe,
 
-Idea **A** sounds good to me! Let's add it to the current sprint. It seems to be easy to execute, and I'm very confident on the impact, cause every users should be able to see the recomendation block on the **listing page**. I'd provide the A/B test design by the end of the day, so we can run it tommorow.
+Idea **A** sounds good to me! Let's add it to the current sprint. It seems to be easy to execute, and I'm very confident on the impact, cause every users should be able to see the recomendation block on the listing page. I'd provide the A/B test design by the end of the day, so we can run it tomorow.
 
 Idea **B** sounds easy to implement, however I'm uncertain on how many users actually need this feature. It doesn't seems like users tend to search the same service over and over again. However if the development side is ready to implement, then this experiment also might go into the backlog on this week.
 
-Idea **C** sounds cool! Does this feature should be integrated into suppliers CRM? If online booking feature is available on the **listing page** then there is a big confidence that it might boost the conversion rate, but we have to be certain that it will be ready anytime soon, otherwise let's postpone it to the next sprint.
+Idea **C** sounds cool! Does this feature should be integrated into suppliers CRM? If online booking feature is available on the listing page then there is a big confidence that it might boost the conversion rate, but we have to be certain that it will be ready anytime soon, otherwise let's postpone it to the next sprint.
 
 Idea **D** in my opinion may decrease the conversion rate, cause it makes clear whether the working hours suit your needs or not. But if you insist, it still very easy to implement so we can run the test on this week.
 
@@ -140,7 +140,7 @@ H1: New blocks does increase conversion rate from service page to contact
 
 #### A/A test groups:
 
-Preliminary experiment to identify two identical groups for comparability. Both groups receiving identical interface, and that ensures randomization in user selection for each group, making sure that any difference in A/B test would happend due to recent changes. 
+Preliminary experiment to identify two identical groups for comparability. Both groups receiving identical interface, and that ensures randomization in user selection for each group, making sure that any difference in A/B test would happened due to recent changes. 
 
 Group A_1: control group 
 
@@ -160,11 +160,11 @@ The A/B test duration time should be at least 7 days, preferably even 14 days. T
 
 #### Metrics to be tracked during experiment:
 
-1. Conversion Rate - the ratio of **contact page** visits to the **service card** visits
+1. Conversion Rate - the ratio of contact page visits to the service card visits
 2. ARPPU - average revenue per user
 3. AOV - Average Order Value
-4. CTR to service card - Clicks from **listing page** to **service card**
-5. CTR to contact page- Clicks from the **service card** to **contact page**
+4. CTR to service card - Clicks from listing page to service card
+5. CTR to contact page- Clicks from the service card to contact page
 
 #### Calculating sample size using R:
 
@@ -211,7 +211,7 @@ sample_size
 
 Assuming that the given APP has been launched in January 2023, then MAU for January should be equal to the amount of new users, then for the february you'd need to multiply previous month MAU on the current retention rate and add the new users in the way like following excel formula would calculate it for you.
 
-                                               $D4=D3*C4+B4$
+              $D4=D3*C4+B4$
 
 | A          | B         | C              | D         |
 | ---------- | --------- | -------------- | --------- |
@@ -271,7 +271,7 @@ On the plot the black dots representing the actual values, the straight blue lin
 
 ### Conclusion
 
-I really enjoyed completing this technical task, except maybe wirting SQL statements, that's why int's not included in the article. I always find SQL super boring in technical tasks, cause there is no sufficient reward for that, whereas in the real life extracting the right data would be the fuel for your model, dashboard or whatever data product you might need.
+I really enjoyed completing this technical task, except maybe writing SQL statements, that's why int's not included in the article. I always find SQL super boring in technical tasks, cause there is no sufficient reward for that, whereas in the real life extracting the right data would be the fuel for your model, dashboard or whatever data product you might need.
 
 However if you are interesting in learning SQL, which is crucial for Data kinda jobs. I'd highly recommend the free resources by [DataAcademy](https://dataacademy.kz). This is a clean content without any ads or payment subscriptions. So definitely check this out!
 
