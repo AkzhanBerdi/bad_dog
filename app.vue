@@ -59,10 +59,7 @@ useHead({
         </div>
 
       </header>
-    <!-- </Header> -->
-      <!-- <MainContent>  -->
         <NuxtPage />
-      <!-- </MainContent> -->
   </div>
 </template>
 
