@@ -6,6 +6,7 @@ function formatDate(date: string) {
     return dt.toLocaleDateString('en-US', options);
 }
 
+
 </script>  
 
 <template>

@@ -1,5 +1,7 @@
 <script setup lang="ts">
 
+import CommentWidget from './components/content/CommentWidget.vue';
+
 useSeoMeta({
   title: 'Bad Dog Data',
   ogTitle: 'Bad Dog Data',
@@ -24,6 +26,22 @@ useHead({
         gtag('config', 'G-VSDTCMMC1P');
       `,
     },
+    // {
+    //   type: 'text/javascript',
+    //   innerHTML:`
+    //   const script = window.document.createElement('script');
+    //   script.src = 'https://utteranc.es/client.js';
+    //   script.setAttribute('repo', 'AkzhanBerdi/bad_dog');
+    //   script.setAttribute('issue-term', 'pathname');
+    //   script.setAttribute('theme', 'boxy-light');
+    //   script.setAttribute('crossorigin', 'anonymous');
+    //   script.setAttribute('async', '');
+
+    //   window.document.body.appendChild(script);
+    //   `,
+    //   tagPosition: 'bodyClose',
+    //   async: true,
+    // }
   ],
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
@@ -32,7 +50,8 @@ useHead({
       lang: 'en',
       //style: 'font-size: 13px',
     },
-});
+})
+;
 </script>
 
 <template>
@@ -60,6 +79,7 @@ useHead({
 
       </header>
         <NuxtPage />
+        <CommentWidget />
   </div>
 </template>
 

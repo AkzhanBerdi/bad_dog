@@ -3,7 +3,6 @@
   import { useRoute } from 'vue-router';
 
   const { params } = useRoute();
-  const utterancesScriptAdded = ref(false);
 
   function formatDate(date: string) {
     const dt = new Date(date);
@@ -11,21 +10,6 @@
     return dt.toLocaleDateString('en-US', options);
   }
 
-  onMounted(() => {
-    // Check if it's a slug page and the Utterances script is not added
-    if (params.slug && !utterancesScriptAdded.value) {
-      const script = document.createElement('script');
-      script.src = 'https://utteranc.es/client.js';
-      script.setAttribute('repo', 'AkzhanBerdi/bad_dog');
-      script.setAttribute('issue-term', 'pathname');
-      script.setAttribute('theme', 'boxy-light');
-      script.setAttribute('crossorigin', 'anonymous');
-      script.setAttribute('async', '');
-
-      document.body.appendChild(script);
-      utterancesScriptAdded.value = true;
-    }
-  });
 </script>
 
 <template>
