@@ -110,6 +110,7 @@ The working hours block. Adding the working hours to the service card would incr
 ## 2.1 Answering via E-mail to the Product Manager
 
 ---
+
 Dear John Doe,
 
 Idea **A** sounds good to me! Let's add it to the current sprint. It seems to be easy to execute, and I'm very confident on the impact, cause every users should be able to see the recomendation block on the listing page. I'd provide the A/B test design by the end of the day, so we can run it tomorow.
@@ -126,7 +127,6 @@ Yours,
 Bad Dog
 
 ---
-
 
 ### 2.2 The Experiment Design Example for Idea A
 
@@ -211,21 +211,22 @@ sample_size
 
 Assuming that the given APP has been launched in January 2023, then MAU for January should be equal to the amount of new users, then for the february you'd need to multiply previous month MAU on the current retention rate and add the new users in the way like following excel formula would calculate it for you.
 
-                        $D4=D3*C4+B4$
+                        
 
-| A          | B         | C              | D         |
-| ---------- | --------- | -------------- | --------- |
-| year_month | new_users | retention_rate | MAU       |
-| 1/1/2023   | 12000     | 100            | 12000     |
-| 2/1/2023   | 11500     | 0.2053         | 13964     |
-| 3/1/2023   | 10000     | 0.1812         | 12530     |
-| 4/1/2023   | 17000     | 0.1715         | 19149     |
-| 5/1/2023   | 14350     | 0.1595         | 17404     |
-| 6/1/2023   | 12200     | 0.144          | 14706     |
-| 7/1/2023   | 11100     | 0.14           | 13159     |
-| 8/1/2023   | 14784     | 0.14           | 16626     |
-| 9/1/2023   | 13347     | 0.14           | 15675     |
-| 10/1/2023  | 20220     | 0.14           | **22414** |
+| Month     | New Users | 20,53% | 18,12% | 17,15% | 15,95% | 14,40% | 14%  | 14%  | 14%  | 14%  | MAU   |
+| --------- | --------- | ------ | ------ | ------ | ------ | ------ | ---- | ---- | ---- | ---- | ----- |
+| January   | 12000     | 2464   | 2174   | 2058   | 1914   | 1728   | 1680 | 1680 | 1680 | 1680 | 12000 |
+| February  | 11500     | 2361   | 2084   | 1972   | 1834   | 1656   | 1610 | 1610 | 1610 |      | 13964 |
+| March     | 10000     | 2053   | 1812   | 1715   | 1595   | 1440   | 1400 | 1400 |      |      | 14535 |
+| April     | 17000     | 3490   | 3080   | 2916   | 2712   | 2448   | 2380 |      |      |      | 23195 |
+| May       | 14350     | 2946   | 2600   | 2461   | 2289   | 2066   |      |      |      |      | 23538 |
+| June      | 12200     | 2505   | 2211   | 2092   | 1946   |        |      |      |      |      | 23504 |
+| July      | 11100     | 2279   | 2011   | 1904   |        |        |      |      |      |      | 24051 |
+| August    | 14784     | 3035   | 2679   |        |        |        |      |      |      |      | 29176 |
+| September | 13347     | 2740   |        |        |        |        |      |      |      |      | 29913 |
+| October   | 20220     |        |        |        |        |        |      |      |      |      | 38625 |
+
+
 
 The MAU for October 2023 should be equal to 22 414 users. But we are not just a aregular excel users, don't we. Let's predict the MAU for the next year using forcasting model **Prophet**
 
@@ -269,9 +270,32 @@ plot(m, forecast)
 
 On the plot the black dots representing the actual values, the straight blue line is the model predicted values, and the lightblue area is the 96% confidence level of prediction accuracy. According to this model, we are likely to exceed 25 000 MAU by the end of the year.
 
-### Conclusion
+### Conclusion or What Could be Done Differently
 
-I really enjoyed completing this technical task, except maybe writing SQL statements, that's why int's not included in the article. I always find SQL super boring in technical tasks, cause there is no sufficient reward for that, whereas in the real life extracting the right data would be the fuel for your model, dashboard or whatever data product you might need.
+I really enjoyed completing this technical task, except maybe writing SQL statements, that's why int's not included in the article. However there is a few things I need to mentioned that could be done differently.
+
+* The Dashboard metrics could be organized in the **North Star** or **MECE framework** 
+
+* The email answer to John Doe could mention the affect on the key metrics
+
+* The A/B tesst design could contain the Client Story and Problem
+
+* The MAU calculation could have a cohort approach
+
+| Month     | New Users | 20,53% | 18,12% | 17,15% | 15,95% | 14,40% | 14%  | 14%  | 14%  | 14%  | MAU   |
+| --------- | --------- | ------ | ------ | ------ | ------ | ------ | ---- | ---- | ---- | ---- | ----- |
+| January   | 12000     | 2464   | 2174   | 2058   | 1914   | 1728   | 1680 | 1680 | 1680 | 1680 | 12000 |
+| February  | 11500     | 2361   | 2084   | 1972   | 1834   | 1656   | 1610 | 1610 | 1610 |      | 13964 |
+| March     | 10000     | 2053   | 1812   | 1715   | 1595   | 1440   | 1400 | 1400 |      |      | 14535 |
+| April     | 17000     | 3490   | 3080   | 2916   | 2712   | 2448   | 2380 |      |      |      | 23195 |
+| May       | 14350     | 2946   | 2600   | 2461   | 2289   | 2066   |      |      |      |      | 23538 |
+| June      | 12200     | 2505   | 2211   | 2092   | 1946   |        |      |      |      |      | 23504 |
+| July      | 11100     | 2279   | 2011   | 1904   |        |        |      |      |      |      | 24051 |
+| August    | 14784     | 3035   | 2679   |        |        |        |      |      |      |      | 29176 |
+| September | 13347     | 2740   |        |        |        |        |      |      |      |      | 29913 |
+| October   | 20220     |        |        |        |        |        |      |      |      |      | 38625 |
+
+I always find SQL super boring in technical tasks, cause there is no sufficient reward, whereas in the real life extracting the right data would create the fuel for your model, dashboard or whatever data product you might need.
 
 However if you are interesting in learning SQL, which is crucial for Data kinda jobs. I'd highly recommend the free resources by [DataAcademy](https://dataacademy.kz). This is a clean content without any ads or payment subscriptions. So definitely check this out!
 
