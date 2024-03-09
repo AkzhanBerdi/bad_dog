@@ -272,15 +272,15 @@ On the plot the black dots representing the actual values, the straight blue lin
 
 ### Conclusion or What Could be Done Differently
 
-I really enjoyed completing this technical task, except maybe writing SQL statements, that's why int's not included in the article. However there is a few things I need to mentioned that could be done differently.
+I really enjoyed completing this technical task, except maybe writing SQL statements, that's why int's not included in the article. However there is a few things that could have been done differently.
 
 * The Dashboard metrics could be organized in the **North Star** or **MECE framework** 
 
 * The email answer to John Doe could mention the affect on the key metrics
 
-* The A/B tesst design could contain the Client Story and Problem
+* The A/B test design could contain the Client Story and Problem
 
-* The MAU calculation could have a cohort approach
+* The MAU calculation might have take into account the retention for each month as a cohort, thus MAU for October is equal to **38 625**
 
 | Month     | New Users | 20,53% | 18,12% | 17,15% | 15,95% | 14,40% | 14%  | 14%  | 14%  | 14%  | MAU   |
 | --------- | --------- | ------ | ------ | ------ | ------ | ------ | ---- | ---- | ---- | ---- | ----- |
