@@ -16,9 +16,7 @@ slug: "how-to-build-data-warehouse-in-activity-schema-with-clickhouse"
 description: "Create a Data Warehouse in Activity-Schema with OLAP database ClickHouse on your local computer"
 ---
 
-# How to build Data Warehouse in Activity Schema with Clickhouse
-
-> It doesn't matter whom you hire first. Would it be a Data Scientist , Data Analyst or ML Engineer. This first guy would have to be a Data Engineer first.
+> "It doesn't matter who you hire first, whether it's a Data Scientist, Data Analyst, or ML Engineer. The first hire eventually would do Data Engineering job."
 > 
 >                                                                                     -- Random Guy from LinkedIn
 
@@ -28,11 +26,11 @@ I learned about Activity-Schema when applied to a Data Engineering role at the c
 
 ## Understanding Data Warehouses vs Traditional Databases
 
-When it comes to work with data, we've got two essential storage types: the Traditional Database, that keeps the day-to-day transactions and handles so called OLTP or On-Line Transactional Processing in smooth operation. For instance you open your bank APP to check your balance. You go through authentication first, so the APP understands your identity, you then click to balance page and for given authentication ID the APP retrieves exactly your balance rather than someones else.
+When it comes to work with data, we've got two essential storage types: the Traditional Database, that keeps the day-to-day transactions and handles so called OLTP or On-Line Transactional Processing in smooth operation. For instance you open your bank APP to check your balance. You go through authentication first, so the APP understands your identity. Then, you click to the balance page, and for the given authentication ID, the APP retrieves your balance exactly, rather than someone else's.
 
 The OLTP Database is essential for any web application to perform CRUD operations as fast as possible. On the other hand imagine that you are a new recruit as a BI Analyst at random company. You ask what Data Storages we have, and your manager answers - "oh yeah, there is one called Oracle", and this is the moment where you should realize that you screwed-up.
 
-The reason you screwed is that OLTP Databases as good as they are for keeping your product up and running, they are not optimized for Data Analysis at all, and therefor you either forced to work in not optimized environment or you have to build one yourself.
+The reason you screwed up is that OLTP databases, as good as they are for keeping your product up and running, are not optimized for data analysis at all. Therefore, you're either forced to work in a non-optimized environment or you have to build one yourself.
 
 And the only good news is that you are reading exacty right article to build OLAP or On-Line Analytical Processing storage or so-called Data Warehouse that is optimized for Data Analysis, and for that purpose we would not use a traditional Star-Schema, but rather a relatively new concept called Activity-Schema.
 
@@ -44,9 +42,9 @@ So what is the schema in the first place? When working with Databases you have a
 
 Fact table is a transactional table that per say accumulates order records, and Dimension tables are the one that feeds Fact tables with a nuances like the client's personal data, the delivery address, and litteraly anything else. It's get more complex when you start generating a Primary and Foreign keys that are used to link tables, and even the links themself has to be further defined as one-to-many or many-to-many relationships and considering that orders is just one out of infinite fact tables that business may operate, this schema is getting complex.
 
-The complexity of such architecture is called normalization, the more tables and relationships between them the more normalized your data infrastucture becomes. And it works well in OLTP. But if you want to query a DataFrame with millions of rows and make further analysis on it, that would be a painful experience to identifing Primary and Foreign keys and writing a complex SQL statement with a lot of dependencies taking into account. And that's my hermano is not bueno.
+The complexity of such architecture is called normalization. The more tables and relationships between them, the more normalized your data infrastructure becomes. And it works well in OLTP. But if you want to query a DataFrame with millions of rows and make further analysis on it, that would be a painful experience to identifing Primary and Foreign keys and writing a complex SQL statement with a lot of dependencies taking into account. And that's my hermano is not bueno.
 
-So in order to make such normalized infrastucture to be optimized for analytics then you have to reverse engineer it's architecture and make it de-normalized. You don't have to be an IT architecture guy to do that, and that's where Activity-Schema comes into play.
+So, in order to optimize such normalized infrastructure for analytics, you have to reverse engineer its architecture and denormalize it. You don't have to be an IT architecture guy to do that, and that's where Activity-Schema comes into play.
 
 ## So what is Activity Schema and why to use it
 
@@ -54,9 +52,9 @@ Activity-Schema in contrast to the Star-Schema doesn't have Primary-Foreign key 
 
 ![](/img/img27.png)
 
-If you read the official [documentation](https://www.activityschema.com/), then this column is called "Feature", However for some reason I call it "Attributes", it doesn't really matter how do you call this column, in the end it's not the name but Data Type that is crucial, as you may see the value in this column may be reminiscive of JSON, but in fact if you are going to follow this guide we will use a ClickHouse's map() Data Type instead of something like jsonb in Postgres for example.
+If you read the official [documentation](https://www.activityschema.com/), then this column is called "Feature", However, for some reason, I call it 'Attributes'. It doesn't really matter how you call this column. In the end, it's not the name but the data type that is crucial. As you may see, the value in this column may be reminiscent of JSON, but in fact if you are going to follow this guide we will use a ClickHouse's map() Data Type instead of something like jsonb in Postgres for example.
 
-This approach is one of the most denormalized since we have no dependencies between the tables, in fact the only join that is possible with Activity-Schema is the Self-Join. This table is going to be enormous, and for that reason you should consider a column-oriented database that is optimized to carry-out big tables like DuckDB or ClickHouse.
+This approach is one of the most denormalized since we have no dependencies between the tables, in fact the only join that is possible with Activity-Schema is the self-Join. This table is going to be enormous, and for that reason you should consider a column-oriented database that is optimized to carry-out big amount of data like DuckDB or ClickHouse.
 
 ## Set-up your ClickHouse
 
@@ -66,11 +64,11 @@ For the sake of simplicity, we will use our local machine in this tutorial, wher
 curl https://clickhouse.com/ | sh
 ```
 
-With the power of Terminal hit the above bash command and that should download a Clickhouse client for you. It will take a while to download, then it should display "Successfully Downloaded".
+With the power of the Terminal, hit the above bash command, and that should download a ClickHouse client for you. It will take a while to download, and then it should display "Successfully Downloaded".
 
 ![](/img/img28.png)
 
-Your next move after installation is to run the ClickHouse Server with this command.
+Your next move after installation is to run the ClickHouse Server with the following command.
 
 ```bash
 ./clickhouse server
@@ -78,7 +76,7 @@ Your next move after installation is to run the ClickHouse Server with this comm
 
 ![](/img/img29.png)
 
-Then open a new terminal where you we will run the ClickHouse Client
+Then open a new terminal where you will run the ClickHouse Client
 
 ```bash
 ./clickhouse client
@@ -86,7 +84,7 @@ Then open a new terminal where you we will run the ClickHouse Client
 
 ![](/img/img30.png)
 
-I'm not even trolling, the ClickHouse command lines has a smile face as the cursor, isn't  it fun? The next ClickHouse commands should be run on the Client side to communicate with your Server. Let's create a Database and name it as 'activity'.
+I'm not even trolling, the ClickHouse command lines has a smile face as the cursor, isn't  it fun? The next ClickHouse commands should be run on the Client side to communicate with your Server. Let's create a database and name it 'activity'.
 
 ```sql
 CREATE DATABASE activity
@@ -94,7 +92,7 @@ CREATE DATABASE activity
 
 ![](/img/img31.png)
 
-This looks like a successful database creation. Now let's create the stream table and define each column and it's Data Types. And as mentioned before, we going to use Map Data Type for attributes column.
+This indicates a successful database creation. Now let's create the stream table and define each column and it's Data Types. And as mentioned before, we going to use Map Data Type for attributes column.
 
 ```sql
 CREATE TABLE activity.stream (
@@ -109,7 +107,7 @@ ORDER BY timestamp;
 
 ![](/img/img32.png)
 
-Here we have defined our columns for Activity-Schema
+Here, we have defined the columns for the Activity-Schema
 
 - timestamp - is the Date and Time of occured activity;
 
@@ -316,19 +314,19 @@ ORDER BY sessions_total DESC
 
 ![](/img/img37.png)
 
-And there you have it! The Data Warehouse in Activity-Schema ready to store millions rows of data under different activity that can be self-joined via timestamp, entity or attributes. Here I have built the simple report on sessions by channels and countries.
+And there you have it! The Data Warehouse in Activity-Schema ready to store millions rows of data under different activity that can be self-joined via timestamp, entity or attributes. Here, I have built a simple report on sessions by channels and countries.
 
 ![](/img/img38.png)
 
 ## Conclusion
 
-In this article we have discussed OLTP vs OLAP databases, also talked about the differences between the Star-Schema and Activity-Schema. Further we have setup the ClickHouse environment and created activity.stream table. We have extracted Google Analytics Data and transformed it into Activity-Schema format, and finally uploaded it to our Data Warehouse named activity.stream.
+In this article we have discussed OLTP vs OLAP databases, also talked about the differences between the Star-Schema and Activity-Schema. Further we have setup the ClickHouse environment and created activity.stream table. Next, we extracted Google Analytics data, transformed it into the Activity-Schema format, and finally uploaded it to our Data Warehouse named activity.stream.
 
 If you want to dive into Data Warehousing, then you should learn MPP or Massive Parallel Processing. MPP is the technical approach to set your OLAP database to ingest data from different shards, which is the seperate units of clustered CPU working in parallel and then sharing the processed data with one another. Pretty cool stuff!
 
-Another point to keep in mind is that in this article we have performed ETL mannually. And the crucial skill in Data Analytics and Engineering is to be able to automate this work flow. For that purpose the Data Orchestration tools like Apache Airflow is very usefull. We will cover it in the next articles, very soon.
+Another point to keep in mind is that in this article, we have performed ETL mannually. And a crucial skill in Data Analytics and Engineering is to be able to automate this workflow. For that purpose the Data Orchestration tools like Apache Airflow is very usefull. We will cover it in the next articles, very soon.
 
-I hope you have enjoyed reading this article!
+I hope you have enjoyed reading this article !
 
 
 
