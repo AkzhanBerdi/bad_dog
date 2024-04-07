@@ -22,7 +22,7 @@ description: "Create a Data Warehouse in Activity-Schema with OLAP database Clic
 
 I learned about Activity-Schema when applied to a Data Engineering role at the company that do Data Analysis as a Service and they work with a lot of data, so the technical task was to implement an Activity-Schema and build a Data Pipeline. This article would introduce Activity-Schema for Data Warehousing and how to build one using ClickHouse, so let's kick off.
 
-![](/img/img25.png)
+![Data Pipeline Schema, modeling and querying data](/img/img25.png)
 
 ## Understanding Data Warehouses vs Traditional Databases
 
@@ -38,7 +38,7 @@ And the only good news is that you are reading exacty right article to build OLA
 
 So what is the schema in the first place? When working with Databases you have a certain architecture of tables and how they are related to one another. And it's usually a matter of scale, but at the simplest example of Star-shema would look like this
 
-![](/img/img26.png)
+![Star-Schema explained](/img/img26.png)
 
 Fact table is a transactional table that per say accumulates order records, and Dimension tables are the one that feeds Fact tables with a nuances like the client's personal data, the delivery address, and litteraly anything else. It's get more complex when you start generating a Primary and Foreign keys that are used to link tables, and even the links themself has to be further defined as one-to-many or many-to-many relationships and considering that orders is just one out of infinite fact tables that business may operate, this schema is getting complex.
 
@@ -50,7 +50,7 @@ So, in order to optimize such normalized infrastructure for analytics, you have 
 
 Activity-Schema in contrast to the Star-Schema doesn't have Primary-Foreign key realationships and any other dependencies for a one good reason. It has only one single table complying with "One-Big-Table" schema, but instead of dimension tables it has the nested key/value column.
 
-![](/img/img27.png)
+![Activity-Schema explained](/img/img27.png)
 
 If you read the official [documentation](https://www.activityschema.com/), then this column is called "Feature", However, for some reason, I call it 'Attributes'. It doesn't really matter how you call this column. In the end, it's not the name but the data type that is crucial. As you may see, the value in this column may be reminiscent of JSON, but in fact if you are going to follow this guide we will use a ClickHouse's map() Data Type instead of something like jsonb in Postgres for example.
 
@@ -66,7 +66,7 @@ curl https://clickhouse.com/ | sh
 
 With the power of the Terminal, hit the above bash command, and that should download a ClickHouse client for you. It will take a while to download, and then it should display "Successfully Downloaded".
 
-![](/img/img28.png)
+![Consol-Log after installing ClickHouse](/img/img28.png)
 
 Your next move after installation is to run the ClickHouse Server with the following command.
 
@@ -74,7 +74,7 @@ Your next move after installation is to run the ClickHouse Server with the follo
 ./clickhouse server
 ```
 
-![](/img/img29.png)
+![Consol-Log after running the server](/img/img29.png)
 
 Then open a new terminal where you will run the ClickHouse Client
 
@@ -82,7 +82,7 @@ Then open a new terminal where you will run the ClickHouse Client
 ./clickhouse client
 ```
 
-![](/img/img30.png)
+![Consol-Log after running the client](/img/img30.png)
 
 I'm not even trolling, the ClickHouse command lines has a smile face as the cursor, isn't  it fun? The next ClickHouse commands should be run on the Client side to communicate with your Server. Let's create a database and name it 'activity'.
 
@@ -90,7 +90,7 @@ I'm not even trolling, the ClickHouse command lines has a smile face as the curs
 CREATE DATABASE activity
 ```
 
-![](/img/img31.png)
+![Consol-Log after creating a database](/img/img31.png)
 
 This indicates a successful database creation. Now let's create the stream table and define each column and it's Data Types. And as mentioned before, we going to use Map Data Type for attributes column.
 
@@ -105,11 +105,11 @@ CREATE TABLE activity.stream (
 ORDER BY timestamp;
 ```
 
-![](/img/img32.png)
+![Consol-Log after creating a table](/img/img32.png)
 
 Here, we have defined the columns for the Activity-Schema
 
-- timestamp - is the Date and Time of occured activity;
+- timestamp - is the Date and Time of occurred activity;
 
 - activity_id - is the unique identifier;
 
@@ -125,7 +125,7 @@ Now let's take a look at our table with this line of code
 DESCRIBE TABLE activity.stream
 ```
 
-![](/img/img33.png)
+![Consol-Log describing the table](/img/img33.png)
 
 The Activity-Schema is now ready to ingest some data.
 
@@ -227,7 +227,7 @@ extract_data()
 
 By running this script we return the DataFrame of our traffic like so
 
-![](/img/img34.png)
+![VSCode terminal after extracting data](/img/img34.png)
 
 Be aware that you won't be able to access my blog's data, since you don't have credentials to access it, so you might want to refactor this script to access any other data available to you.
 
@@ -267,14 +267,14 @@ transform_data() # This line also should be removed in the Load step
 
 Running above script creates a new column called activity, and by default it populates with "INCOMING_TRAFFIC" value, as this batch of data is about incoming traffic, some other columns like date and country has been renamed to comply the ClickHouse table we created earlier. And finally we created attributes column, that takes the rest of the data like channel source, sessions numbers etc ...
 
-![](/img/img35.png)
+![VSCode Terminal after transforming the data](/img/img35.png)
 
 ## Loading Data into ClickHouse
 
 ```python
 """
     Same as before 
-    Remove tranform_data() lines
+    Remove transform_data() lines
     With the following script to avoid console noise
 """
 
@@ -299,7 +299,7 @@ To check if the Data has been loaded, let's get back to the ClickHouse Client Te
 SELECT count() FROM activity.stream
 ```
 
-![](/img/img36.png)
+![Consol-Log after counting rows in the table](/img/img36.png)
 
 We have ingested Google Analytics Data into Activity-Schema, now let's see how to access attributes data, imagine that we are interested in total sessions by country.
 
@@ -312,19 +312,19 @@ GROUP BY entity
 ORDER BY sessions_total DESC
 ```
 
-![](/img/img37.png)
+![Consol-Log after agregating data in the table](/img/img37.png)
 
 And there you have it! The Data Warehouse in Activity-Schema ready to store millions rows of data under different activity that can be self-joined via timestamp, entity or attributes. Here, I have built a simple report on sessions by channels and countries.
 
-![](/img/img38.png)
+![The dashboard of sessions by channel and countries](/img/img38.png)
 
 ## Conclusion
 
 In this article we have discussed OLTP vs OLAP databases, also talked about the differences between the Star-Schema and Activity-Schema. Further we have setup the ClickHouse environment and created activity.stream table. Next, we extracted Google Analytics data, transformed it into the Activity-Schema format, and finally uploaded it to our Data Warehouse named activity.stream.
 
-If you want to dive into Data Warehousing, then you should learn MPP or Massive Parallel Processing. MPP is the technical approach to set your OLAP database to ingest data from different shards, which is the seperate units of clustered CPU working in parallel and then sharing the processed data with one another. Pretty cool stuff!
+If you want to dive into Data Warehousing, then you should learn MPP or Massive Parallel Processing. MPP is the technical approach to set your OLAP database to ingest data from different shards, which is the separate units of clustered CPU working in parallel and then sharing the processed data with one another. Pretty cool stuff!
 
-Another point to keep in mind is that in this article, we have performed ETL mannually. And a crucial skill in Data Analytics and Engineering is to be able to automate this workflow. For that purpose the Data Orchestration tools like Apache Airflow is very usefull. We will cover it in the next articles, very soon.
+Another point to keep in mind is that in this article, we have performed ETL mannually. And a crucial skill in Data Analytics and Engineering is to be able to automate this workflow. For that purpose the Data Orchestration tools like Apache Airflow is very useful. We will cover it in the next articles, very soon.
 
 I hope you have enjoyed reading this article !
 
