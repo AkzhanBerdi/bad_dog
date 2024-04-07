@@ -1,5 +1,5 @@
 ---
-title: "How to Build Data Warehouse in Activity Schema with ClickHouse"
+title: "Building Data Warehouse in Activity Schema with ClickHouse"
 
 date: 2024-04-07
 
@@ -13,7 +13,7 @@ alt_description: 'Building Data Ware House using ClickHouse'
 
 slug: "how-to-build-data-warehouse-in-activity-schema-with-clickhouse"
 
-description: "Create a Data Warehouse in Activity-Schema with OLAP database ClickHouse on your local computer"
+description: "How to Create a Data Warehouse in Activity-Schema with OLAP database ClickHouse on your local computer"
 ---
 
 > "It doesn't matter who you hire first, whether it's a Data Scientist, Data Analyst, or ML Engineer. The first hire eventually would do Data Engineering job."
