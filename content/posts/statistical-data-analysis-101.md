@@ -17,7 +17,7 @@ description: "Learn about Statistical Analysis, Central Tendency, Variability, V
 
 ---
 
-# Bloody Beginners Guide. Part I
+## Bloody Beginners Guide. Part I
 
 In this article we will take a look at the basic concepts of Statistical Analysis. We will be using the R programming language to visualize essential details, so download [RStudio Desktop](https://posit.co/download/rstudio-desktop/) and install both R and R studio. If you are not comfortable programming at all, then check out my previous post about [how to start coding](https://baddogdata.com/how-to-learn-coding) and build the basics of using Terminal and VS Code. Even though it's not covering the R, it still a good point to start.
 
