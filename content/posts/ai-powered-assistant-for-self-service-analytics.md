@@ -61,6 +61,8 @@ These are concerns you must address and manage. For example, set read-only crede
 
 The NLP model doesn't need to see the actual data, although it works better if a data sample is provided. You can synthesize the data sample so the NLP doesn't access classified data.
 
+[YdataAI](https://github.com/ydataai/ydata-synthetic) is highly recommended service to synthsize data samples.
+
 ## Conclusion
 Empowering business users with self-service analytics through AI can significantly reduce the burden on your Data Team. By addressing potential security concerns and providing robust tools, you can enable your business to become more data-savvy and self-reliant. This approach not only enhances efficiency but also ensures that your data professionals can focus on delivering Product Metrics.
 
