@@ -1,24 +1,43 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
- //   "@nuxtjs/google-analytics",
     "@nuxtjs/tailwindcss", 
-    "@nuxt/content",
+    "@nuxt/content"
   ],
-  // googleAnalytics: {
-  //   id: 'G-VSDTCMMC1P', // Replace with your Google Analytics tracking ID
-  // },
+
   content: {
     markdown: {
       remarkPlugins: [
-        'remark-math'
+        ['remark-math', {
+          singleDollarTextMath: true
+        }]
       ],
       rehypePlugins: [
         'rehype-katex'
+      ],
+      components: {
+        code: 'ProseCode'
+      }
+    }
+  },
+
+  // Use CDN instead of local file
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
+          integrity: 'sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq',
+          crossorigin: 'anonymous'
+        }
       ]
     }
   },
-  css: [
-    '/static/katext.css'
-  ]  
-});
+
+  // Remove the css array since we're using CDN
+  // css: ['/static/katext.css'],
+
+  compatibilityDate: '2024-10-27'
+})
