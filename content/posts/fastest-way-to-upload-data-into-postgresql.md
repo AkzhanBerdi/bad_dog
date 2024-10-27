@@ -17,8 +17,10 @@ description: "Learn how to significantly speed up your PostgreSQL data uploads b
 ---
 
 > There are only two hard things in Computer Science: cache invalidation and naming things.
-> -- Phil Karlton
->                                                                                     
+> 
+>                                                                                    -- Random Guy from LinkedIn
+
+
 
 Recently I changed my job from Data Analyst in a Big Tech Marketplace to a Data Product Manager in Agribusiness Enterprise. And I was freaking out of FOMO concerning that Enterprise company would not challenge me enough to stay on point with technical approach to creative solutions. I gotta say, that I was wrong and my learning curve is as steep as it should be for anyone who changes the jobs in between to seize the learning opportunity.
 
@@ -44,7 +46,7 @@ Imagine doing this millions of times! Each INSERT statement requires a round tri
 
 ## Enter the COPY Method
 
-One of the greatest mind in our team Miras Serikuly comes with the thought "I may have developed the fastest way to upload dataframe into PostgreSQL". Here's the core of the solution:
+One of the greatest mind in our team comes with the thought "I may have realized the fastest way to upload dataframe into PostgreSQL". Here's the core of the solution:
 
 ```python
 def psql_insert_copy(table, conn, keys, data_iter):
@@ -108,7 +110,7 @@ Yes, you read that right. What used to take half an hour now completes in second
 
 If you're dealing with bulk data uploads in PostgreSQL, switching from INSERT to COPY is like upgrading from a Honda Civic to a Ferrari (without the expensive maintenance). Just remember - with great power comes great responsibility. Make sure your data is clean before attempting the upload, as COPY is an all-or-nothing operation.
 
-The full implementation would be available in Miras repository if he agrees to. Stay in tune with us in Telegram or Linkedin!
+The full implementation and comparison available in Askin Tamanli [repository](https://github.com/askintamanli/Fastest-Methods-to-Bulk-Insert-Pandas-Dataframe-into-PostgreSQL)
 
 Yours,  
 Bad Dog 
