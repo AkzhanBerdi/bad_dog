@@ -62,8 +62,7 @@ or using Mac
 ```
 brew install uv
 ```
-
-![[/img/plink/plink_1.png]]
+![terminal installation](/img/plink/plink_1.png)
 In my case I have it installed, so nothing really happens here after the prompt.
 ### Create Project
 
@@ -73,7 +72,7 @@ Now let's initiate the project with UV
 uv init project_name
 ```
 
-![[/img/plink/plink_2.png]]
+![terminal installation](/img/plink/plink_2.png)
 Change directory to a new project via "cd plink_data" and type "ls" to see files inside the project.
 
 ```
@@ -81,7 +80,7 @@ cd plink_data
 ls
 ```
 
-![[/img/plink/plink_3.png]]
+![terminal installation](/img/plink/plink_3.png)
 As soon as we switched to plink_data project we can see three basic files here
 - hello.py
 - pyproject.toml
@@ -92,14 +91,14 @@ We also have initialized git project. Let's explore it first
 git status
 ```
 
-![[/img/plink/plink_4.png]]
+![terminal installation](/img/plink/plink_4.png)
 Git says we are at master branch with no commits and couple of untracked files. If you don't know what Git is, then don't mind and let's keep up with our project. Let's kick it off
 
 ```
 uv run hello.py
 ```
 
-![[/img/plink/plink_5.png]]
+![terminal installation](/img/plink/plink_5.png)
 We just ran our project with CPython, created virtual environment and received greetings from plink-data project. Good job so far !
 
 Now let's add our project components by running following command 
@@ -107,20 +106,20 @@ Now let's add our project components by running following command
 uv add fastapi sqlmodel python-multipart uvicorn
 ```
 
-![[/img/plink/plink_6.png]]
+![terminal installation](/img/plink/plink_6.png)
 All components being installed and we can synchronize them 
 
 ```
 uv sync
 ```
 
-![[/img/plink/plink_7.png]]
+![terminal installation](/img/plink/plink_7.png)
 Also we can see the project dependencies structure
 ```
 uv tree
 ```
 
-![[/img/plink/plink_8.png]]
+![terminal installation](/img/plink/plink_8.png)
 
 Our plink-data project and it's components like fastapi which depends on pydantic and starlette, sqlmodel depend on sqlalchemy and so on. Now let's activate our python virtual environment 
 
@@ -128,7 +127,7 @@ Our plink-data project and it's components like fastapi which depends on pydanti
 . .venv/bin/activate
 ```
 
-![[/img/plink/plink_9.png]]
+![terminal installation](/img/plink/plink_9.png)
 By following this steps we accomplished to set up our project in a couple of minutes without wasting our time on creating git project , virtual environment and declare our dependencies. UV made it for us, and it's bad ass. Now let's write some source code
 
 ### SRC
@@ -140,7 +139,7 @@ mkdir src
 cd src
 ```
 
-![[/img/plink/plink_10.png]]
+![terminal installation](/img/plink/plink_10.png)
 
 ### Database
 
@@ -150,7 +149,7 @@ Here we would need to define a database structure
 nano database.py
 ```
 
-![[/img/plink/plink_11.png]]
+![terminal installation](/img/plink/plink_11.png)
 Here we would need to write following 
 ```
 from sqlmodel import SQLModel, create_engine
@@ -162,13 +161,13 @@ def create_db_and_tables():
     SQLModel.metadata.create_all(engine)
 ```
 
-![[/img/plink/plink_12.png]]
+![terminal installation](/img/plink/plink_12.png)
 then press Ctrl + X, and press "Y" and "ENTER" to save content
 ```
 cat database.py
 ```
 
-![[/img/plink/plink_13.png]]
+![terminal installation](/img/plink/plink_13.png)
 
 I actually used bat, but it's an additional feature that need to be installed, however cat would give you same results, but without syntax highlight.
 
@@ -208,7 +207,7 @@ Save it with Ctrl + X, press "Y" and "ENTER", and check the content
 cat models.py
 ```
 
-![[/img/plink/plink_14.png]]
+![terminal installation](/img/plink/plink_14.png)
 
 ### Main
 
@@ -267,7 +266,7 @@ async def upload_file(file: UploadFile):
 cat main.py
 ```
 
-![[/img/plink/plink_15.png]]
+![terminal installation](/img/plink/plink_15.png)
 
 ### Init
 
@@ -298,7 +297,7 @@ FAM3    IND5    0    0    1    2    A A    G G    C C    T T    G G
 cat sample.txt
 ```
 
-![[/img/plink/plink_16.png]]
+![terminal installation](/img/plink/plink_16.png)
 
 ### Upload sample
 
@@ -308,35 +307,35 @@ First we need to launch our application with the uvicorn command
 uvicorn src.main:app --reload
 ```
 
-![[/img/plink/plink_17.png]]
+![terminal installation](/img/plink/plink_17.png)
 Cool! The app is live and running. The nuance is that we have to keep this terminal in it's current state and open another terminal to ingest the file.
 In the new terminal write the following command:
 ```
 curl -X POST -F "file=@sample.txt" http://localhost:8000/upload/
 ```
 
-![[/img/plink/plink_18.png]]
+![terminal installation](/img/plink/plink_18.png)
 
 ### Read data using SQL
 
 First you need a program that will allow you access your database with SQL. My way to go with SQL is dbeaver, but you can use any other program such as Data Grip for example. I have it installed, if you don't go to official website to download and install it. Community version is free.
 
 This is how interface look like, click on the socket + sign to add the database
-![[/img/plink/plink_19.png]]
+![dbeaver interface](/img/plink/plink_19.png)
 Chose SQLite and press Next
 
-![[/img/plink/plink_20.png]]
+![dbeaver interface](/img/plink/plink_20.png)
 
 Press Open
-![[/img/plink/plink_21.png]]
+![dbeaver interface](/img/plink/plink_21.png)
 
 Then choose genotype.db file and press open and then finish
 
-![[/img/plink/plink_22.png]]
+![dbeaver interface](/img/plink/plink_22.png)
 
 Look at the bar where genotypes.db connection is chosen instead of N/A. You have to explicitly choose it.
 
-![[/img/plink/plink_23.png]]
+![dbeaver interface](/img/plink/plink_23.png)
 
 ### SQL
 
@@ -346,7 +345,7 @@ Now we can do some basic SELECT statements like so
 SELECT * FROM genotypedata
 ```
 
-![[/img/plink/plink_24.png]]
+![dbeaver interface](/img/plink/plink_24.png)
 Now as we got all data at hand, let's explore some DML (Data Manipulation Language) functionality. For example we might need to see how many individuals are in each familiy
 
 ```
@@ -356,7 +355,7 @@ SELECT
 FROM genotypedata
 GROUP BY family_id;
 ```
-![[/img/plink/plink_25.png]]
+![dbeaver interface](/img/plink/plink_25.png)
 
 
 Or let's say we want to see only females with phenotype 2
@@ -368,7 +367,7 @@ WHERE sex = 2
 AND phenotype = 2;
 ```
 
-![[/img/plink/plink_26.png]]
+![dbeaver interface](/img/plink/plink_26.png)
 
 ```
 SELECT 
@@ -382,7 +381,7 @@ GROUP BY family_id;
 
 Get total records and split by sex
 
-![[/img/plink/plink_27.png]]
+![dbeaver interface](/img/plink/plink_27.png)
 
 ### Advanced SQL
 
@@ -399,7 +398,7 @@ GROUP BY phenotype, snp1
 ORDER BY phenotype, count DESC;
 ```
 
-![[/img/plink/plink_28.png]]
+![dbeaver interface](/img/plink/plink_28.png)
 
 We can see that between snp1 of phenotype 1 is evenly distributed in 50 / 50, but not much for phenotype 2 where distribution is 67 / 33
 
@@ -426,7 +425,7 @@ SELECT
 FROM allele_counts;
 ```
 
-![[/img/plink/plink_29.png]]
+![dbeaver interface](/img/plink/plink_29.png)
 The differences between observed and expected aren't large, but noticeable enough to warrant attention in quality control processes.
 
 So here we go. This is the SQL way 
