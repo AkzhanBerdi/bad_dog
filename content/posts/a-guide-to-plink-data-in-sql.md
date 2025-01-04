@@ -55,11 +55,11 @@ First we need to open our Terminal and install our components and set up the pro
 ### Install UV
 
 if using Linux / Windows
-```
+```bash
 pip install uv
 ```
 or using Mac
-```
+```bash
 brew install uv
 ```
 ![terminal_installation](/img/plink/plink_1.png)
@@ -68,14 +68,14 @@ In my case I have it installed, so nothing really happens here after the prompt.
 
 Now let's initiate the project with UV
 
-```
-uv init project_name
+```bash
+uv init plink_data
 ```
 
 ![terminal_installation](/img/plink/plink_2.png)
 Change directory to a new project via "cd plink_data" and type "ls" to see files inside the project.
 
-```
+```bash
 cd plink_data
 ls
 ```
@@ -85,16 +85,17 @@ As soon as we switched to plink_data project we can see three basic files here
 - hello.py
 - pyproject.toml
 - README.md
+
 We also have initialized git project. Let's explore it first
 
-```
+```bash
 git status
 ```
 
 ![terminal_installation](/img/plink/plink_4.png)
 Git says we are at master branch with no commits and couple of untracked files. If you don't know what Git is, then don't mind and let's keep up with our project. Let's kick it off
 
-```
+```bash
 uv run hello.py
 ```
 
@@ -102,20 +103,20 @@ uv run hello.py
 We just ran our project with CPython, created virtual environment and received greetings from plink-data project. Good job so far !
 
 Now let's add our project components by running following command 
-```
+```bash
 uv add fastapi sqlmodel python-multipart uvicorn
 ```
 
 ![terminal_installation](/img/plink/plink_6.png)
 All components being installed and we can synchronize them 
 
-```
+```bash
 uv sync
 ```
 
 ![terminal_installation](/img/plink/plink_7.png)
 Also we can see the project dependencies structure
-```
+```bash
 uv tree
 ```
 
@@ -123,18 +124,18 @@ uv tree
 
 Our plink-data project and it's components like fastapi which depends on pydantic and starlette, sqlmodel depend on sqlalchemy and so on. Now let's activate our python virtual environment 
 
-```
+```bash
 . .venv/bin/activate
 ```
 
 ![terminal_installation](/img/plink/plink_9.png)
 By following this steps we accomplished to set up our project in a couple of minutes without wasting our time on creating git project , virtual environment and declare our dependencies. UV made it for us, and it's bad ass. Now let's write some source code
 
-### SRC
+## SRC
 
 Let's create source directory where the main python code would live 
 
-```
+```bash
 mkdir src
 cd src
 ```
@@ -145,13 +146,13 @@ cd src
 
 Here we would need to define a database structure 
 
-```
+```bash
 nano database.py
 ```
 
 ![terminal_installation](/img/plink/plink_11.png)
 Here we would need to write following 
-```
+```bash
 from sqlmodel import SQLModel, create_engine
 
 DATABASE_URL = "sqlite:///genotypes.db"
@@ -163,23 +164,23 @@ def create_db_and_tables():
 
 ![terminal_installation](/img/plink/plink_12.png)
 then press Ctrl + X, and press "Y" and "ENTER" to save content
-```
+```bash
 cat database.py
 ```
 
 ![terminal_installation](/img/plink/plink_13.png)
 
-I actually used bat, but it's an additional feature that need to be installed, however cat would give you same results, but without syntax highlight.
+I actually use bat, but it's an additional feature that has to be installed first, however cat would give you the same results, but without syntax highlight.
 
 ### Models
 
-```
+```bash
 nano models.py
 ```
 
 The following code would create a class for GenotypeData, i.e the PLINK data structure
 
-```
+```bash
 from datetime import datetime
 from typing import Optional
 
@@ -203,7 +204,7 @@ class GenotypeData(SQLModel, table=True):
 
 Save it with Ctrl + X, press "Y" and "ENTER", and check the content
 
-```
+```bash
 cat models.py
 ```
 
@@ -213,12 +214,12 @@ cat models.py
 
 Create main python file
 
-```
+```bash
 nano main.py
 ```
 
 Pass the following code
-```
+```bash
 from fastapi import FastAPI, UploadFile
 from sqlmodel import Session
 
@@ -262,7 +263,7 @@ async def upload_file(file: UploadFile):
 	return {"message": f"Data from {file.filename} uploaded successfully"}
 ```
 
-```
+```bash
 cat main.py
 ```
 
@@ -272,7 +273,7 @@ cat main.py
 
 We also need a simple init file, this way we interpret whole src directory as the python package
 
-```
+```bash
 touch __init__.py
 ```
 
@@ -280,12 +281,12 @@ And that's it.
 
 ### Create a sample data or use your own
 
-I will create a sample to ingest the data, if you have your own PLNIK data, feel free to ingest it into your database instead 
-```
+I will create a sample to ingest the data, if you have your own PLNIK data, feel free to upload your samples into the same folder we working on
+```bash
 nano sample.txt
 ```
 
-```
+```bash
 FAM1    IND1    0    0    1    2    A A    G G    A C    T T    A G
 FAM1    IND2    0    0    2    2    A G    G T    C C    T T    G G
 FAM2    IND3    0    0    1    1    G G    T T    C C    A T    G G
@@ -293,7 +294,7 @@ FAM2    IND4    0    0    2    1    A G    G T    0 0    T T    A G
 FAM3    IND5    0    0    1    2    A A    G G    C C    T T    G G
 ```
 
-```
+```bash
 cat sample.txt
 ```
 
@@ -303,26 +304,28 @@ cat sample.txt
 
 First we need to launch our application with the uvicorn command
 
-```
+```bash
 uvicorn src.main:app --reload
 ```
 
 ![terminal_installation](/img/plink/plink_17.png)
 Cool! The app is live and running. The nuance is that we have to keep this terminal in it's current state and open another terminal to ingest the file.
 In the new terminal write the following command:
-```
+```bash
 curl -X POST -F "file=@sample.txt" http://localhost:8000/upload/
 ```
 
 ![terminal_installation](/img/plink/plink_18.png)
 
-### Read data using SQL
+Congrats! Your data has been ingested.
 
-First you need a program that will allow you access your database with SQL. My way to go with SQL is dbeaver, but you can use any other program such as Data Grip for example. I have it installed, if you don't go to official website to download and install it. Community version is free.
+## Read data using SQL
+
+First you need a program that will allow you access your database with SQL. My way to go with SQL is dbeaver, but you can use any other program such as Data Grip for example. I have it installed, if you don't go to official website to [download](https://dbeaver.io/download/) and install it. Community version is free.
 
 This is how interface look like, click on the socket + sign to add the database
 ![dbeaver_interface](/img/plink/plink_19.png)
-Chose SQLite and press Next
+Choose SQLite and press Next
 
 ![dbeaver_interface](/img/plink/plink_20.png)
 
@@ -341,14 +344,14 @@ Look at the bar where genotypes.db connection is chosen instead of N/A. You have
 
 Now we can do some basic SELECT statements like so
 
-```
+```sql
 SELECT * FROM genotypedata
 ```
 
 ![dbeaver_interface](/img/plink/plink_24.png)
 Now as we got all data at hand, let's explore some DML (Data Manipulation Language) functionality. For example we might need to see how many individuals are in each familiy
 
-```
+```sql
 SELECT
 	family_id,
 	COUNT(*) as individual_count
@@ -360,7 +363,7 @@ GROUP BY family_id;
 
 Or let's say we want to see only females with phenotype 2
 
-```
+```sql
 SELECT *
 FROM genotypedata
 WHERE sex = 2
@@ -369,7 +372,7 @@ AND phenotype = 2;
 
 ![dbeaver interface](/img/plink/plink_26.png)
 
-```
+```sql
 SELECT 
 	family_id, 
 	COUNT(*) as total_records, 
@@ -387,7 +390,7 @@ Get total records and split by sex
 
 Let's say we want to see Genotype Distribution by Phenotype analyzing relationships between genotypes and phenotypes
 
-```
+```sql
 SELECT
 	phenotype,
 	snp1,
@@ -406,7 +409,7 @@ We can see that between snp1 of phenotype 1 is evenly distributed in 50 / 50, bu
 
 It's based on a fundamental principle: in a stable population, the frequency of genotypes should follow a predictable pattern unless something is interfering.
 
-```
+```sql
 WITH allele_counts AS (
 	SELECT
 		COUNT(*) as total,
@@ -425,10 +428,10 @@ SELECT
 FROM allele_counts;
 ```
 
-![dbeaver_interface](/img/plink/plink_29.png)
+![dbeaver interface](/img/plink/plink_29.png)
 The differences between observed and expected aren't large, but noticeable enough to warrant attention in quality control processes.
 
-So here we go. This is the SQL way 
+So here we go lads. This is the SQL way 
 
-Yours,
+Yours,  
 Bad Dog
