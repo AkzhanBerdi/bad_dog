@@ -29,8 +29,6 @@ export default defineNuxtConfig({
         {
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
-          integrity: 'sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq',
-          crossorigin: 'anonymous'
         },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'apple-touch-icon', sizes: '152x152', href: '/apple-touch-icon-152x152.png' },

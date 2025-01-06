@@ -20,8 +20,6 @@ description: "Building Self-Service Analytics using telegram bot and ChatGPT"
 >
 >                                                                                     -- Random Guy from LinkedIn
 
-## AI-powered Assistant for Self-Service Analytics
-
 In small start-ups, the demand for data products is ever-growing. As the Lead Data Analyst, I've developed numerous solutions, from automated email reporting systems and comprehensive dashboards integrating external data sources to real-time fraud detection algorithms. However, maintaining these projects makes it challenging to develop new solutions. With budget constraints preventing the hiring of more data professionals, why not empower the business itself to be a Data Product? This article explains how to build Self-Service Analytics using a Telegram bot and ChatGPT's Natural Language Processing (NLP).
 
 ## Prerequisites

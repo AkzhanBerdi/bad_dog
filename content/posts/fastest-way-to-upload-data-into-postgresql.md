@@ -16,14 +16,11 @@ slug: "fastest-way-to-upload-data-into-postgresql"
 description: "Learn how to significantly speed up your PostgreSQL data uploads by switching from INSERT to COPY method"
 ---
 
-> There are only two hard things in Computer Science: cache invalidation and naming things.
-> 
->                                                                                    -- Random Guy from LinkedIn
+> According to Pareto principal, 20% of your code do 80% of compilation
+>
+>                                                                            -- Christian Mayer, The Art of Clean Code
 
-
-
-Recently I changed my job from Data Analyst in a Big Tech Marketplace to a Data Product Manager in Agribusiness Enterprise. And I was freaking out of FOMO concerning that Enterprise company would not challenge me enough to stay on point with technical approach to creative solutions. I gotta say, that I was wrong and my learning curve is as steep as it should be for anyone who changes the jobs in between to seize the learning opportunity.
-
+Recently I changed my job from Data Analyst in a Big Tech to a Data Product Manager in Enterprise. And I was freaking out of FOMO concerning that Enterprise company would not challenge me enough to stay on point with technical approach to creative solutions. I gotta say, that I was wrong and my learning curve is as steep as it should be for anyone who changes the jobs in between to seize the learning opportunity.
 
 ## The Problem with Pandas Default Insert
 
@@ -63,6 +60,7 @@ def psql_insert_copy(table, conn, keys, data_iter):
             table_name, columns)
         cur.copy_expert(sql=sql, file=s_buf)
 ```
+
 Suggesting to use PostgreSQL's COPY command, this beast can handle bulk data loading like it's nothing. Instead of sending individual INSERT statements, COPY streams the data in a single transaction. It's like upgrading from a bicycle courier to a cargo plane!
 
 ## The Results Speak for Themselves
@@ -78,29 +76,27 @@ Suggesting to use PostgreSQL's COPY command, this beast can handle bulk data loa
 
 Yes, you read that right. What used to take half an hour now completes in seconds. Our DBAs finally stopped giving us the evil eye during peak load times.
 
-## Let's break it down:
+## Let's break it down
 
 ### INSERT Method
-**Pros:**
+
 - Simple to implement
 - Good for small datasets
 - Better for real-time row-by-row updates
 - Easier error handling per row
 
-**Cons:**
 - Painfully slow for bulk uploads
 - Creates heavy network traffic
 - Causes database connection overhead
 - Makes DBAs cry
 
 ### COPY Method
-**Pros:**
+
 - Blazing fast for bulk uploads
 - Minimal network overhead
 - Single transaction
 - Makes DBAs smile
 
-**Cons:**
 - More complex implementation
 - All-or-nothing transaction
 - Harder to handle individual row errors
@@ -113,4 +109,4 @@ If you're dealing with bulk data uploads in PostgreSQL, switching from INSERT to
 The full implementation and comparison available in Askin Tamanli [repository](https://github.com/askintamanli/Fastest-Methods-to-Bulk-Insert-Pandas-Dataframe-into-PostgreSQL)
 
 Yours,  
-Bad Dog 
+Bad Dog

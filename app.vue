@@ -1,15 +1,24 @@
 <script setup lang="ts">
 
-import CommentWidget from './components/content/CommentWidget.vue';
+const CommentWidget = defineAsyncComponent(() => 
+  import('./components/content/CommentWidget.vue')
+)
+
+const meta = {
+  title: 'Bad Dog Data',
+  description: 'Self-Taught Data Science / Machine Learning Journal',
+  image: 'https://baddogdata.com/img/hello_world.png',
+  url: 'https://baddogdata.com/',
+}
 
 useSeoMeta({
-  title: 'Bad Dog Data',
-  ogTitle: 'Bad Dog Data',
-  description: 'Self-Taught Data Science / Machine Learning Journal',
-  ogDescription: 'Self-Taught Data Science / Machine Learning Journal',
-  ogImage: 'https://baddogdata.com/img/hello_world.png',
+  title: meta.title,
+  ogTitle: meta.title,
+  description: meta.description,
+  ogDescription: meta.description,
+  ogImage: meta.image,
   ogType: 'website',
-  ogUrl: 'https://baddogdata.com/',
+  ogUrl: meta.url,
 });
 
 useHead({
@@ -17,24 +26,9 @@ useHead({
     {
       src: 'https://www.googletagmanager.com/gtag/js?id=G-VSDTCMMC1P',
       async: true,
-    },
-    {
-      innerHTML: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-VSDTCMMC1P');
-      `,
-    },
-
-  ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-  ],
-  htmlAttrs: {
-      lang: 'en',
-      //style: 'font-size: 13px',
-    },
+      defer: true,
+    }
+  ]
 })
 ;
 </script>
@@ -61,7 +55,9 @@ useHead({
 
       </header>
         <NuxtPage />
+        <Suspense>
         <CommentWidget />
+        </Suspense>
   </div>
 </template>
 
