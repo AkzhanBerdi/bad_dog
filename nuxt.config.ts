@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         }]
       ],
       rehypePlugins: [
-        'rehype-katex'
+        'rehype-katex',
       ],
       components: {
         code: 'ProseCode'
@@ -22,22 +22,23 @@ export default defineNuxtConfig({
     }
   },
 
-  // Use CDN instead of local file
   app: {
     head: {
+      viewport: 'width=device-width, initial-scale=1',
       link: [
         {
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
           integrity: 'sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq',
           crossorigin: 'anonymous'
-        }
+        },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'apple-touch-icon', sizes: '152x152', href: '/apple-touch-icon-152x152.png' },
+        { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-touch-icon-120x120.png' },
+        { rel: 'apple-touch-icon', sizes: '76x76', href: '/apple-touch-icon-76x76.png' }
       ]
     }
   },
-
-  // Remove the css array since we're using CDN
-  // css: ['/static/katext.css'],
 
   compatibilityDate: '2024-10-27'
 })

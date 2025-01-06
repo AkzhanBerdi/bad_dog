@@ -26,22 +26,7 @@ useHead({
         gtag('config', 'G-VSDTCMMC1P');
       `,
     },
-    // {
-    //   type: 'text/javascript',
-    //   innerHTML:`
-    //   const script = window.document.createElement('script');
-    //   script.src = 'https://utteranc.es/client.js';
-    //   script.setAttribute('repo', 'AkzhanBerdi/bad_dog');
-    //   script.setAttribute('issue-term', 'pathname');
-    //   script.setAttribute('theme', 'boxy-light');
-    //   script.setAttribute('crossorigin', 'anonymous');
-    //   script.setAttribute('async', '');
 
-    //   window.document.body.appendChild(script);
-    //   `,
-    //   tagPosition: 'bodyClose',
-    //   async: true,
-    // }
   ],
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
@@ -59,16 +44,13 @@ useHead({
     <!-- <Header> -->
       <header class="mt-8 mb-4 flex justify-between items-end">
         <div>
-          <h1 class="text-2xl font-semibold">
-            <NuxtLink to="/">Bad Dog Data</NuxtLink>
-          </h1>
-          <p class="text-gray-500">Self-Taught Data-Science / Machine Learning Journal</p>
+          <h2 class="text-2xl font-semibold">
+            <NuxtLink to="/">Data Science and Machine Learning Journal</NuxtLink>
+          </h2>
+          <p class="text-gray-500">From Almaty Kazakhstan to the world!</p>
         </div>
 
         <div class="align-right">
-          <!-- <Btn>
-            <a href="https://baddogdata.com/hello-world" target="_blank">About me</a>
-          </Btn> -->
           <Btn>
             <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn</a>
           </Btn>

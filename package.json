@@ -19,10 +19,10 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@tailwindcss/typography": "^0.5.10",
-    "remark-math": "3.0.1",
-    "rehype-katex": "5.0.0",
-    "katex": "^0.16.9",
+    "katex": "^0.16.19",
     "nuxt": "^3.8.2",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^3.0.1",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
   }

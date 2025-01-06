@@ -1,5 +1,5 @@
 ---
-title: "A Guide to PLINK Data in SQL. Bridging Bioinformatics and Data Management"
+title: "A Guide to Manage Bioinformatics Data in SQL Database"
 
 date: 2025-01-04
 
@@ -17,11 +17,9 @@ description: "How to work with genotype data in databases"
 ---
 > Dedicated to Tamerlan.
 >
-> "The world belongs to those who believe in the beauty of their dreams"
+> The world belongs to those who believe in the beauty of their dreams
 >
-> <p align="right">— Random Indonesian Girl</p>
-
->
+> <p align="right">-- Not Random Indonesian Girl</p>
 
 Many bioinformaticians excel at processing genetic data but have limited exposure to modern database practices. This tutorial aims to help laboratory specialists enhance their data management skills by building a practical SQLite database for PLINK genotype data.
 
@@ -52,18 +50,24 @@ And last, but not least the Python Package manager written in Rust, providing ea
 ## Set up
 
 First we need to open our Terminal and install our components and set up the project, let's do this typing following commands into our terminal:
+
 ### Install UV
 
 if using Linux / Windows
+
 ```bash
 pip install uv
 ```
+
 or using Mac
+
 ```bash
 brew install uv
 ```
+
 ![terminal_installation](/img/plink/plink_1.png)
 In my case I have it installed, so nothing really happens here after the prompt.
+
 ### Create Project
 
 Now let's initiate the project with UV
@@ -82,6 +86,7 @@ ls
 
 ![terminal_installation](/img/plink/plink_3.png)
 As soon as we switched to plink_data project we can see three basic files here
+
 - hello.py
 - pyproject.toml
 - README.md
@@ -102,13 +107,14 @@ uv run hello.py
 ![terminal_installation](/img/plink/plink_5.png)
 We just ran our project with CPython, created virtual environment and received greetings from plink-data project. Good job so far !
 
-Now let's add our project components by running following command 
+Now let's add our project components by running following command
+
 ```bash
 uv add fastapi sqlmodel python-multipart uvicorn
 ```
 
 ![terminal_installation](/img/plink/plink_6.png)
-All components being installed and we can synchronize them 
+All components being installed and we can synchronize them
 
 ```bash
 uv sync
@@ -116,13 +122,14 @@ uv sync
 
 ![terminal_installation](/img/plink/plink_7.png)
 Also we can see the project dependencies structure
+
 ```bash
 uv tree
 ```
 
 ![terminal_installation](/img/plink/plink_8.png)
 
-Our plink-data project and it's components like fastapi which depends on pydantic and starlette, sqlmodel depend on sqlalchemy and so on. Now let's activate our python virtual environment 
+Our plink-data project and it's components like fastapi which depends on pydantic and starlette, sqlmodel depend on sqlalchemy and so on. Now let's activate our python virtual environment
 
 ```bash
 . .venv/bin/activate
@@ -133,7 +140,7 @@ By following this steps we accomplished to set up our project in a couple of min
 
 ## SRC
 
-Let's create source directory where the main python code would live 
+Let's create source directory where the main python code would live
 
 ```bash
 mkdir src
@@ -144,14 +151,15 @@ cd src
 
 ### Database
 
-Here we would need to define a database structure 
+Here we would need to define a database structure
 
 ```bash
 nano database.py
 ```
 
 ![terminal_installation](/img/plink/plink_11.png)
-Here we would need to write following 
+Here we would need to write following
+
 ```bash
 from sqlmodel import SQLModel, create_engine
 
@@ -164,6 +172,7 @@ def create_db_and_tables():
 
 ![terminal_installation](/img/plink/plink_12.png)
 then press Ctrl + X, and press "Y" and "ENTER" to save content
+
 ```bash
 cat database.py
 ```
@@ -219,6 +228,7 @@ nano main.py
 ```
 
 Pass the following code
+
 ```bash
 from fastapi import FastAPI, UploadFile
 from sqlmodel import Session
@@ -232,35 +242,35 @@ app = FastAPI()
 @app.on_event("startup")
 
 def on_startup():
-	create_db_and_tables()
+ create_db_and_tables()
 
 @app.post("/upload/")
 
 async def upload_file(file: UploadFile):
-	content = (await file.read()).decode()
-	with Session(engine) as session:
-		for line in content.splitlines():
-		fields = line.strip().split()
-		if not fields: # Skip empty lines
-			continue
+ content = (await file.read()).decode()
+ with Session(engine) as session:
+  for line in content.splitlines():
+  fields = line.strip().split()
+  if not fields: # Skip empty lines
+   continue
 
-		genotype_data = GenotypeData(
-			family_id=fields[0],
-			individual_id=fields[1],
-			paternal_id=fields[2],
-			maternal_id=fields[3],
-			sex=int(fields[4]),
-			phenotype=int(fields[5]),
-			snp1=f"{fields[6]} {fields[7]}",
-			snp2=f"{fields[8]} {fields[9]}",
-			snp3=f"{fields[10]} {fields[11]}",
-			snp4=f"{fields[12]} {fields[13]}",
-			snp5=f"{fields[14]} {fields[15]}",
-		)
-		session.add(genotype_data)
-	session.commit()
+  genotype_data = GenotypeData(
+   family_id=fields[0],
+   individual_id=fields[1],
+   paternal_id=fields[2],
+   maternal_id=fields[3],
+   sex=int(fields[4]),
+   phenotype=int(fields[5]),
+   snp1=f"{fields[6]} {fields[7]}",
+   snp2=f"{fields[8]} {fields[9]}",
+   snp3=f"{fields[10]} {fields[11]}",
+   snp4=f"{fields[12]} {fields[13]}",
+   snp5=f"{fields[14]} {fields[15]}",
+  )
+  session.add(genotype_data)
+ session.commit()
 
-	return {"message": f"Data from {file.filename} uploaded successfully"}
+ return {"message": f"Data from {file.filename} uploaded successfully"}
 ```
 
 ```bash
@@ -282,6 +292,7 @@ And that's it.
 ### Create a sample data or use your own
 
 I will create a sample to ingest the data, if you have your own PLNIK data, feel free to upload your samples into the same folder we working on
+
 ```bash
 nano sample.txt
 ```
@@ -311,6 +322,7 @@ uvicorn src.main:app --reload
 ![terminal_installation](/img/plink/plink_17.png)
 Cool! The app is live and running. The nuance is that we have to keep this terminal in it's current state and open another terminal to ingest the file.
 In the new terminal write the following command:
+
 ```bash
 curl -X POST -F "file=@sample.txt" http://localhost:8000/upload/
 ```
@@ -353,13 +365,13 @@ Now as we got all data at hand, let's explore some DML (Data Manipulation Langua
 
 ```sql
 SELECT
-	family_id,
-	COUNT(*) as individual_count
+ family_id,
+ COUNT(*) as individual_count
 FROM genotypedata
 GROUP BY family_id;
 ```
-![dbeaver_interface](/img/plink/plink_25.png)
 
+![dbeaver_interface](/img/plink/plink_25.png)
 
 Or let's say we want to see only females with phenotype 2
 
@@ -374,10 +386,10 @@ AND phenotype = 2;
 
 ```sql
 SELECT 
-	family_id, 
-	COUNT(*) as total_records, 
-	SUM(CASE WHEN sex = 1 THEN 1 ELSE 0 END) as male_count, 
-	SUM(CASE WHEN sex = 2 THEN 1 ELSE 0 END) as female_count 
+ family_id, 
+ COUNT(*) as total_records, 
+ SUM(CASE WHEN sex = 1 THEN 1 ELSE 0 END) as male_count, 
+ SUM(CASE WHEN sex = 2 THEN 1 ELSE 0 END) as female_count 
 FROM genotypedata
 GROUP BY family_id;
 ```
@@ -392,10 +404,10 @@ Let's say we want to see Genotype Distribution by Phenotype analyzing relationsh
 
 ```sql
 SELECT
-	phenotype,
-	snp1,
-	COUNT(*) as count,
-	ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY phenotype), 2) as percentage
+ phenotype,
+ snp1,
+ COUNT(*) as count,
+ ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (PARTITION BY phenotype), 2) as percentage
 FROM genotypedata
 GROUP BY phenotype, snp1
 ORDER BY phenotype, count DESC;
@@ -405,33 +417,47 @@ ORDER BY phenotype, count DESC;
 
 We can see that between snp1 of phenotype 1 is evenly distributed in 50 / 50, but not much for phenotype 2 where distribution is 67 / 33
 
-### Hardy-Weinberg Equilibrium (HWE) Check:
+### Hardy-Weinberg Equilibrium (HWE) Check
 
 It's based on a fundamental principle: in a stable population, the frequency of genotypes should follow a predictable pattern unless something is interfering.
 
 ```sql
 WITH allele_counts AS (
-	SELECT
-		COUNT(*) as total,
-		SUM(CASE WHEN snp1 LIKE 'A A' THEN 1 ELSE 0 END) as AA,
-		SUM(CASE WHEN snp1 LIKE 'A G' OR snp1 LIKE 'G A' THEN 1 ELSE 0 END) as AG,
-		SUM(CASE WHEN snp1 LIKE 'G G' THEN 1 ELSE 0 END) as GG
-	FROM genotypedata
+ SELECT
+  COUNT(*) as total,
+  SUM(CASE WHEN snp1 LIKE 'A A' THEN 1 ELSE 0 END) as AA,
+  SUM(CASE WHEN snp1 LIKE 'A G' OR snp1 LIKE 'G A' THEN 1 ELSE 0 END) as AG,
+  SUM(CASE WHEN snp1 LIKE 'G G' THEN 1 ELSE 0 END) as GG
+ FROM genotypedata
 )
 SELECT
-	AA as observed_AA,
-	AG as observed_AG,
-	GG as observed_GG,
-	ROUND(POWER((2*AA + AG)/(2.0*total), 2) * total, 2) as expected_AA,
-	ROUND(2 * ((2*AA + AG)/(2.0*total)) * ((2*GG + AG)/(2.0*total)) * total, 2) as expected_AG,
-	ROUND(POWER((2*GG + AG)/(2.0*total), 2) * total, 2) as expected_GG
+ AA as observed_AA,
+ AG as observed_AG,
+ GG as observed_GG,
+ ROUND(POWER((2*AA + AG)/(2.0*total), 2) * total, 2) as expected_AA,
+ ROUND(2 * ((2*AA + AG)/(2.0*total)) * ((2*GG + AG)/(2.0*total)) * total, 2) as expected_AG,
+ ROUND(POWER((2*GG + AG)/(2.0*total), 2) * total, 2) as expected_GG
 FROM allele_counts;
 ```
 
 ![dbeaver interface](/img/plink/plink_29.png)
 The differences between observed and expected aren't large, but noticeable enough to warrant attention in quality control processes.
 
-So here we go lads. This is the SQL way 
+## Wrapping Up: From Lab Benches to Database Queries 🧬
+
+We've come quite a journey from those text-based PLINK files to a fully-functional SQL database. Pretty cool transformation, right?
+
+Here's what you've accomplished:
+
+- Set up a modern Python project faster than you can say "nucleotide sequencing"
+- Transformed genetic data into queryable gold using SQLite
+- Learned to use use SQL queries (and even tackled Hardy-Weinberg equilibrium!)
+
+The best part? This is just the beginning. With your genetic data now living in a proper database, you've opened up a whole new world of possibilities for analysis and collaboration.
+
+Keep experimenting, keep querying, and most importantly - keep pushing the boundaries of what's possible with your data!
 
 Yours,  
 Bad Dog
+
+P.S. Remember: Every great bioinformatician started somewhere. Today, that somewhere was turning PLINK files into SQL magic! 🪄
