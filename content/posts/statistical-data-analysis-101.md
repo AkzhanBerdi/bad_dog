@@ -9,11 +9,11 @@ tags: ["stats"]
 
 thumbnail: '/img/statistical_data_analysis_101.png'
 
-alt_description: 'Statistical Data Analysis in 4 basic steps'
+alt_description: 'Statistical Data Analysis in 4 steps'
 
 slug: "statistical-data-analysis-101"
 
-description: "Learn about Statistical Analysis, Central Tendency, Variability, Variance, neural networks and back propagation."
+description: "Learn about Statistical Analysis, Central Tendency, Variability, Variance, and back propagation."
 
 ---
 
