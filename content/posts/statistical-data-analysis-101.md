@@ -9,7 +9,7 @@ tags: ["stats"]
 
 thumbnail: '/img/statistical_data_analysis_101.png'
 
-alt_description: 'Statistical Data Analysis in 4 steps'
+alt_description: 'Statistical Data Analysis in 4 basic steps'
 
 slug: "statistical-data-analysis-101"
 
