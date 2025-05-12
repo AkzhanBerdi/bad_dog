@@ -6,6 +6,7 @@ function formatDate(date: string) {
     return dt.toLocaleDateString('en-US', options);
 }
 
+
 </script>  
 
 <template>
@@ -28,12 +29,14 @@ function formatDate(date: string) {
             class="blog-card bg-white rounded-2xl overflow-hidden mb-4"
         >
         <div class="h-[300px] relative">
+            <NuxtLink :to="`/${post.slug}`">
             <img
                 v-if="post.thumbnail" 
                 :src="post.thumbnail"
                 :alt="post.title"
                 class="w-full h-full object-cover absolute" 
             />
+            </NuxtLink>
         </div>
 
         <div class="blog-card--meta p-4">
