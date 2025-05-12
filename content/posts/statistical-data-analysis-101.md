@@ -9,17 +9,19 @@ tags: ["stats"]
 
 thumbnail: '/img/statistical_data_analysis_101.png'
 
+alt_description: 'Statistical Data Analysis in 4 steps'
+
 slug: "statistical-data-analysis-101"
 
-description: "Learn Statistical Data Analysis for Bloody Beginners and dive into basics of Measures of Central Tendency, Variability and Variance. Also Learn how neural networks use back propagation to learn from experience."
+description: "Learn about Statistical Analysis, Central Tendency, Variability, Variance, neural networks and back propagation."
 
 ---
 
-# Statistical Data Analysis 101. Part I
+## Bloody Beginners Guide. Part I
 
-In this article we will take a look at the basic concepts of Statistical Analysis. We will be using the R programming language to visualize essential details, so [download]([RStudio Desktop - Posit](https://posit.co/download/rstudio-desktop/)) and install both R and R studio. If you are not comfortable programming at all, then check out my previous post about [how to start coding](https://baddogdata.com/how-to-learn-coding) and build the basics of using Terminal and VS Code. Even though it's not covering the R, it still a good starting point.
+In this article we will take a look at the basic concepts of Statistical Analysis. We will be using the R programming language to visualize essential details, so download [RStudio Desktop](https://posit.co/download/rstudio-desktop/) and install both R and R studio. If you are not comfortable programming at all, then check out my previous post about [how to start coding](https://baddogdata.com/how-to-learn-coding) and build the basics of using Terminal and VS Code. Even though it's not covering the R, it still a good point to start.
 
-Now let's kick-off with the following command to generate random dataset. After printing out the entire block of the code you'd need to select it and press *Ctrl + Enter*. 
+Now let's kick-off with the following command to generate random dataset. Print the entire block of the code into R studio editor, then select the code you want to run and press *Ctrl + Enter*. 
 
 ```r
 set.seed(123)  # Allows you to reproduce the same random data as mine
@@ -68,13 +70,13 @@ print(median(data))
 
 ![Normal Distribution with mean and median](/img/img12.png)
 
-Looking at the graph we can see the mean and median both at the center, as expected. The console line calculated \$50.90 and \$50.61 as the mean and median respectivly.
+Looking at the graph we can see the mean and median both at the center, as expected. The console line calculated \$50.90 and \$50.61 as the mean and median respectively.
 
 But what is this median and why do we need it?
 
 ### Median
 
-Unlike the mean, the median, denoted by $\tilde x$ it's the exact middle value in the dataset. It's pretty much straightforward with odd numbers of observations, you just sort the spendings in ascending order and point to the value in the middle. As the formula suggests - divide number of observations by 2 and round it upwards. And that's your median! 
+Unlike the mean, the median, denoted by $\tilde x$ it's the exact middle value in the dataset. It's pretty much straightforward with odd numbers of observations, you just sort the spendings in ascending order and point to the value in the middle. As the formula suggests - divide the number of observations by 2 and round it upwards. That's your median! 
 
 $$
 \tilde{x} = {x}_\frac{n+1}{2}
@@ -112,7 +114,7 @@ Note how the median and mean are further apart from each other, to be precise th
 
 ## Quantiles
 
-A quantile divides the dataset into equal parts. The median is actually a particular case of a quantile which divides the dataet into two quantiles. Let's create a couple of variables using the **'quantile()'** function.
+A quantile divides the dataset into several equal parts. The median is actually a particular case of a quantile which divides the dataset into two quantiles. Let's create a couple of variables using the **'quantile()'** function.
 
 ```r
 # Defining median using quantiles function
@@ -150,7 +152,7 @@ Now we have four equal quantiles in terms of total amount of values, but notice 
 
 ## Measure of variability
 
-The Central tendency is not the only measure to look at when analyzing the data. Now imagine you are assigned to a business in three different cities. Let's check the weather to make an assumptions on how to dress and what clothes to pack in your luggage.
+The Central tendency is not the only measure to look at when analyzing the data. Now imagine you've been set for a business trip to three different cities. Let's check the weather to make an assumptions on how to dress and what clothes to pack in your luggage.
 
 | City     | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
 | -------- |:------:|:-------:|:---------:|:--------:|:------:|:--------:|
@@ -184,7 +186,7 @@ $$
 IQR = \tilde{x}_{0.75} - \tilde{x}_{0.25}
 $$
 
-Let's create a new transaction data and group it by the payment providers. Now run the following script to create the dataframe.
+Let's create a new data for order transactions and group it by the payment providers. Now run the following script to create the dataframe.
 
 ```r
 set.seed(123) # Keep this for reproducibility
@@ -224,9 +226,11 @@ ggplot(df, aes(x = Group, y = Values, fill = Group)) +
 
 ![The boxplot displaying payment providers](/img/img16.png)
 
-Looking at this graph we can see three different plots representing **'Halyk'**, **'Jusan'**, and **'Kaspi'** in green, orange and red respectively. The horizontal line in the middle of sandglass shape is the median, the sandglass shape itself is the IQR, where the bottom part is the second quartile, the top part is the third quartile, everything above it is the fourth quartile, and everything below IQR is the first quartile. Also we can see the outliers represented as single point isolated from the rest of the dataset.
+Looking at this graph we can see three different plots representing **'Halyk'**, **'Jusan'**, and **'Kaspi'** in green, orange and red respectively.
 
-If made it this far, then congrats fellow, now you can perform basic descriptive analysis using measures of Central Tendency and Variablity. The next section would get a little bit tricky, but pretty much exciting for nerds like me.
+Think of the sandglass shape like this: the middle line is the median, the whole sandglass thing is the IQR. The bottom part is the second quartile, the top part is the third quartile, above it is the fourth quartile, and below the IQR is the first quartile. And the outlier? It's a lonely point that separated from the Halyk Group boxplot.
+
+If you made it this far, then congrats fellow! You've learn how to perform decent descriptive analysis using measures of Central Tendency and Variablity. The next section would get a little bit tricky, but pretty much exciting for nerds like me.
 
 ## Variance
 
@@ -234,17 +238,17 @@ Sometimes we have to understand how far the values in the dataset from the mean 
 
 ### Absolute Deviation
 
-The absolute deviation is the sum of differences between the mean and each and every given value of the dataset divided by total observations. The math is pretty much straightforward.
+The absolute deviation is the sum of differences between the average and each and every given value of the dataset divided by total observations. The math is pretty much straightforward.
 
 $$
 D = \frac{\sum_{i=1}^n(x_i - A)}{n}
 $$
 
-However, there is a technical problem with this formula, it only would work if our distribution doesn't have the negative values like so.    
+However, there is a technical problem with this formula, it would only work if our distribution doesn't have any negative value within it, just like our dataset happens to be.    
 
 ![Absolute Deviation of a certain value](/img/img17.png)
 
-Otherwise, just like with the weather example where the negative and positive values cancels eachother, it would be rather meaningless to have 0 deviation at actual 10 &deg;C range, so for this reason the formula is modified to use modules like so 
+Otherwise, just like with the weather example where the negative and positive values cancels eachother out, it would be rather meaningless to have 0 deviation at actual 10 &deg;C range, so for this reason the formula has been modified to use modules like so 
 
 $$
 D = \frac{\sum_{i=1}^n|x_i - A|}{n}
@@ -256,49 +260,51 @@ $$
 D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \tilde x_{0,5}|}{n}
 $$
 
-or an **Absolute Mean Deviation**
+Or an **Absolute Mean Deviation**
 
 $$
 D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \bar x_{0,5}|}{n}
 $$
 
-Essentially the same thing, but different point of refference.
+Essentially the same thing, but different point of reference to the average.
 
 ## Back Propagation
 
-Module does great job eliminating problem of negative values by using absolutes. However when the task requires optimization for a machine learning algorythms like neural network for instance, then the Absolute Values becomes a huge problem.
+Module does great job eliminating problem of negative values by using absolutes. However when the task requires optimization for a machine learning algorithms like neural network for instance, then the Absolute Values becomes a huge problem.
 
-How does machine distinguish between cat and dog? It learns through an algorythm called back propagation, it gives a shot saying cat is dog, it then receives an error, this error propagated back to an algorythm optimizing the next intteration.
+How does machine learn to distinguish between cat and dog? It learns through a process of back propagation, it gives a shot saying cat is dog, it then receives an error, this error propagated back to an algorithm optimizing yet another numerous intteration.
 
-At the very core of it's engine, neural networks use function's derivative to adjust itself in case of error. But what happens if the the algorythm use absolute deviation?
+At the very core of it's engine, neural networks use function's derivative to adjust itself in case of error. But what happens if the the algorithm use absolute deviation?
 
 ![Absolute Value Function](/img/img18.png)
 
-The Absolute Value Function gets to a corner point where the Lipschitz condition is violated, and no derivative available to propagate the error back to the machine, hence neural network algorythm breaks.
+The Absolute Value Function gets to a corner point where the Lipschitz condition is violated, and no derivative available to propagate the error back to the machine, hence neural network algorithm breaks.
 
 ### Mean Squared Error
 
-Finding the derivative requires a tangency line that gives machine a new direction to adjust itself. Therefor the Absolute Deviation formula has been evolved to **Mean Squared Error** which use square instead of module. Thus allows to keep absolute values and function's derivative both at the same time.
+Finding the derivative requires a tangency line that gives machine a new direction to adjust itself. Therefor the Absolute Deviation evolved into **Mean Squared Error** which use square instead of module. 
 
 $$
 S^2(A) = \frac{\sum_{i=1}^n(x_i - A)^2}{n}
 $$
 
-The optimization task is always cares about MSE to be as minimum as possible. And it gets to it's minimum when Central Tendency is an Arythmetic Mean or $ A = \bar x$ 
+Thus allows to keep absolute values and function's derivative both at the same time, and that optimizes back propagation to work as expected.
+
+![Tangency Line on a function](/img/img19.png) 
 
 ### Sample Variance
+
+The optimization task always requires Mean Squared Error to be as minimum as possible. That's pretty obvious! We want our neural network to be precise, and not making any mistakes, hence the name Mean Squared **Error**. The MSE gets minimum value when the Central Tendency is equal to Arythmetic Mean or $ A = \bar x$ , and that's called **Sample Variance**.
 
 $$
 \tilde S^2 = \frac{\sum_{i=1}^n(x_i - \bar x)^2}{n}
 $$
 
-It may feel a bit off to use square values, but so what? We don't care about actual values if it allows us the machine to learn how to distinguish between cat and dog, car and pedastrian, cancer and healthy cells and so on. 
-
-![Tangency Line on a function](/img/img19.png)
+It may feel a bit off to use square values, but so what? We don't care about actual values if it allows the machine to learn how to distinguish between cancer and healthy cells, right? 
 
 ### Standard Deviation
 
-In the end if original values are required, we are always allowed to apply the square root to the Sample Variance, and that's how the Standard Deviation kicks into the game.
+In the end if the original values are required, we are always allowed to apply the square root to the Sample Variance, and that's how the Standard Deviation kicks into the game.
 
 $$
 \tilde S = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i - \bar x)^2}
@@ -307,4 +313,4 @@ $$
 That's enough for an introduction into Statistical Data Analysis, I hope you enjoyed.
 
 Yours,  
-Akzhan
+Bad Dog

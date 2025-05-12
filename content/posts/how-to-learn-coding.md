@@ -9,12 +9,14 @@ tags: ["coding"]
 
 thumbnail: '/img/how_to_learn_coding.png'
 
+alt_description: 'Learn to code in three simple steps'
+
 slug: "how-to-learn-coding"
 
 description: "Start coding with these 3 steps! Learn to code in a browser, explore the terminal, and dive into an IDE like VS Code. Follow hands-on exercises and build a bilingual project"
 ---
 
-# Start to Code in These 3 Steps
+## Start to Code in These 3 Steps
 
 You probably landed this page because you want to learn to code, which is great! Most people still didn't figure out what they want to do in their life, but you already did the hardest part. The coding is truly powerful skill. It enables you to write instructions to the machine which in turn builds stuff like websites, mobile applications, rocket missiles launching systems and many more.
 

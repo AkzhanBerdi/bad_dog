@@ -1,13 +1,24 @@
 <script setup lang="ts">
 
-useSeoMeta({
+const CommentWidget = defineAsyncComponent(() => 
+  import('./components/content/CommentWidget.vue')
+)
+
+const meta = {
   title: 'Bad Dog Data',
-  ogTitle: 'Bad Dog Data',
   description: 'Self-Taught Data Science / Machine Learning Journal',
-  ogDescription: 'Self-Taught Data Science / Machine Learning Journal',
-  ogImage: 'https://baddogdata.com/img/hello_world.png',
+  image: 'https://baddogdata.com/img/hello_world.png',
+  url: 'https://baddogdata.com/',
+}
+
+useSeoMeta({
+  title: meta.title,
+  ogTitle: meta.title,
+  description: meta.description,
+  ogDescription: meta.description,
+  ogImage: meta.image,
   ogType: 'website',
-  ogUrl: 'https://baddogdata.com/',
+  ogUrl: meta.url,
 });
 
 useHead({
@@ -15,6 +26,7 @@ useHead({
     {
       src: 'https://www.googletagmanager.com/gtag/js?id=G-VSDTCMMC1P',
       async: true,
+      defer: true,
     },
     {
       innerHTML: `
@@ -23,16 +35,10 @@ useHead({
         gtag('js', new Date());
         gtag('config', 'G-VSDTCMMC1P');
       `,
-    },
-  ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-  ],
-  htmlAttrs: {
-      lang: 'en',
-      //style: 'font-size: 13px',
-    },
-});
+    }
+  ]
+})
+;
 </script>
 
 <template>
@@ -40,29 +46,26 @@ useHead({
     <!-- <Header> -->
       <header class="mt-8 mb-4 flex justify-between items-end">
         <div>
-          <h1 class="text-2xl font-semibold">
-            <NuxtLink to="/">Bad Dog Data</NuxtLink>
-          </h1>
-          <p class="text-gray-500">Self-Taught Data-Science / Machine Learning Journal</p>
+          <h2 class="text-2xl font-semibold">
+            <NuxtLink to="/">Data Science and Machine Learning Journal</NuxtLink>
+          </h2>
+          <p class="text-gray-500">From Almaty Kazakhstan to the world!</p>
         </div>
 
         <div class="align-right">
-          <!-- <Btn>
-            <a href="https://baddogdata.com/hello-world" target="_blank">About me</a>
-          </Btn> -->
           <Btn>
-            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn Me</a>
+            <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn</a>
           </Btn>
           <Btn>
-            <a href="https://t.me/akzhan_berdi" target="_blank">Telegram Me</a>
+            <a href="https://t.me/baddogdata" target="_blank">Telegram</a>
           </Btn>
         </div>
 
       </header>
-    <!-- </Header> -->
-      <!-- <MainContent>  -->
         <NuxtPage />
-      <!-- </MainContent> -->
+        <Suspense>
+        <CommentWidget />
+        </Suspense>
   </div>
 </template>
 

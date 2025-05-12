@@ -4,13 +4,14 @@ date: 2023-12-16
 draft: false
 tags: ["personal"]
 thumbnail: '/img/hello_world.png'
+alt_description: 'The bad dog is a data scientist'
 slug: "hello-world"
 description: "Welcome to Bad Dog Data blog! Here we will learn about programming, statistical data analysis and machine learning"
 ---
 
-# Greetings to all curious minds!
+## Greetings to all curious minds!
 
-I'm Akzhan, your bad dog from the vibrant city of Almaty, Kazakhstan. By day, I learn just enough of new stuff to navigate the ever-shifting landscape of e-commerce trends as a Data Analyst. I do love coding, stats, and business – a potent trifecta for understanding the world through numbers and algorithms, or even scaling any business like online commerce for instance.
+I'm Akzhan, your bad dog from the vibrant city of Almaty, Kazakhstan. By day, I learn just enough of new stuff to navigate the ever-shifting landscape of Data World as a Data Product Manager. I do love coding, stats, and business – a potent trifecta for understanding the world through numbers and algorithms, or even scaling any business like online commerce for instance.
 
 Statistical analysis is so much fun, sometimes even mind-blowing! Forget boring spreadsheets. Here, you'll learn about statistical learning, how to transform it into machine learning, hence interpret the world around you and make data-driven decisions.
 
