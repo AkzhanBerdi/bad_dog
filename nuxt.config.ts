@@ -6,6 +6,22 @@ export default defineNuxtConfig({
     "@nuxt/content"
   ],
 
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => [
+        // MathML elements
+        'math', 'semantics', 'mrow', 'mi', 'mo', 'mn', 'msub', 'msup', 
+        'msubsup', 'mfrac', 'mover', 'munderover', 'annotation', 'msqrt',
+        'mtext', 'mspace', 'mglyph', 'malignmark', 'mstyle', 'mprescripts',
+        'none', 'mtr', 'mtd', 'mtable', 'mroot', 'mmultiscripts', 'mlongdiv',
+        'menclose', 'msline', 'mscarry', 'msgroup', 'mscarries', 'msrow',
+        'mstack', 'munder', 'merror', 'mpadded', 'mphantom', 'maction',
+        'path', 'svg', 'line', 'circle', 'ellipse', 'rect', 'polygon', 'polyline',
+        'g', 'use', 'defs', 'marker'
+      ].includes(tag.toLowerCase())
+    }
+  },
+
   content: {
     markdown: {
       remarkPlugins: [
