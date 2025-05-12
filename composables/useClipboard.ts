@@ -12,4 +12,8 @@ export function useClipboard() {
     return {
       copy
     };
+<<<<<<< HEAD
   }
+=======
+  }
+>>>>>>> katex-fix-2

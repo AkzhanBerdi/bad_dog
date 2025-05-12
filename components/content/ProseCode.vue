@@ -38,4 +38,8 @@ const handleCopy = async () => {
   </svg>
 </button>
   </div>
+<<<<<<< HEAD
 </template>
+=======
+</template>
+>>>>>>> katex-fix-2

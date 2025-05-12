@@ -34,4 +34,8 @@
   <style scoped>
   /* Add any additional styles if needed */
   </style>
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> katex-fix-2
