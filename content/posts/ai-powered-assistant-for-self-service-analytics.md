@@ -24,7 +24,7 @@ In small start-ups, the demand for data products is ever-growing. As the Lead Da
 
 ## Prerequisites
 
-As mentioned in my [previous article](https://baddogdata.com/how-to-build-data-warehouse-in-activity-schema-with-clickhouse), as a Data Professional, the first step is ensuring denormalization. Data Marts and Data Warehouses are crucial utilities for your Data Team. Having all data in one place makes it easier to deliver business objectives. Once you have consistent data in one place, you are ready to implement AI into your infrastructure.
+As mentioned in my [previous article](https://blog.baddogdata.com/how-to-build-data-warehouse-in-activity-schema-with-clickhouse), as a Data Professional, the first step is ensuring denormalization. Data Marts and Data Warehouses are crucial utilities for your Data Team. Having all data in one place makes it easier to deliver business objectives. Once you have consistent data in one place, you are ready to implement AI into your infrastructure.
 
 ## User to Assistant Interaction
 
