@@ -58,7 +58,7 @@ This approach is one of the most denormalized since we have no dependencies betw
 
 ## Set-up your ClickHouse
 
-For the sake of simplicity, we will use our local machine in this tutorial, whereas in the real world the Data Warehouses should be deployed somewhere in the cloud, but with this in mind let's assume that our laptop is the powerful on-premise server, and just for this purpose it's happened to be that my laptop is running on Linux. If you are a Windows guy, then my previous article on [how to coding](https://baddogdata.com/how-to-learn-coding), where I've include the  installation of WSL2 or Windows Subsystem for Linux would help you to keep up with this guide. 
+For the sake of simplicity, we will use our local machine in this tutorial, whereas in the real world the Data Warehouses should be deployed somewhere in the cloud, but with this in mind let's assume that our laptop is the powerful on-premise server, and just for this purpose it's happened to be that my laptop is running on Linux. If you are a Windows guy, then my previous article on [how to coding](https://blog.baddogdata.com/how-to-learn-coding), where I've include the  installation of WSL2 or Windows Subsystem for Linux would help you to keep up with this guide. 
 
 ```bash
 curl https://clickhouse.com/ | sh
