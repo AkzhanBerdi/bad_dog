@@ -9,8 +9,8 @@ const CommentWidget = defineAsyncComponent(() =>
 const meta = {
   title: 'Bad Dog Data',
   description: 'Self-Taught Data Science / Machine Learning Journal',
-  image: 'https://baddogdata.com/img/hello_world.png',
-  url: 'https://baddogdata.com/',
+  image: 'https://blog.baddogdata.com/img/hello_world.png',
+  url: 'https://blog.baddogdata.com/',
 }
 
 
