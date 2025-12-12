@@ -39,17 +39,25 @@ The most basic concept of statistical data analysis is the average expected valu
 
 The mean, of course, is just a ratio between the amount of values and total number of observations. It sounds simple, but look at this scary formula. It's worth breaking it down and memorizing, as you will see it more often on your learning journey. 
 
-$$
-\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-$$
+**Mean Formula:**
+
+```
+x̄ = (1/n) × Σ(xᵢ) for i=1 to n
+```
+
+Where:
+- **x̄** (x-bar) = the mean
+- **n** = number of observations
+- **Σ** (sigma) = sum of all values
+- **xᵢ** = individual values
 
 #### Formula Explanation
 
-The mean, denoted by $\bar{x}$ , which equals to the sum of all values expressed by the sign $\sum_{i=1}^n {x_i}$ , and the implied $\frac{1}{n}$ multiplication is merely a division by the number of observations. It's fair enough to interpret this formula as following.
+The mean, denoted by **x̄**, equals the sum of all values (expressed by Σ from i=1 to n of xᵢ), and the multiplication by (1/n) is merely a division by the number of observations. It's fair enough to interpret this formula as:
 
-$$
-\bar{x} = \frac{{x_1} + {x_2} + ... +{x_n}}{N}
-$$
+```
+x̄ = (x₁ + x₂ + ... + xₙ) / n
+```
 
 Now enough of math! Let's visualize our dataset using histogram. Also we will draw two absolute lines, the red line indicating the mean, and the green line representing the median.
 
@@ -70,23 +78,27 @@ print(median(data))
 
 ![Normal Distribution with mean and median](/img/img12.png)
 
-Looking at the graph we can see the mean and median both at the center, as expected. The console line calculated \$50.90 and \$50.61 as the mean and median respectively.
+Looking at the graph we can see the mean and median both at the center, as expected. The console line calculated $50.90 and $50.61 as the mean and median respectively.
 
 But what is this median and why do we need it?
 
 ### Median
 
-Unlike the mean, the median, denoted by $\tilde x$ it's the exact middle value in the dataset. It's pretty much straightforward with odd numbers of observations, you just sort the spendings in ascending order and point to the value in the middle. As the formula suggests - divide the number of observations by 2 and round it upwards. That's your median! 
+Unlike the mean, the median (denoted by **x̃**) is the exact middle value in the dataset. It's pretty much straightforward with odd numbers of observations, you just sort the spendings in ascending order and point to the value in the middle. As the formula suggests - divide the number of observations by 2 and round it upwards. That's your median! 
 
-$$
-\tilde{x} = {x}_\frac{n+1}{2}
-$$
+**Median Formula (odd number of values):**
+
+```
+x̃ = x₍ₙ₊₁₎/₂
+```
 
 However our dataset has even 100 values. In this case the division by 2 would not result with the value in the middle. So in this case we have to find the arithmetic mean between the two values closest to the middle. That would be the sum of number 50 and 51, divided by 2.
 
-$$
-\tilde{x} = \frac{{X_{(\frac{n}{2})}}+{X_{(\frac{n}{2}+1)}}}{2}
-$$
+**Median Formula (even number of values):**
+
+```
+x̃ = (x₍ₙ/₂₎ + x₍ₙ/₂₊₁₎) / 2
+```
 
 Use the following script to get a new random distribution, but less symmetric this time.
 
@@ -110,7 +122,7 @@ cat("Median:", median(data), "\n")
 
 ![Not Normal Distribution with mean and median](/img/img13.png)
 
-Note how the median and mean are further apart from each other, to be precise they are \$52.78 and \$56.90 respectively. That's due to the fact that we've defined some spendings to be more than \$100. And that's why we use median more often, cause it's resistant to the outliers and always point to the middle value unlike the mean. 
+Note how the median and mean are further apart from each other, to be precise they are $52.78 and $56.90 respectively. That's due to the fact that we've defined some spendings to be more than $100. And that's why we use median more often, cause it's resistant to the outliers and always point to the middle value unlike the mean. 
 
 ## Quantiles
 
@@ -160,31 +172,35 @@ The Central tendency is not the only measure to look at when analyzing the data.
 | Columbus | -5     | 5       | -5        | 5        | -5     | 5        |
 | Dublin   | -30    | -10     | 10        | 10       | 10     | 10       |
 
-If you take the weekly average temperature for each city of Lulea, Columbus or Dublin you will get the exactly same 0&deg;C in every city. We don't care about the mean in this situation, but what we do care about - is the range or spread of the values.
+If you take the weekly average temperature for each city of Lulea, Columbus or Dublin you will get the exactly same 0°C in every city. We don't care about the mean in this situation, but what we do care about - is the range or spread of the values.
 
 ### Range
 
 Calculating the range is pretty simple. You sort the values in ascending order, then find the difference between the maximum and minimum values. However be aware that just like an avarage, the range is quite sensitive for outliers.
 
-$$
-x_1 \le x_2 \le... \le x_n
-$$
+**Range Formula:**
 
-$$
-R = x_n - x_1
-$$
+```
+Sort values: x₁ ≤ x₂ ≤ ... ≤ xₙ
+Range (R) = xₙ - x₁
+```
 
-$$
-R_{Dublin} = 10 - (-30) = 40
-$$
+**Example:**
+```
+R(Dublin) = 10 - (-30) = 40
+```
 
 ### Interquartile Range
 
 Since all outliers are usually marginal values, they should lie on either edge of the dataset i.e. within the first or fourth quartile. That's why the Interquartile Range or IQR for short is used to eliminate the outliers impact. We slice the dataset to contain only the second and third quartiles, and that is the sweetest data for us to make an assumptions on. 
 
-$$
-IQR = \tilde{x}_{0.75} - \tilde{x}_{0.25}
-$$
+**IQR Formula:**
+
+```
+IQR = x̃₀.₇₅ - x̃₀.₂₅
+```
+
+(This is the 75th percentile minus the 25th percentile)
 
 Let's create a new data for order transactions and group it by the payment providers. Now run the following script to create the dataframe.
 
@@ -240,65 +256,81 @@ Sometimes we have to understand how far the values in the dataset from the mean 
 
 The absolute deviation is the sum of differences between the average and each and every given value of the dataset divided by total observations. The math is pretty much straightforward.
 
-$$
-D = \frac{\sum_{i=1}^n(x_i - A)}{n}
-$$
+**Absolute Deviation Formula:**
 
-However, there is a technical problem with this formula, it would only work if our distribution doesn't have any negative value within it, just like our dataset happens to be.    
+```
+D = Σ(xᵢ - A) / n   for i=1 to n
+```
+
+Where:
+- **D** = deviation
+- **A** = average (mean or median)
+- **xᵢ** = individual values
+- **n** = number of observations
+
+However, there is a technical problem with this formula, it would only work if our distribution doesn't have any negative value within it, just like our dataset happens to be.    
 
 ![Absolute Deviation of a certain value](/img/img17.png)
 
-Otherwise, just like with the weather example where the negative and positive values cancels eachother out, it would be rather meaningless to have 0 deviation at actual 10 &deg;C range, so for this reason the formula has been modified to use modules like so 
+Otherwise, just like with the weather example where the negative and positive values cancels eachother out, it would be rather meaningless to have 0 deviation at actual 10°C range, so for this reason the formula has been modified to use absolute values (modules) like so:
 
-$$
-D = \frac{\sum_{i=1}^n|x_i - A|}{n}
-$$
+**Modified Formula:**
 
-Depending on your requirements you may need either an **Absolute Median Deviation** 
+```
+D = Σ|xᵢ - A| / n   for i=1 to n
+```
 
-$$
-D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \tilde x_{0,5}|}{n}
-$$
+The vertical bars | | represent absolute value, which makes all differences positive.
 
-Or an **Absolute Mean Deviation**
+Depending on your requirements you may need either an **Absolute Median Deviation:**
 
-$$
-D_{(\tilde x_{0,5})} = \frac{\sum_{i=1}^n|x_i - \bar x_{0,5}|}{n}
-$$
+```
+D(x̃₀.₅) = Σ|xᵢ - x̃₀.₅| / n   for i=1 to n
+```
+
+Or an **Absolute Mean Deviation:**
+
+```
+D(x̄) = Σ|xᵢ - x̄| / n   for i=1 to n
+```
 
 Essentially the same thing, but different point of reference to the average.
 
 ## Back Propagation
 
-Module does great job eliminating problem of negative values by using absolutes. However when the task requires optimization for a machine learning algorithms like neural network for instance, then the Absolute Values becomes a huge problem.
+Absolute values do a great job eliminating the problem of negative values. However when the task requires optimization for machine learning algorithms like neural networks for instance, then the Absolute Values become a huge problem.
 
-How does machine learn to distinguish between cat and dog? It learns through a process of back propagation, it gives a shot saying cat is dog, it then receives an error, this error propagated back to an algorithm optimizing yet another numerous intteration.
+How does a machine learn to distinguish between cat and dog? It learns through a process of back propagation: it gives a shot saying "cat is dog", it then receives an error, this error is propagated back to the algorithm optimizing through yet another numerous iteration.
 
-At the very core of it's engine, neural networks use function's derivative to adjust itself in case of error. But what happens if the the algorithm use absolute deviation?
+At the very core of its engine, neural networks use a function's derivative to adjust itself in case of error. But what happens if the algorithm uses absolute deviation?
 
 ![Absolute Value Function](/img/img18.png)
 
-The Absolute Value Function gets to a corner point where the Lipschitz condition is violated, and no derivative available to propagate the error back to the machine, hence neural network algorithm breaks.
+The Absolute Value Function gets to a corner point where the Lipschitz condition is violated, and no derivative is available to propagate the error back to the machine, hence the neural network algorithm breaks.
 
 ### Mean Squared Error
 
-Finding the derivative requires a tangency line that gives machine a new direction to adjust itself. Therefor the Absolute Deviation evolved into **Mean Squared Error** which use square instead of module. 
+Finding the derivative requires a tangent line that gives the machine a new direction to adjust itself. Therefore the Absolute Deviation evolved into **Mean Squared Error** which uses square instead of absolute value. 
 
-$$
-S^2(A) = \frac{\sum_{i=1}^n(x_i - A)^2}{n}
-$$
+**Mean Squared Error Formula:**
 
-Thus allows to keep absolute values and function's derivative both at the same time, and that optimizes back propagation to work as expected.
+```
+S²(A) = Σ(xᵢ - A)² / n   for i=1 to n
+```
+
+This allows keeping absolute values and the function's derivative both at the same time, and that optimizes back propagation to work as expected.
 
 ![Tangency Line on a function](/img/img19.png) 
 
 ### Sample Variance
 
-The optimization task always requires Mean Squared Error to be as minimum as possible. That's pretty obvious! We want our neural network to be precise, and not making any mistakes, hence the name Mean Squared **Error**. The MSE gets minimum value when the Central Tendency is equal to Arythmetic Mean or $ A = \bar x$ , and that's called **Sample Variance**.
+The optimization task always requires Mean Squared Error to be as minimum as possible. That's pretty obvious! We want our neural network to be precise, and not making any mistakes, hence the name Mean Squared **Error**. The MSE gets its minimum value when the Central Tendency equals the Arithmetic Mean (A = x̄), and that's called **Sample Variance**.
 
-$$
-\tilde S^2 = \frac{\sum_{i=1}^n(x_i - \bar x)^2}{n}
-$$
+**Sample Variance Formula:**
+
+```
+S̃² = Σ(xᵢ - x̄)² / n   for i=1 to n
+```
 
 It may feel a bit off to use square values, but so what? We don't care about actual values if it allows the machine to learn how to distinguish between cancer and healthy cells, right? 
 
@@ -306,9 +338,16 @@ It may feel a bit off to use square values, but so what? We don't care about act
 
 In the end if the original values are required, we are always allowed to apply the square root to the Sample Variance, and that's how the Standard Deviation kicks into the game.
 
-$$
-\tilde S = \sqrt{\frac{1}{n}\sum_{i=1}^n(x_i - \bar x)^2}
-$$
+**Standard Deviation Formula:**
+
+```
+S̃ = √[Σ(xᵢ - x̄)² / n]   for i=1 to n
+```
+
+Or written out:
+```
+S̃ = square root of [(1/n) × sum of (xᵢ - x̄)² for all i from 1 to n]
+```
 
 That's enough for an introduction into Statistical Data Analysis, I hope you enjoyed.
 
