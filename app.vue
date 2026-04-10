@@ -50,7 +50,7 @@ useHead({
       <header class="mt-8 mb-4 flex justify-between items-end">
         <div>
           <h2 class="text-2xl font-semibold">
-            <NuxtLink to="/">Data Science and Machine Learning Journal</NuxtLink>
+            <NuxtLink to="/">Data Consultant</NuxtLink>
           </h2>
           <p class="text-gray-500">From Almaty Kazakhstan to the world!</p>
         </div>
