@@ -1,5 +1,5 @@
 ---
-title: "Still a Bad Dog. Just a more dangerous one."
+title: "Still a Bad Dog"
 date: 2023-12-16
 draft: false
 tags: ["personal", "consulting"]
@@ -11,7 +11,7 @@ description: "Bad Dog Data has evolved. From a data science journal to a consult
 
 ## Greetings to all curious minds!
 
-I'm Akzhan — a data consultant based in Almaty, Kazakhstan, and this is Bad Dog Data.
+I'm Akzhan — a data consultant based in Almaty, Kazakhstan, and this is my blog.
 
 I started this blog in 2023 when I was a Data Product Manager at a marketplace, mostly writing for myself and anyone curious enough to read about statistics, engineering, and the occasional rabbit hole. The posts were technical, a bit rough, and genuinely fun to write. That part hasn't changed.
 
@@ -22,4 +22,4 @@ This blog still lives at the intersection of data, business, and the human exper
 If you're a developer or analyst — welcome, there's plenty here for you. If you're a decision-maker trying to figure out what your data should actually be doing for your business — you might find this useful too.
 
 Yours,
-Bad Dog.
+Akzhan
