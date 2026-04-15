@@ -21,5 +21,5 @@ This blog still lives at the intersection of data, business, and the human exper
 
 If you're a developer or analyst — welcome, there's plenty here for you. If you're a decision-maker trying to figure out what your data should actually be doing for your business — you might find this useful too.
 
-Yours,
+Yours,  
 Akzhan
