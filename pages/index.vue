@@ -3,9 +3,9 @@
 
     <!-- HERO -->
     <div class="bg-white rounded-2xl overflow-hidden mb-4 p-8">
-      <p class="text-xs font-medium tracking-widest uppercase text-gray-400 mb-4">Independent Consultant — Available Globally</p>
+      <p class="text-xs font-medium tracking-widest uppercase text-gray-400 mb-4">Data Consultant — Available Globally</p>
       <h1 class="text-4xl font-semibold text-gray-900 leading-tight mb-4">
-        Strategy first<br />Everything else follows
+        Data strategy first.<br />Everything else follows.
       </h1>
       <p class="text-gray-500 leading-relaxed max-w-xl">
         Most companies start building before they know what they're building toward. Six months later they have pipelines, dashboards, and reports — and still can't answer the questions that matter.<br /><br />
@@ -32,7 +32,7 @@
         <span class="pulse-dot"></span>
         <span class="text-white font-medium text-sm">Available for new projects</span>
       </div>
-      <span class="text-gray-500 text-xs text-right">Remote worldwide<br />Based in Almaty, KZ</span>
+      <span class="text-gray-500 text-xs text-right">Remote worldwide<br />Based in Central Asia · Available in UAE</span>
     </div>
 
     <!-- SERVICES -->
@@ -119,11 +119,11 @@
       <p class="text-gray-500 text-sm mb-5">Tell me what you're working on — I'll come back with a clear picture of how I can help.</p>
       <div class="flex flex-col gap-2">
 
-        <a href="https://linkedin.com/in/akzhanberdi" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
-          <div class="w-8 h-8 rounded-lg flex-shrink-0 text-white text-xs font-semibold flex items-center justify-center" style="background:#0a66c2;">in</div>
+        <a href="https://wa.me/77713974173" target="_blank" class="flex items-center gap-3 p-4 rounded-xl bg-green-50 hover:bg-green-100 transition-colors border border-green-100">
+          <div class="w-9 h-9 rounded-lg flex-shrink-0 text-white text-sm flex items-center justify-center" style="background:#25d366;">✓</div>
           <div>
-            <div class="text-gray-900 font-medium text-sm">LinkedIn</div>
-            <div class="text-gray-400 text-xs">linkedin.com/in/akzhanberdi</div>
+            <div class="text-gray-900 font-semibold text-sm">WhatsApp</div>
+            <div class="text-gray-500 text-xs">+7 771 397 4173 — fastest response</div>
           </div>
         </a>
 
@@ -135,11 +135,11 @@
           </div>
         </a>
 
-        <a href="https://wa.me/77713974173" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
-          <div class="w-8 h-8 rounded-lg flex-shrink-0 text-white text-xs flex items-center justify-center" style="background:#25d366;">✓</div>
+        <a href="https://linkedin.com/in/akzhanberdi" target="_blank" class="flex items-center gap-3 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+          <div class="w-8 h-8 rounded-lg flex-shrink-0 text-white text-xs font-semibold flex items-center justify-center" style="background:#0a66c2;">in</div>
           <div>
-            <div class="text-gray-900 font-medium text-sm">WhatsApp</div>
-            <div class="text-gray-400 text-xs">+7 771 397 4173</div>
+            <div class="text-gray-900 font-medium text-sm">LinkedIn</div>
+            <div class="text-gray-400 text-xs">linkedin.com/in/akzhanberdi</div>
           </div>
         </a>
 
