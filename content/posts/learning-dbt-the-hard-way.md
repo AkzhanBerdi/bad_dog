@@ -212,7 +212,7 @@ Now the interesting part. dbt models follow a layered architecture — this is t
 
 ### The Three Layers
 
-**Staging** — one model per source table. No business logic, just cleaning: rename columns, cast types, filter nulls. Always materialized as a `view` because it's just a lens on raw data, no need to store it.
+**Staging** - one model per source table. No business logic, just cleaning: rename columns, cast types, filter nulls. Always materialized as a `view` because it's just a lens on raw data, no need to store it.
 
 **Intermediate** — optional layer for joins and complex business logic. Useful when multiple staging models need to be combined before reaching the final mart.
 
@@ -325,11 +325,12 @@ dbt run
 Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
 ```
 
+dbt ran them in the right order automatically. No scripts, no orchestration config, no "run this before that" documentation.
+
 Here is what `fct_posts` actually looks like once dbt finishes:
 
 ![fct_posts query result showing message_id, views, engagement_rate and post_length_bucket columns](/img/dbt/dbt_fct_posts_query.png)
 
-dbt ran them in the right order automatically. No scripts, no orchestration config, no "run this before that" documentation.
 
 ## Adding Tests
 
