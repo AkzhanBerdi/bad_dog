@@ -454,7 +454,7 @@ dbt docs serve
 
 dbt spins up a local website with every model documented, every column described, and a lineage graph showing exactly how data flows from `raw_posts` through `stg_posts` into `fct_posts` and `fct_posts_summary`.
 
-![dbt lineage graph showing raw_posts flowing through stg_posts into fct_posts and fct_posts_summary](/img/dbt/dbt_lineage.png)
+![dbt lineage graph showing raw_posts flowing through stg_posts into fct_posts and fct_posts_summary](/public/img/dbt/dbt_lineage.png)
 
 Click on any model and you see its description, columns, tests, and the SQL that generated it.
 
