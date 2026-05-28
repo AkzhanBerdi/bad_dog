@@ -42,19 +42,19 @@
       <div class="bg-white rounded-2xl p-6">
         <div class="text-xs text-gray-400 uppercase tracking-widest mb-3">01</div>
         <div class="font-semibold text-gray-900 mb-2">Data Strategy &amp; OKRs</div>
-        <p class="text-gray-500 text-sm leading-relaxed">Before anything gets built — align on what success looks like. OKR frameworks that connect your data roadmap directly to business outcomes.</p>
+        <p class="text-gray-500 text-sm leading-relaxed">Before anything gets built, we align on what success looks like. OKR frameworks that connect your data roadmap directly to business outcomes.</p>
       </div>
 
       <div class="bg-white rounded-2xl p-6">
         <div class="text-xs text-gray-400 uppercase tracking-widest mb-3">02</div>
         <div class="font-semibold text-gray-900 mb-2">Data Infrastructure &amp; Architecture</div>
-        <p class="text-gray-500 text-sm leading-relaxed">Pipelines, data warehouses, cloud setup. Airflow, PostgreSQL, MS SQL, AWS — built to scale and not break at 3am.</p>
+        <p class="text-gray-500 text-sm leading-relaxed">Pipelines, data warehouses, cloud setup, orchestration, CDC — built to scale and not break at 3am.</p>
       </div>
 
       <div class="bg-white rounded-2xl p-6">
         <div class="text-xs text-gray-400 uppercase tracking-widest mb-3">03</div>
         <div class="font-semibold text-gray-900 mb-2">BI &amp; Analytics</div>
-        <p class="text-gray-500 text-sm leading-relaxed">Power BI dashboards (PL-300 certified), KPI frameworks, and reporting that executives actually read.</p>
+        <p class="text-gray-500 text-sm leading-relaxed">BI dashboards (PL-300 certified), KPI frameworks, and reporting that executives actually read.</p>
       </div>
 
       <div class="bg-white rounded-2xl p-6">
@@ -66,7 +66,7 @@
       <div class="bg-white rounded-2xl p-6">
         <div class="text-xs text-gray-400 uppercase tracking-widest mb-3">05</div>
         <div class="font-semibold text-gray-900 mb-2">Market &amp; Business Insights</div>
-        <p class="text-gray-500 text-sm leading-relaxed">Competitive intelligence, demand signals, customer segments — data-driven answers to real business questions.</p>
+        <p class="text-gray-500 text-sm leading-relaxed">Competitive intelligence, demand signals, customer segments and data-driven answers to real business questions.</p>
       </div>
 
       <div class="bg-white rounded-2xl p-6">
@@ -78,13 +78,13 @@
       <div class="bg-white rounded-2xl p-6">
         <div class="text-xs text-gray-400 uppercase tracking-widest mb-3">07</div>
         <div class="font-semibold text-gray-900 mb-2">Machine Learning &amp; AI Integration</div>
-        <p class="text-gray-500 text-sm leading-relaxed">From classification models to LLM-powered features — practical AI that solves a real business problem, not a demo that lives in a notebook.</p>
+        <p class="text-gray-500 text-sm leading-relaxed">From classification models to LLM-powered features and practical AI that solves a real business problem, not a demo that lives in a notebook.</p>
       </div>
 
       <div class="bg-white rounded-2xl p-6">
         <div class="text-xs text-gray-400 uppercase tracking-widest mb-3">08</div>
         <div class="font-semibold text-gray-900 mb-2">Data Team Building</div>
-        <p class="text-gray-500 text-sm leading-relaxed">Building from zero — hiring, structuring, and leading data teams. I've done it, I can help you do it too.</p>
+        <p class="text-gray-500 text-sm leading-relaxed">Building from zero, hiring, structuring, and leading data teams. I've done it, I can help you do it too.</p>
       </div>
 
     </div>

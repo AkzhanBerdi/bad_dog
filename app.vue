@@ -47,7 +47,7 @@ useHead({
     <header class="mt-8 mb-4 flex justify-between items-end">
       <div>
         <h2 class="text-2xl font-semibold">
-          <NuxtLink to="/">Data Consultant</NuxtLink>
+          <NuxtLink to="/">Freelance Journal</NuxtLink>
         </h2>
         <p class="text-gray-500">From Almaty, Kazakhstan to the world!</p>
       </div>
@@ -62,7 +62,7 @@ useHead({
           <a href="https://www.linkedin.com/in/akzhanberdi" target="_blank">LinkedIn</a>
         </Btn>
         <Btn>
-          <a href="https://t.me/akzhan_berdi" target="_blank">Telegram</a>
+          <a href="https://t.me/baddogdata" target="_blank">Telegram</a>
         </Btn>
       </div>
     </header>
