@@ -199,9 +199,9 @@ Primary source: Lyubishchev, A.A. (1943). *Programma obshchey sistematiki*. Manu
 
 ## What Is Next
 
-The library is being submitted to [scikit-learn-contrib](https://github.com/scikit-learn-contrib/scikit-learn-contrib) — the official sklearn ecosystem for compatible packages. If you have used it, hit an issue, or want to contribute, the repo is open
+The library is listed under scikit-learn-contrib (#81) — the official sklearn ecosystem for compatible packages. An R version has been submitted to CRAN. A proposal to add lyubishchev_divergence to scipy.spatial.distance is open at scipy #25335, tagged by a SciPy maintainer
 
-An R port is also in progress
+If you have used the library, hit an issue, or want to contribute — the repo is open
 
 ---
 

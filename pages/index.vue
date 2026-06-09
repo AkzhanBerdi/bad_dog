@@ -35,7 +35,8 @@
           systems across fintech, FMCG, and Oil &amp; Gas, and recently made the jump to independent
           consulting. I now take on projects globally — strategy, infrastructure, analytics, ML,
           AI — for founders, product owners, and executives who need a data partner, not just a
-          contractor.
+          contractor. I also write open source — lyubishchev is a Python and R library I published recently, 
+          now proposed for inclusion in SciPy and scikit-learn
         </p>
 
         <p>
