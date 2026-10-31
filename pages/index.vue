@@ -20,7 +20,7 @@
       <div class="prose prose-gray max-w-none">
 
         <p>
-          I'm Akzhan — a data consultant based in Almaty, Kazakhstan, and this is Bad Dog Data.
+          I'm Akzhan — a Data &amp; AI Team Lead based in Almaty, Kazakhstan, and this is Bad Dog Data.
         </p>
 
         <p>
@@ -31,25 +31,33 @@
         </p>
 
         <p>
-          What has changed: I've since led a full Data Team at an agricultural holding, built data
-          systems across fintech, FMCG, and Oil &amp; Gas, and recently made the jump to independent
-          consulting. I now take on projects globally — strategy, infrastructure, analytics, ML,
-          AI — for founders, product owners, and executives who need a data partner, not just a
-          contractor. I also write open source — lyubishchev is a Python and R library I published recently, 
-          now proposed for inclusion in SciPy and scikit-learn
+          Today, I lead a data team dedicated to cross-border e-commerce. My
+          day-to-day is spent building the middleware and intelligence layers that connect massive
+          international marketplaces to local platforms. We handle heavy market data ingestion,
+          pull and normalize complex partner feeds, and build RAG (Retrieval-Augmented Generation)
+          systems for dynamic resource localization. We also design and implement dynamic pricing
+          pipelines that react in real-time to global market signals.
+        </p>
+
+        <p>
+          I also write open source. Right now, I'm implementing my library, lyubishchev, directly
+          into our day-to-day production workflows. The R package is already out in the wild, and
+          I'm actively preparing to propose the Python version for inclusion in SciPy and
+          scikit-learn.
         </p>
 
         <p>
           This blog still lives at the intersection of data, business, and the human experience.
-          Some posts will be deep technical dives. Others will be about what actually happens when
-          you try to build data capabilities inside a real company with real constraints and real
-          politics.
+          Some posts will be deep technical dives into vector search layers, dynamic pricing
+          models, or normalization pipelines. Others will be about what actually happens when you
+          try to build resilient data systems across borders with real constraints, messy APIs,
+          and real politics.
         </p>
 
         <p>
-          If you're a developer or analyst — welcome, there's plenty here for you. If you're a
-          decision-maker trying to figure out what your data should actually be doing for your
-          business — you might find this useful too.
+          If you're an engineer or analyst — welcome, there's plenty here for you. If you're a
+          product owner or decision-maker trying to figure out how to leverage RAG, complex
+          partner data, or automated pricing for your business — you might find this useful too.
         </p>
 
         <p>
